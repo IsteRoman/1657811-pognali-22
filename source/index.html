@@ -11,6 +11,9 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="body">
+    <div class="visually-hidden">
+      @@include("build/img/sprite.svg")
+    </div>
     <heaber class="header">
       <div class="wrapper heaber__block">
         <a class="header__logo">
@@ -210,10 +213,21 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div>
-        <img>
-        <ul>
+    <footer class="footer">
+      <div class="wrapper footer__block">
+        <a class="footer__logo">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.webp 1x, img/logo/logo-desktop-scrol@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.png 1x, img/logo/logo-desktop-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.webp 1x, img/logo/logo-tablet-scrol@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.png 1x, img/logo/logo-tablet-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile-scrol.webp 1x, img/logo/logo-mobile-scrol@2x.webp 2x">
+            <img class="footer__logo-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="96" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <ul class="footer__social social">
           <li>
             <a href="#" title="Фэйсбук"></a>
           </li>
