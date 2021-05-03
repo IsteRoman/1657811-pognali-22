@@ -1,0 +1,140 @@
+.contacts__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 116px;
+  }
+}
+
+.contacts__info::before,
+.contacts__info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  background-color: @basic-yellow;
+
+  @media (min-width: @desktop-width) {
+    min-width: 100%;
+  }
+}
+.contacts__info::before {
+  height: 100%;
+}
+
+.contacts__info::after {
+  top: 100%;
+  height: 35px;
+  border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    height: 47px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 56px;
+    border-radius: 0 0 40px 40px;
+  }
+}
+
+.contacts__text {
+  position: relative;
+  margin-bottom: 32px;
+  padding-top: 63px;
+  padding-left: 61px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+    margin-bottom: 62px;
+    padding-top: 124px;
+    padding-left: 94px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    margin-right: 147px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 121px;
+  }
+}
+
+.contacts__text::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background: url(../img/map/map_mark.svg) no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    top: 100px;
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -36px;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.contacts__button {
+  justify-content: flex-start;
+  z-index: 1;
+  align-self: stretch;
+  min-height: 62px;
+  padding-left: 22px;
+  border: 3px solid @special-blue-dark-2;
+
+  @media (min-width: @tablet-width) {
+    min-height: 80px;
+    margin-bottom: 37px;
+    padding-left: 37px;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    min-width: 324px;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__static-map {
+  z-index: -2;
+  width: 100%;
+}
+
+.contacts__static-map-image {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  height: 424px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 581px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 584px;
+  }
+}
