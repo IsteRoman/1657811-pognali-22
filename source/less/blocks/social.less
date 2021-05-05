@@ -1,0 +1,51 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 140px;
+  .zero-intervals;
+}
+
+.social__item {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 5px;
+  background-color: @basic-yellow;
+  border-radius: 50%;
+}
+
+.social__item:hover,
+.social__item:focus,
+.social__item:active {
+  background-color: @basic-yellow-dark;
+}
+
+.social__link {
+  display: block;
+  width: 45px;
+  height: 45px;
+}
+
+.social__item:active  .social__link:active {
+  opacity: 30%;
+}
+
+
+.social__ico {
+  position: absolute;
+}
+
+.social__item:first-of-type .social__ico{
+  top: 10px;
+  left: 19px;
+}
+
+.social__item:nth-of-type(2) .social__ico{
+  top: 16px;
+  left: 12px;
+}
+
+.social__item:nth-of-type(3n) .social__ico{
+  top: 13px;
+  left: 14px;
+}
