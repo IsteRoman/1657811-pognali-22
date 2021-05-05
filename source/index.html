@@ -179,25 +179,48 @@
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Заинтересовались?</h2>
-          <p>Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a>авторизуйтесь.</a></p>
-          <form action="" method="GET">
-            <label>Введите адрес электронной почты</label>
-            <input type="email" placeholder="E-mail">
-            <button type="submit"></button>
+      <section class="check-in">
+        <div class="wrapper check-in__block">
+          <h2 class="main-sub-title check-in__title">Заинтересовались?</h2>
+          <p class="check-in__text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее&nbsp;<a class="check-in__link" href="enter-form.html">авторизуйтесь</a>.</p>
+          <form class="check-in__form" action="https://echo.htmlacademy.ru/" method="GET">
+            <label class="visually-hidden">Введите адрес электронной почты</label>
+            <input class="check-in__input" type="email" placeholder="E-mail" required>
+            <button class="button check-in__button" type="submit" title="Отправить">
+              <svg class="check-in__arrow-ico" width="14" height="16">
+                <use href="#button-arrow"></use>
+              </svg>
+              <span class="check-in__button-text">Регистрация</span>
+            </button>
           </form>
-          <p>Остались вопросы? Мы с радостью на них ответим!</p>
-          <a href="tel:88005558628">8 800 555-86-28</a>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <p class="check-in__text">Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на&nbsp;них&nbsp;ответим!</p>
+          <ul class="check-in__ours-contacts our-contacts">
+            <li class="our-contacts__item">
+              <a class="our-contacts__link our-contacts__link--check-out" href="tel:88005558628">
+                <svg class="our-contacts__link-ico-phone our-contacts__link-ico-phone--check-out" width="18" height="17">
+                  <use href="#icon-phone"></use>
+                </svg>
+                8 800 555-86-28</a>
+            </li>
+            <li class="our-contacts__item">
+              <a class="our-contacts__link our-contacts__link--check-out" href="mailto:mail@htmlacademy.ru">
+                <svg class="our-contacts__link-ico-mail our-contacts__link-ico-mail--check-out" width="23" height="25">
+                  <use href="#icon-mail"></use>
+                </svg>
+                mail@htmlacademy.ru</a>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Как нас найти</h2>
         <div class="wrapper contacts__info">
           <span class="contacts__text">ул. Большая Конюшенная,&nbsp;19/8</span>
-          <a class="button contacts__button">Проложить маршрут</a>
+          <a class="button contacts__button"><span class="button__text contacts__button-text">Проложить маршрут
+            <svg class="contacts__arrow-ico" width="14" height="16">
+              <use href="#button-arrow"></use>
+            </svg>
+          </span></a>
         </div>
         <div class="contacts__static-map">
           <picture>
