@@ -1,8 +1,14 @@
 .social {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   max-width: 140px;
   .zero-intervals;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    max-width: 200px;
+  }
 }
 
 .social__item {
@@ -12,6 +18,11 @@
   margin-bottom: 5px;
   background-color: @basic-yellow;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .social__item:hover,
@@ -24,10 +35,15 @@
   display: block;
   width: 45px;
   height: 45px;
+
+  @media (min-width: @tablet-width) {
+    width: 62px;
+    height: 62px;
+  }
 }
 
 .social__item:active  .social__link:active {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 
