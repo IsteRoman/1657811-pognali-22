@@ -115,26 +115,82 @@
           <a>Показать все</a>
         </div>
       </section>
-      <section>
-        <div>
-          <div>
-            <h2>Попутчики</h2>
-            <p>Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <b>Теперь можно легко найти единомышленников!</b>
+      <section class="companion">
+        <div class="wrapper companion__block">
+          <div class="companion__about">
+            <h2 class="main-sub-title companion__title">Попутчики</h2>
+            <p class="companion__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+            <b class="companion__tagline">Теперь можно легко найти единомышленников!</b>
           </div>
-          <ul>
-            <li>
-              <img>
-              <strong>Таня Фирсова</strong>
-              <span>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</span>
+          <ul class="companion__list">
+            <li class="companion__card">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.jpg 1x, img/catalog/users/main-firsova-tablet-desktop@2x.jpg 2x">
+
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
+                <img class="companion__card-avatar" src="img/catalog/users/main-firsova-mobile.jpg" srcset="img/catalog/users/main-firsova-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+              </picture>
+              <strong class="companion__card-name">Таня Фирсова</strong>
+              <span class="companion__card-hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</span>
+              <ul class="companion__card-transport">
+                <li class="companion__card-transport-item">
+                  <svg class="companion__card-transport-ico" width="20" height="21" title="Авиаперелет">
+                    <use href="#icon-plane"></use>
+                  </svg>
+                </li>
+                <li class="companion__card-transport-item companion__card-transport-item--unselected">
+                  <svg class="companion__card-transport-ico" width="17" height="19" title="Автотранспорт">
+                    <use href="#icon-bus"></use>
+                  </svg>
+                </li>
+                <li class="companion__card-transport-item companion__card-transport-item--unselected">
+                  <svg class="companion__card-transport-ico" width="23" height="24" title="Велосипед">
+                    <use href="#icon-bicycle"></use>
+                  </svg>
+                </li>
+                <li class="companion__card-transport-item companion__card-transport-item--unselected">
+                  <svg class="companion__card-transport-ico" width="20" height="23" title="Пешком">
+                    <use href="#icon-run"></use>
+                  </svg>
+                </li>
+              </ul>
             </li>
-            <li>
-              <img>
-              <strong>Петя Демин</strong>
-              <span>#бургер #бар #футбол #концерт #крафт</span>
+            <li class="companion__card">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-demin-tablet-desktop.webp 1x, img/catalog/users/main-demin-tablet-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/catalog/users/main-demin-tablet-desktop.jpg 1x, img/catalog/users/main-demin-tablet-desktop@2x.jpg 2x">
+
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-demin-mobile.webp 1x, img/catalog/users/main-demin-mobile@2x.webp 2x">
+                <img class="companion__card-avatar" src="img/catalog/users/main-demin-mobile.jpg" srcset="img/catalog/users/main-demin-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+              </picture>
+              <strong class="companion__card-name">Петя Демин</strong>
+              <span class="companion__card-hashtags">#бургер #бар #футбол #концерт #крафт</span>
+              <ul class="companion__card-transport">
+                <li class="companion__card-transport-item">
+                  <svg class="companion__card-transport-ico" width="20" height="21" title="Авиаперелет">
+                    <use href="#icon-plane"></use>
+                  </svg>
+                </li>
+                <li class="companion__card-transport-item">
+                  <svg class="companion__card-transport-ico" width="17" height="19" title="Автотранспорт">
+                    <use href="#icon-bus"></use>
+                  </svg>
+                </li>
+                <li class="companion__card-transport-item companion__card-transport-item--unselected">
+                  <svg class="companion__card-transport-ico" width="23" height="24" title="Велосипед">
+                    <use href="#icon-bicycle"></use>
+                  </svg>
+                </li>
+                <li class="companion__card-transport-item">
+                  <svg class="companion__card-transport-ico" width="20" height="23" title="Пешком">
+                    <use href="#icon-run"></use>
+                  </svg>
+                </li>
+              </ul>
             </li>
           </ul>
-          <a href="catalog.html">Показать всех</a>
+          <a class="button companion__button" href="catalog.html"><span class="button__text">Показать всех</span></a>
         </div>
       </section>
       <section class="tariffs">
@@ -277,7 +333,7 @@
             </a>
           </li>
         </ul>
-        <a class="footer__developer">Разработано
+        <a class="footer__developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
           <svg class="footer__developer-ico" width="27" height="34">
             <use href="#icon-html"></use>
           </svg>
