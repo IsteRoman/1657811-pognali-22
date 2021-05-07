@@ -82,37 +82,72 @@
           <a>Подробнее</a>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Направления</h2>
-          <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
-          <ul>
-            <li>
-              <div>
-                <b>Таиланд</b>
-                <span>Джунгли зовут!</span>
-                <span>18321</span>
+      <section class="directions">
+        <div class="wrapper directions__block">
+          <div class="directions__about">
+            <h2 class="main-sub-title directions__title">Направления</h2>
+            <p class="directions__text">Мы&nbsp;не&nbsp;продаем&nbsp;туры и&nbsp;ничего&nbsp;не&nbsp;рекламируем. Люди&nbsp;сами&nbsp;пишут&nbsp;о&nbsp;странах, куда&nbsp;хотели&nbsp;бы&nbsp;отправиться и&nbsp;чем&nbsp;можно&nbsp;там&nbsp;заняться.</p>
+          </div>
+          <ul class="directions__list">
+            <li class="directions__item">
+              <div class="directions__item-img-block">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/thailand-desktop.webp 1x, img/index/thailand-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/index/thailand-desktop.png 1x, img/index/thailand-desktop@2x.png 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/index/thailand-tablet.webp 1x, img/index/thailand-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/thailand-tablet.png 1x, img/index/thailand-tablet@2x.png 2x">
+
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/thailand-mobile.webp 1x, img/index/thailand-mobile@2x.webp 2x">
+                  <img class="directions__item-img-Thailand" src="img/index/thailand-mobile.png" srcset="img/index/thailand-mobile@2x.png 2x" width="270" height="110" alt="Таиланд">
+                </picture>
               </div>
-              <img>
+              <div class="directions__item-info-block">
+                <b class="directions__item-name">Таиланд</b>
+                <span class="directions__item-tagline">Джунгли зовут!</span>
+                <span class="directions__item-visitors">18321</span>
+              </div>
             </li>
-            <li>
-              <div>
-                <b>Франция</b>
-                <span>Трэ бьен, манифик!</span>
-                <span>12518</span>
+            <li class="directions__item">
+              <div class="directions__item-img-block">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/france-desktop.webp 1x, img/index/france-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/index/france-desktop.png 1x, img/index/france-desktop@2x.png 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/index/france-tablet.webp 1x, img/index/france-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/france-tablet.png 1x, img/index/france-tablet@2x.png 2x">
+
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/france-mobile.webp 1x, img/index/france-mobile@2x.webp 2x">
+                  <img class="directions__item-img-Thailand" src="img/index/france-mobile.png" srcset="img/index/france-mobile@2x.png 2x" width="270" height="110" alt="Франция">
+                </picture>
               </div>
-              <img>
+              <div class="directions__item-info-block">
+                <b class="directions__item-name">Франция</b>
+                <span class="directions__item-tagline">Трэ бьен, манифик!</span>
+                <span class="directions__item-visitors">12518</span>
+              </div>
             </li>
-            <li>
-              <div>
-                <b>Чехия</b>
-                <span>Закоулки старой Европы</span>
-                <span>5326</span>
+            <li class="directions__item">
+              <div class="directions__item-img-block">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/czech-desktop.webp 1x, img/index/czech-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/index/czech-desktop.png 1x, img/index/czech-desktop@2x.png 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/index/czech-tablet.webp 1x, img/index/czech-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/czech-tablet.png 1x, img/index/czech-tablet@2x.png 2x">
+
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/index/czech-mobile.webp 1x, img/index/czech-mobile@2x.webp 2x">
+                  <img class="directions__item-img-Thailand" src="img/index/czech-mobile.png" srcset="img/index/czech-mobile@2x.png 2x" width="270" height="110" alt="Чехия">
+                </picture>
               </div>
-              <img>
+              <div class="directions__item-info-block">
+                <b class="directions__item-name">Чехия</b>
+                <span class="directions__item-tagline">Закоулки старой Европы</span>
+                <span class="directions__item-visitors">5326</span>
+              </div>
             </li>
           </ul>
-          <a>Показать все</a>
+          <a class="button directions__button" href="form.html"><span class="button__text directions__button-text">Показать все</span></a>
         </div>
       </section>
       <section class="companion">
@@ -310,7 +345,7 @@
         <h2 class="visually-hidden">Как нас найти</h2>
         <div class="wrapper contacts__info">
           <span class="contacts__text">ул. Большая Конюшенная,&nbsp;19/8</span>
-          <a class="button contacts__button"><span class="button__text contacts__button-text">Проложить маршрут
+          <a class="button contacts__button" href="https://yandex.ru/maps/-/CCU4aRT6lA"><span class="button__text contacts__button-text">Проложить маршрут
             <svg class="contacts__arrow-ico" width="14" height="16">
               <use href="#button-arrow"></use>
             </svg>
