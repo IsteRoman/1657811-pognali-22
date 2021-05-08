@@ -1,6 +1,38 @@
 .header {
+  position: relative;
   padding-top: 19px;
   background-color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 46px;
+  }
+}
+
+.header--scrol {
+  padding-top: 27px;
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 18px;
+  }
+}
+
+.heaber__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .header__logo-ico {
@@ -13,4 +45,88 @@
     width: 200px;
     height: 52px;
   }
+}
+
+.header__logo-scrol-ico {
+  @media (min-width: @tablet-width) {
+    width: 164px;
+    height: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 198px;
+    height: 60px;
+  }
+}
+
+.header__logo--scrol {
+  display: none;
+}
+
+.header__button {
+  display: block;
+  width: 25px;
+  height: 11px;
+  border: none;
+  background: none;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__button:focus,
+.header__button:hover {
+  opacity: 0.6;
+}
+
+.header__button:active {
+  opacity: 0.3;
+}
+
+.header__button--open {
+  border-top: 3px solid @basic-white;
+  border-bottom: 3px solid @basic-white;
+  border-radius: 1.5%;
+}
+
+.header__button--scrol {
+  border-color: @special-grey-2;
+}
+
+.header__button--close {
+  position: relative;
+  width: 19px;
+  height: 19px;
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.header__button--close::before,
+.header__button--close::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 10px;
+  display: block;
+  width: 2px;
+  height: 24px;
+  background-color: @special-grey-2;
+}
+
+.header__button--close::before {
+  transform: rotate(45deg);
+}
+
+.header__button--close::after {
+  transform: rotate(-45deg);
+}
+
+.header__navigation-block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }

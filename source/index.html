@@ -14,6 +14,9 @@
     <div class="visually-hidden">
       @@include("build/img/sprite.svg")
     </div>
+
+
+
     <heaber class="header">
       <div class="wrapper heaber__block">
         <a class="header__logo">
@@ -28,33 +31,96 @@
             <img class="header__logo-ico" src="img/logo/logo-mobile.png" srcset="img/logo/logo-mobile@2x.png 2x" width="96" height="15" alt="Погнали">
           </picture>
         </a>
-        <button class="button header__button--open" type="button" aria-label="открыть меню"></button>
-        <nav>
-          <ul>
-            <li>
-              <a>о сервисе</a>
+        <a class="header__logo header__logo--scrol">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.webp 1x, img/logo/logo-desktop-scrol@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.png 1x, img/logo/logo-desktop-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.webp 1x, img/logo/logo-tablet-scrol@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.png 1x, img/logo/logo-tablet-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile-scrol.webp 1x, img/logo/logo-mobile-scrol@2x.webp 2x">
+            <img class="header__logo-scrol-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="100" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <button class="header__button header__button--open" type="button" aria-label="открыть меню"></button>
+        <div class="header__navigation-block">
+          <nav class="heaber__navigation">
+            <ul class="heaber__navigation-list">
+              <li class="heaber__navigation-itme">
+                <a class="heaber__navigation-link">о сервисе</a>
+              </li>
+              <li class="heaber__navigation-itme">
+                <a class="heaber__navigation-link" href="form.html">направления</a>
+              </li>
+              <li class="heaber__navigation-itme">
+                <a class="heaber__navigation-link" href="catalog.html">попутчики</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button header__button">авторизация</a>
+          <ul class="check-in__ours-contacts our-contacts">
+            <li class="our-contacts__item">
+              <a class="our-contacts__link our-contacts__link--check-out" href="tel:88005558628">
+                <svg class="our-contacts__link-ico-phone our-contacts__link-ico-phone--check-out" width="18" height="17">
+                  <use href="#icon-phone"></use>
+                </svg>
+                8 800 555-86-28</a>
             </li>
-            <li>
-              <a href="form.html">направления</a>
-            </li>
-            <li>
-              <a href="catalog.html">попутчики</a>
+            <li class="our-contacts__item">
+              <a class="our-contacts__link our-contacts__link--check-out" href="mailto:mail@htmlacademy.ru">
+                <svg class="our-contacts__link-ico-mail our-contacts__link-ico-mail--check-out" width="23" height="25">
+                  <use href="#icon-mail"></use>
+                </svg>
+                mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <ul>
-            <li>
-              <a></a>
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__link" href="#" title="Фэйсбук">
+                <svg class="social__ico" width="10" height="20">
+                  <use href="#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a></a>
+            <li class="social__item">
+              <a class="social__link" href="#" title="В контакте">
+                <svg class="social__ico" width="23" height="11">
+                  <use href="#icon-vkontakte"></use>
+                </svg>
+              </a>
             </li>
-            <li>
-              <a>авторизация</a>
+            <li class="social__item">
+              <a class="social__link" href="#" title="Инстаграм">
+                <svg class="social__ico" width="18" height="17">
+                  <use href="#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </nav>
+        </div>
+        <a class="button header__button">авторизация</a>
+        <ul class="check-in__ours-contacts our-contacts">
+          <li class="our-contacts__item">
+            <a class="our-contacts__link our-contacts__link--check-out" href="tel:88005558628">
+              <svg class="our-contacts__link-ico-phone our-contacts__link-ico-phone--check-out" width="18" height="17">
+                <use href="#icon-phone"></use>
+              </svg>
+              8 800 555-86-28</a>
+          </li>
+          <li class="our-contacts__item">
+            <a class="our-contacts__link our-contacts__link--check-out" href="mailto:mail@htmlacademy.ru">
+              <svg class="our-contacts__link-ico-mail our-contacts__link-ico-mail--check-out" width="23" height="25">
+                <use href="#icon-mail"></use>
+              </svg>
+              mail@htmlacademy.ru</a>
+          </li>
+        </ul>
       </div>
     </heaber>
+
+
+
     <main>
       <section class="intro">
         <div class="wrapper intro__block">
