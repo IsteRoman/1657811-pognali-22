@@ -55,6 +55,7 @@
 
 .contacts__text {
   position: relative;
+  z-index: 1;
   margin-bottom: 32px;
   padding-top: 63px;
   padding-left: 61px;
@@ -184,3 +185,21 @@
     height: 584px;
   }
 }
+
+.contacts__interactive-map {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 424px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 581px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 584px;
+  }
+}
+

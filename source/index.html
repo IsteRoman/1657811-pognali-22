@@ -14,9 +14,6 @@
     <div class="visually-hidden">
       @@include("build/img/sprite.svg")
     </div>
-
-
-
     <heaber class="header header--no-js">
       <div class="wrapper header__block">
         <a class="header__logo header__logo--scrol">
@@ -43,15 +40,7 @@
             <img class="header__logo-scrol-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="100" height="15" alt="Погнали">
           </picture>
         </a>
-
-
-
-
         <button class="header__button header__button--close" type="button" aria-label="открыть меню"></button>
-
-
-
-
         <div class="header__navigation-block">
           <nav class="header__navigation">
             <ul class="header__navigation-list header__navigation-list--open">
@@ -66,11 +55,7 @@
               </li>
             </ul>
           </nav>
-
-
           <a class="button header__button-authorization"><span class="header__button-authorization-text">авторизация</span></a>
-
-
           <ul class="our-contacts">
             <li class="our-contacts__item our-contacts__item--header">
               <a class="our-contacts__link" href="tel:88005558628">
@@ -87,9 +72,6 @@
                 mail@htmlacademy.ru</a>
             </li>
           </ul>
-
-
-
           <ul class="social">
             <li class="social__item">
               <a class="social__link" href="#" title="Фэйсбук">
@@ -114,7 +96,6 @@
             </li>
           </ul>
         </div>
-
         <div class="header__out-trail">
           <ul class="header__contacts">
             <li class="header__contacts__item">
@@ -134,12 +115,8 @@
           </ul>
           <a class="button header__button-authorization-out-trail"><span class="header__button-authorization-out-trail-text">авторизация</span></a>
         </div>
-
       </div>
     </heaber>
-
-
-
     <main>
       <section class="intro">
         <div class="wrapper intro__block">
@@ -445,6 +422,7 @@
             <img class="contacts__static-map-image" src="img/map/map-and-marker-mobile.jpg" srcset="img/map/map-and-marker-mobile@2x.jpg 2x" width="320" height="424" alt="Карта с адресом Санкт-Петербург ул. Большая Конюшенная, 19/8">
           </picture>
         </div>
+        <div class="contacts__interactive-map" id="map"></div>
       </section>
     </main>
     <footer class="footer">
@@ -491,5 +469,7 @@
         </a>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2863a1bb-af93-4ad4-ad27-0d86db0b55bc"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
