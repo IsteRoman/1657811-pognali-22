@@ -1,3 +1,66 @@
+const header = function() {
+
+  const header_block = document.querySelector('.header');
+  const logo_static = document.querySelector('.header__logo-static');
+  const logo_move = document.querySelector('.header__logo-move');
+  const menu_button = document.querySelector('.header__button');
+  const navigation_block = document.querySelector('.header__navigation-block');
+  const navigation_list = document.querySelector('.header__navigation-list');
+  const header_out_trail = document.querySelector('.header__out-trail');
+
+  const start = function () {
+    header_block.classList.remove('header--no-js');
+    logo_static.classList.remove('header__logo--scrol');
+    logo_move.classList.add('header__logo--scrol');
+    menu_button.classList.remove('header__button--close');
+    menu_button.classList.add('header__button--open');
+    navigation_list.classList.remove('header__navigation-list--open');
+  }
+
+  start();
+
+  const scrol = function() {
+    window.addEventListener('scroll', function(evt) {
+      if (window.pageYOffset > 1) {
+        header_block.classList.add('header--scrol');
+        logo_static.classList.add('header__logo--scrol');
+      logo_move.classList.remove('header__logo--scrol');
+      } else if (window.pageYOffset < 1) {
+        header_block.classList.remove('header--scrol');
+        logo_static.classList.remove('header__logo--scrol');
+      logo_move.classList.add('header__logo--scrol');
+      }
+    });
+  }
+
+  scrol();
+
+  menu_button.addEventListener('click', function() {
+    if (menu_button.classList.contains('header__button--open')) {
+      header_block.classList.add('header--open');
+      logo_static.classList.add('header__logo--scrol');
+      logo_move.classList.remove('header__logo--scrol');
+      menu_button.classList.remove('header__button--open');
+      menu_button.classList.add('header__button--close');
+      navigation_block.classList.add('header__navigation-block--open');
+      navigation_list.classList.add('header__navigation-list--open');
+      header_out_trail.classList.add('header__out-trail--hidden');
+    } else if (menu_button.classList.contains('header__button--close')) {
+      header_block.classList.remove('header--open');
+      logo_static.classList.remove('header__logo--scrol');
+      logo_move.classList.add('header__logo--scrol');
+      menu_button.classList.add('header__button--open');
+      menu_button.classList.remove('header__button--close');
+      navigation_block.classList.remove('header__navigation-block--open');
+      navigation_list.classList.remove('header__navigation-list--open');
+      header_out_trail.classList.remove('header__out-trail--hidden');
+    }
+  })
+}
+
+
+
+
 const business_tariffs = function() {
   if (!document.querySelector('.tariffs')) {
     return;
@@ -79,6 +142,8 @@ const map_block = function() {
     }
   })
 }
+
+header();
 
 business_tariffs();
 

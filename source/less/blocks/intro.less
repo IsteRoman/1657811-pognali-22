@@ -1,6 +1,15 @@
 .intro {
   position: relative;
+  margin-top: 73px;
   background-color: @special-blue-dark-2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 99px;
+  }
 }
 
 .intro::before {
@@ -10,18 +19,20 @@
   left: 0;
   width: 100%;
   height: 569px;
-  background: url(../img/background/globe-back-mobile.png) top no-repeat;
+  background: url("../img/background/globe-back-mobile.png") top no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
-    top: 220px;
+    top: 315px;
     height: 612px;
-    background: url(../img/background/globe-back-tablet.png) no-repeat;
+    background: url("../img/background/globe-back-tablet.png") no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     top: -100px;
     height: 750px;
-    background: url(../img/background/globe-back-desktop.png) no-repeat;
+    background: url("../img/background/globe-back-desktop.png") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -40,6 +51,7 @@
     height: 76px;
     border-radius: 0 0 40px 40px;
   }
+
   @media (min-width: @desktop-width) {
     top: 99.5%;
     height: 88px;
@@ -51,6 +63,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .intro__general {
@@ -76,14 +96,14 @@
   left: 55px;
   width: 192px;
   height: 255px;
-  background: url(../img/index/traveller-illustration-mobile.png) no-repeat;
+  background: url("../img/index/traveller-illustration-mobile.png") no-repeat;
 
   @media (min-width: @tablet-width) {
     top: 261px;
     left: 240px;
     width: 372px;
     height: 451px;
-    background: url(../img/index/traveller-illustration-tablet.png) no-repeat;
+    background: url("../img/index/traveller-illustration-tablet.png") no-repeat;
   }
 
   @media (min-width: @desktop-width) {
@@ -91,7 +111,7 @@
     left: 540px;
     width: 431px;
     height: 640px;
-    background: url(../img/index/traveller-illustration-desktop.png) no-repeat;
+    background: url("../img/index/traveller-illustration-desktop.png") no-repeat;
   }
 }
 
@@ -407,14 +427,14 @@
   z-index: -1;
   width: 292px;
   height: 353px;
-  background: url(../img/index/about-mobile.png) no-repeat;
+  background: url("../img/index/about-mobile.png") no-repeat;
 
   @media (min-width: @tablet-width) {
     top: 10px;
     left: 310px;
     width: 376px;
     height: 548px;
-    background: url(../img/index/about-tablet.png) no-repeat;
+    background: url("../img/index/about-tablet.png") no-repeat;
   }
 
   @media (min-width: @desktop-width) {
@@ -422,7 +442,7 @@
     left: 630px;
     width: 630px;
     height: 665px;
-    background: url(../img/index/about-desktop.png) no-repeat;
+    background: url("../img/index/about-desktop.png") no-repeat;
   }
 }
 

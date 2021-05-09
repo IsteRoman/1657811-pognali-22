@@ -1,15 +1,18 @@
 .header {
-  position: relative;
+  position: fixed;
   z-index: 10;
+  width: 100%;
   padding-top: 19px;
 
   @media (min-width: @tablet-width) {
     padding-top: 40px;
+    background-color: @special-blue-dark-5;
   }
 
   @media (min-width: @desktop-width) {
     z-index: 100000;
     padding-top: 46px;
+    background-color: transparent;
   }
 }
 
@@ -17,7 +20,11 @@
   background-color: @basic-white;
 }
 
-.header--scrol .header {
+.header--open {
+  background-color: @basic-white;
+}
+
+.header--scrol {
   padding-top: 27px;
   background-color: @basic-white;
 
@@ -90,6 +97,10 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.header--scrol .header__button {
+  margin-top: -20px;
 }
 
 .header__button:focus,
@@ -350,6 +361,7 @@
 
 .header__out-trail {
   position: absolute;
+  top: 440px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -364,6 +376,18 @@
   @media (min-width: @desktop-width) {
     order: unset;
     margin-left: auto;
+  }
+}
+
+.header__out-trail--hidden {
+  @media (max-width: @max-mobile-width) {
+    display: none;
+  }
+}
+
+.header--scrol .header__out-trail {
+  @media (max-width: @max-mobile-width) {
+    display: none;
   }
 }
 
