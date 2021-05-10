@@ -131,22 +131,22 @@
 }
 
 .companion__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  width: 100%;
   .zero-intervals;
   margin-bottom: 11px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    align-self: center;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
     margin-bottom: 81px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: card;
+    width: unset;
     margin-bottom: 0;
     margin-left: 192px;
   }
@@ -156,7 +156,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 269px;
+  min-width: 269px;
   min-height: 428px;
   margin-bottom: 9px;
   background-color: @basic-white;
@@ -164,16 +164,20 @@
   overflow: hidden;
 
   @media (min-width: @tablet-width) {
-    width: 285px;
+    min-width: 285px;
     min-height: 483px;
-    margin-right: 50px;
     margin-bottom: 0;
     border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 285px;
   }
 }
 
 .companion__card:hover,
 .companion__card:focus {
+  height: 484px;
   filter: drop-shadow(0 4px 9px rgba(255, 255, 0, 1));
 }
 
@@ -196,11 +200,11 @@
 }
 
 .companion__card-avatar {
-  width: 270px;
+  width: 100%;
   height: 270px;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    width: 285px;
     height: 286px;
   }
 }
@@ -208,24 +212,25 @@
 .companion__card-countries {
   position: absolute;
   top: 259px;
-  left: 60px;
   display: flex;
   justify-content: center;
+  align-self: center;
   flex-wrap: wrap;
   width: 170px;
   .zero-intervals;
-  margin-left: auto;
-  margin-right: auto;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     top: 270px;
-    left: 70px;
   }
 }
 
 .companion__card-flags {
   margin-right: 20px;
+}
+
+.companion__card-flags:last-of-type {
+  margin-right: 0;
 }
 
 .companion__card-name {

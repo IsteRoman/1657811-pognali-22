@@ -1,34 +1,49 @@
 const header = function() {
 
   const header_block = document.querySelector('.header');
-  const logo_static = document.querySelector('.header__logo-static');
-  const logo_move = document.querySelector('.header__logo-move');
-  const menu_button = document.querySelector('.header__button');
-  const navigation_block = document.querySelector('.header__navigation-block');
-  const navigation_list = document.querySelector('.header__navigation-list');
-  const header_out_trail = document.querySelector('.header__out-trail');
+  const logo_static = header_block.querySelector('.header__logo-static');
+  const logo_move = header_block.querySelector('.header__logo-move');
+  const menu_button = header_block.querySelector('.header__button');
+  const navigation_list = header_block.querySelector('.header__navigation-list');
+  const minScrolheight = 1;
+
+  const showLogoMove = function() {
+    logo_static.classList.add('header__logo--scrol');
+    logo_move.classList.remove('header__logo--scrol');
+  }
+
+  const showLogoStatic = function() {
+    logo_static.classList.remove('header__logo--scrol');
+    logo_move.classList.add('header__logo--scrol');
+  }
+
+  const buttonOpenAppirance = function() {
+    menu_button.classList.remove('header__button--close');
+    menu_button.classList.add('header__button--open');
+  }
+
+  const buttonCloseAppirance = function() {
+    menu_button.classList.add('header__button--close');
+    menu_button.classList.remove('header__button--open');
+  }
 
   const start = function () {
     header_block.classList.remove('header--no-js');
-    logo_static.classList.remove('header__logo--scrol');
-    logo_move.classList.add('header__logo--scrol');
-    menu_button.classList.remove('header__button--close');
-    menu_button.classList.add('header__button--open');
+    showLogoStatic();
+    buttonOpenAppirance();
     navigation_list.classList.remove('header__navigation-list--open');
   }
 
   start();
 
   const scrol = function() {
-    window.addEventListener('scroll', function(evt) {
-      if (window.pageYOffset > 1) {
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > minScrolheight) {
         header_block.classList.add('header--scrol');
-        logo_static.classList.add('header__logo--scrol');
-      logo_move.classList.remove('header__logo--scrol');
-      } else if (window.pageYOffset < 1) {
+        showLogoMove();
+      } else {
         header_block.classList.remove('header--scrol');
-        logo_static.classList.remove('header__logo--scrol');
-      logo_move.classList.add('header__logo--scrol');
+        showLogoStatic();
       }
     });
   }
@@ -38,37 +53,25 @@ const header = function() {
   menu_button.addEventListener('click', function() {
     if (menu_button.classList.contains('header__button--open')) {
       header_block.classList.add('header--open');
-      logo_static.classList.add('header__logo--scrol');
-      logo_move.classList.remove('header__logo--scrol');
-      menu_button.classList.remove('header__button--open');
-      menu_button.classList.add('header__button--close');
-      navigation_block.classList.add('header__navigation-block--open');
-      navigation_list.classList.add('header__navigation-list--open');
-      header_out_trail.classList.add('header__out-trail--hidden');
+      showLogoMove();
+      buttonCloseAppirance();
     } else if (menu_button.classList.contains('header__button--close')) {
       header_block.classList.remove('header--open');
-      logo_static.classList.remove('header__logo--scrol');
-      logo_move.classList.add('header__logo--scrol');
-      menu_button.classList.add('header__button--open');
-      menu_button.classList.remove('header__button--close');
-      navigation_block.classList.remove('header__navigation-block--open');
-      navigation_list.classList.remove('header__navigation-list--open');
-      header_out_trail.classList.remove('header__out-trail--hidden');
+      showLogoStatic();
+      buttonOpenAppirance();
     }
   })
 }
 
-
-
-
+const tariffs_block = document.querySelector('.tariffs');
 const business_tariffs = function() {
-  if (!document.querySelector('.tariffs')) {
+  if (!tariffs_block) {
     return;
   }
 
-  const show_tariffs = document.querySelector('.tariffs__open-business');
-  const hide_tariffs = document.querySelector('.tariffs__close-business');
-  const tariffs_block_business = document.querySelector('.tariffs__business-block');
+  const show_tariffs = tariffs_block.querySelector('.tariffs__open-business');
+  const hide_tariffs = tariffs_block.querySelector('.tariffs__close-business');
+  const tariffs_block_business = tariffs_block.querySelector('.tariffs__business-block');
 
   show_tariffs.addEventListener('click', function(evt) {
     evt.preventDefault();
@@ -89,8 +92,8 @@ const validation = function() {
 
 
   const maliRegEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  const submitButton = document.querySelector('.check-in__button');
-  const inputEmail = document.querySelector('.check-in__input[type="email"]');
+  const submitButton = form_check_in.querySelector('.check-in__button');
+  const inputEmail = form_check_in.querySelector('.check-in__input[type="email"]');
 
 
   inputEmail.addEventListener('input', function() {
@@ -137,6 +140,7 @@ const map_block = function() {
         myMap.controls.remove('typeSelector');
         myMap.controls.remove('fullscreenControl');
         myMap.controls.remove('rulerControl');
+        myMap.behaviors.disable('scrollZoom');
         myMap.geoObjects.add(myPlacemark);
       });
     }
