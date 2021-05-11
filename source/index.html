@@ -43,7 +43,7 @@
         <button class="header__button header__button--close" type="button" aria-label="открыть меню"></button>
         <div class="header__navigation-block">
           <nav class="header__navigation">
-            <ul class="header__navigation-list header__navigation-list--open">
+            <ul class="header__navigation-list">
               <li class="header__navigation-itme">
                 <a class="header__navigation-link header__navigation-link--active">о сервисе</a>
               </li>
@@ -55,7 +55,7 @@
               </li>
             </ul>
           </nav>
-          <a class="button header__button-authorization"><span class="header__button-authorization-text">авторизация</span></a>
+          <a class="button header__button-authorization">авторизация</a>
           <ul class="header__our-contacts our-contacts">
             <li class="our-contacts__item our-contacts__item--header">
               <a class="our-contacts__link" href="tel:88005558628">
@@ -113,7 +113,7 @@
               </a>
             </li>
           </ul>
-          <a class="button header__button-authorization-out-trail"><span class="header__button-authorization-out-trail-text">авторизация</span></a>
+          <a class="button header__button-authorization-out-trail">авторизация</a>
         </div>
       </div>
     </heaber>
@@ -139,7 +139,11 @@
               <h2 class="main-sub-title about-service__subtitle">О сервисе</h2>
               <p class="about-service__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной&nbsp;волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
               <b class="about-service__tagline">А если найдете кого-то близкого&nbsp;по&nbsp;духу — скорее зовите&nbsp;в&nbsp;совместный трип!</b>
-              <a class="button about-service__button" href="#"><span class="button__text about-service__button-text">Подробнее</span></a>
+              <a class="button about-service__button" href="#">Подробнее
+              <svg class="button__arrow-ico about-service__arrow-ico" width="14" height="16">
+                <use href="#button-arrow"></use>
+              </svg>
+            </a>
             </div>
         </section>
       <section class="directions">
@@ -207,7 +211,11 @@
               </div>
             </li>
           </ul>
-          <a class="button directions__button" href="form.html"><span class="button__text directions__button-text">Показать все</span></a>
+          <a class="button directions__button" href="form.html">Показать Все
+            <svg class="button__arrow-ico directions__arrow-ico" width="14" height="16">
+              <use href="#button-arrow"></use>
+            </svg>
+          </a>
         </div>
       </section>
       <section class="companion">
@@ -319,7 +327,11 @@
               </ul>
             </li>
           </ul>
-          <a class="button companion__button" href="catalog.html"><span class="button__text companion__button-text">Показать всех</span></a>
+          <a class="button companion__button" href="catalog.html">Показать всех
+            <svg class="button__arrow-ico companion__arrow-ico" width="14" height="16">
+              <use href="#button-arrow"></use>
+            </svg>
+          </a>
         </div>
       </section>
       <section class="tariffs">
@@ -376,10 +388,10 @@
             <label class="visually-hidden">Введите адрес электронной почты</label>
             <input class="check-in__input" type="email" placeholder="E-mail" required>
             <button class="button check-in__button" type="submit" title="Отправить">
-              <svg class="check-in__arrow-ico" width="14" height="16">
+              <span class="check-in__button-text">Регистрация</span>
+              <svg class="button__arrow-ico check-in__arrow-ico" width="14" height="16">
                 <use href="#button-arrow"></use>
               </svg>
-              <span class="check-in__button-text">Регистрация</span>
             </button>
           </form>
           <p class="check-in__text">Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на&nbsp;них&nbsp;ответим!</p>
@@ -405,11 +417,11 @@
         <h2 class="visually-hidden">Как нас найти</h2>
         <div class="wrapper contacts__info">
           <address class="contacts__text">ул. Большая Конюшенная,&nbsp;19/8</address>
-          <a class="button contacts__button" href="https://yandex.ru/maps/-/CCU4aRT6lA"><span class="button__text contacts__button-text">Проложить маршрут
-            <svg class="contacts__arrow-ico" width="14" height="16">
+          <a class="button contacts__button" href="https://yandex.ru/maps/-/CCU4aRT6lA">Проложить маршрут
+            <svg class="button__arrow-ico contacts__arrow-ico" width="14" height="16">
               <use href="#button-arrow"></use>
             </svg>
-          </span></a>
+          </a>
         </div>
         <div class="contacts__static-map">
           <picture>

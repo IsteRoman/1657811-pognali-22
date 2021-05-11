@@ -151,12 +151,12 @@
   position: absolute;
   top: 0;
   right: 0;
+  justify-content: center;
   width: 60px;
   height: 62px;
   .zero-intervals;
   border: none;
   border-radius: 10px;
-  text-align: center;
 
   @media (min-width: @tablet-width) {
     width: 80px;
@@ -165,28 +165,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 335px;
-  }
-}
-
-.check-in__button:active {
-  opacity: 0.3;
-}
-
-.check-in__arrow-ico {
-  position: absolute;
-  top: 23px;
-  right: 20px;
-  fill: @basic-blue-dark;
-
-  @media (min-width: @tablet-width) {
-    top: 30px;
-    right: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 30px;
-    right: 30px;
+    justify-content: space-between;
+    width: 330px;
+    padding: 0 36px 0 33px;
   }
 }
 
@@ -194,11 +175,7 @@
   display: none;
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: 25px;
-    right: 170px;
     display: block;
-    width: max-content;
     font-size: 24px;
     line-height: 1;
   }

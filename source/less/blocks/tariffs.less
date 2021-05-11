@@ -274,6 +274,7 @@
   line-height: 1;
   font-weight: 700;
   color: @special-blue-dark-3;
+  transition: @default-transition;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 6px;
@@ -441,7 +442,7 @@
 .tariffs__close-business {
   align-self: center;
   display: block;
-  width: 270px;
+  width: calc(100% + 50px);
   padding: 21px 0;
   font-size: 16px;
   line-height: 1.5;
@@ -450,16 +451,17 @@
   color: @basic-blue-dark;
   background-color: @super-light-gray-6;
   cursor: pointer;
+  transition: @default-transition;
 
   @media (min-width: @tablet-width) {
-    width: 688px;
+    width: calc(100% + 182px);
     padding: 41px 0;
     font-size: 24px;
     line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
-    width: 750px;
+    width: calc(100% + 118px);
     padding: 41px 0 45px 0;
     line-height: 1.08333;
   }
