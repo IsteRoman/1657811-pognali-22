@@ -1,0 +1,215 @@
+.user-information {
+  padding-top: 36px;
+  padding-bottom: 62px;
+  background-color: @super-light-gray-5;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 132px;
+    padding-bottom: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 141px;
+    padding-bottom: 108px;
+  }
+}
+
+.user-information__block {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "level avatar"
+    "button button"
+    "hashtags hashtags"
+    "transport transport";
+
+  @media (min-width: @tablet-width) {
+    grid-template-areas:
+      "level transport transport avatar"
+      "button button button button"
+      "hashtags hashtags hashtags hashtags";
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.user-information__level {
+  grid-area: level;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    margin-right: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 95px;
+    height: 95px;
+    margin: 0;
+  }
+}
+
+.user-information__avatar {
+  grid-area: avatar;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    margin-left: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 190px;
+    height: 190px;
+    margin: 0;
+  }
+}
+
+.user-information__button {
+  grid-area: button;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 18px;
+  margin-bottom: 33px;
+  font-size: 20px;
+  line-height: 0.9;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: none;
+  background-color: @special-blue-light;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: 0;
+
+  @media (min-width: @tablet-width) {
+    min-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 190px;
+    min-height: 47px;
+  }
+}
+
+.user-information__button-text {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.user-information__fieldset {
+  position: relative;
+  .zero-intervals;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 10px;
+}
+
+.user-information__legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @basic-blue-dark;
+  text-align: center;
+  background-color: @super-light-gray-5;
+}
+
+.user-information__hashtags {
+  grid-area: hashtags;
+  margin-bottom: 25px;
+}
+
+.user-information__hashtags .user-information__legend {
+  top: -10px;
+  left: 50px;
+}
+
+.user-information__textarea {
+  width: 100%;
+  height: 89px;
+  padding: 26px 28px 26px 25px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: 400;
+  color: @special-grey-0-6;
+  background-color: transparent;
+  border: none;
+}
+
+.user-information__textarea::placeholder {
+  color: @special-grey-0-6;
+}
+
+.user-information__transport {
+  grid-area: transport;
+  padding: 16px 10px 15px 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 10px 26px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 23px 10px 24px 10px;
+  }
+}
+
+.user-information__transport-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .zero-intervals;
+  list-style: none;
+}
+
+.user-information__transport-item {
+  position: relative;
+  width: 31px;
+  height: 31px;
+}
+
+.user-information__checkbox {
+  display: none;
+}
+
+.user-information__checkbox-label {
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 31px;
+  background-color: @basic-white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-information__checkbox:checked + .user-information__transport-ico {
+  opacity: 1;
+}
+
+.user-information__checkbox + .user-information__transport-ico {
+  opacity: 0.15;
+}
+
+

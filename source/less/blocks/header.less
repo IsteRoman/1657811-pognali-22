@@ -87,6 +87,7 @@
   border: none;
   background: none;
   transition: @default-transition;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-left: auto;
@@ -374,7 +375,8 @@
 
 .header--no-js .header__out-trail,
 .header--open .header__out-trail,
-.header--scrol .header__out-trail {
+.header--scrol .header__out-trail,
+.header--form {
   @media (max-width: @max-mobile-width) {
     display: none;
   }

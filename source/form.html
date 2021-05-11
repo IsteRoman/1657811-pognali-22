@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Погнали</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body class="body">
+    <div class="visually-hidden">
+      @@include("build/img/sprite.svg")
+    </div>
+    <heaber class="header header--no-js">
+      <div class="wrapper header__block">
+        <a class="header__logo header__logo-static header__logo--scrol" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop.webp 1x, img/logo/logo-desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.png 1x, img/logo/logo-desktop@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet.webp 1x, img/logo/logo-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.png 1x, img/logo/logo-tablet@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile.webp 1x, img/logo/logo-mobile@2x.webp 2x">
+            <img class="header__logo-ico" src="img/logo/logo-mobile.png" srcset="img/logo/logo-mobile@2x.png 2x" width="96" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <a class="header__logo header__logo-move" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.webp 1x, img/logo/logo-desktop-scrol@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.png 1x, img/logo/logo-desktop-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.webp 1x, img/logo/logo-tablet-scrol@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.png 1x, img/logo/logo-tablet-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile-scrol.webp 1x, img/logo/logo-mobile-scrol@2x.webp 2x">
+            <img class="header__logo-scrol-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="100" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <button class="header__button header__button--close" type="button" aria-label="открыть меню"></button>
+        <div class="header__navigation-block">
+          <nav class="header__navigation">
+            <ul class="header__navigation-list">
+              <li class="header__navigation-itme">
+                <a class="header__navigation-link" href="index.html">о сервисе</a>
+              </li>
+              <li class="header__navigation-itme">
+                <a class="header__navigation-link header__navigation-link--active" href="form.html">направления</a>
+              </li>
+              <li class="header__navigation-itme">
+                <a class="header__navigation-link" href="catalog.html">попутчики</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button header__button-authorization">авторизация</a>
+          <ul class="header__our-contacts our-contacts">
+            <li class="our-contacts__item our-contacts__item--header">
+              <a class="our-contacts__link" href="tel:88005558628">
+                <svg class="our-contacts__link-ico-phone" width="18" height="17">
+                  <use href="#icon-phone"></use>
+                </svg>
+                8 800 555-86-28</a>
+            </li>
+            <li class="our-contacts__item">
+              <a class="our-contacts__link" href="mailto:mail@htmlacademy.ru">
+                <svg class="our-contacts__link-ico-mail" width="23" height="25">
+                  <use href="#icon-mail"></use>
+                </svg>
+                mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="header__social social">
+            <li class="social__item">
+              <a class="social__link" href="#" title="Фэйсбук">
+                <svg class="social__ico" width="10" height="20">
+                  <use href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="В контакте">
+                <svg class="social__ico" width="23" height="11">
+                  <use href="#icon-vkontakte"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="Инстаграм">
+                <svg class="social__ico" width="18" height="17">
+                  <use href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div  class="header__out-trail header--form">
+          <ul class="header__contacts">
+            <li class="header__contacts__item">
+              <a class="header__contacts-link" href="tel:88005558628" title="Позвоните нам">
+                <svg class="header__contacts-ico-phone" width="18" height="18">
+                  <use href="#icon-ring-phone"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__contacts__item">
+              <a class="header__contacts-link" href="mailto:mail@htmlacademy.ru" title="Напишите нам">
+                <svg class="header__contacts-ico-mail" width="18" height="15">
+                  <use href="#icon-post-mail"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="button header__button-authorization-out-trail">авторизация</a>
+        </div>
+      </div>
+    </heaber>
+
+
+
+
+
+
+
+
+
+    <main>
+      <h1 class="title__block title__block-form"><span class="wrapper main-title-else">Направления</span></h1>
+      <section class="user-information">
+        <div class="wrapper user-information__block">
+          <img class="user-information__level" src="img/catalog/ico-level/lv-80.svg" width="100" height="100" alt="Уровень пользователя 80">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.webp 1x, img/catalog/users/form-user-avatar-desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.png 1x, img/catalog/users/form-user-avatar-desktop@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.webp 1x, img/catalog/users/form-user-avatar-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.png 1x, img/catalog/users/form-user-avatar-tablet@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/form-user-avatar-modile.webp 1x, img/catalog/users/form-user-avatar-modile@2x.webp 2x">
+            <img class="user-information__avatar" src="img/catalog/users/form-user-avatar-modile.png" srcset="img/catalog/users/form-user-avatar-modile@2x.png 2x" width="100" height="100" alt="Аватар пользователя">
+          </picture>
+          <button class="user-information__button" type="button"><span class="user-information__button-text">сменить&nbsp;</span>фото</button>
+          <fieldset class="user-information__fieldset user-information__hashtags">
+            <legend class="user-information__legend">Тэги</legend>
+            <label class="visually-hidden" for="user-hashtags-input">Введите свои хаштеги</label>
+            <textarea class="user-information__textarea" id="user-hashtags-input" rows="2" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
+          </fieldset>
+          <fieldset class="user-information__fieldset user-information__transport">
+            <legend class="user-information__legend">Транспорт</legend>
+
+
+
+            <ul class="user-information__transport-list">
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="Air_travel" name="Air-travel" checked>
+                <label class="user-information__checkbox-label" for="Air_travel" title="Авиаперелет">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-plane"></use>
+                  </svg>
+                </label>
+              </li>
+
+
+
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="Road_transport" name="Road-transport" checked>
+                <label class="user-information__checkbox-label" for="Road_transport" title="Автотранспорт">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-bus"></use>
+                  </svg>
+                </label>
+              </li>
+
+
+
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="Bike_riding" name="Bike-riding">
+                <label class="user-information__checkbox-label" for="Bike_riding" title="Велосипед">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-bicycle"></use>
+                  </svg>
+                </label>
+              </li>
+
+
+
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="On_foot" name="On-foot" checked>
+                <label class="user-information__checkbox-label" for="On_foot" title="Пешком">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-run"></use>
+                  </svg>
+                </label>
+              </li>
+            </ul>
+
+
+
+          </fieldset>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="wrapper footer__block">
+        <a class="footer__logo" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.webp 1x, img/logo/logo-desktop-scrol@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.png 1x, img/logo/logo-desktop-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.webp 1x, img/logo/logo-tablet-scrol@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.png 1x, img/logo/logo-tablet-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile-scrol.webp 1x, img/logo/logo-mobile-scrol@2x.webp 2x">
+            <img class="footer__logo-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="96" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="#" title="Фэйсбук">
+              <svg class="social__ico" width="10" height="20">
+                <use href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" title="В контакте">
+              <svg class="social__ico" width="23" height="11">
+                <use href="#icon-vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" title="Инстаграм">
+              <svg class="social__ico" width="18" height="17">
+                <use href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+          <svg class="footer__developer-ico" width="27" height="34">
+            <use href="#icon-html"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
