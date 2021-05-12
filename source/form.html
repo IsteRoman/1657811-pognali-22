@@ -117,30 +117,23 @@
         </div>
       </div>
     </heaber>
-
-
-
-
-
-
-
-
-
     <main>
-      <h1 class="title__block title__block-form"><span class="wrapper main-title-else">Направления</span></h1>
+      <h1 class="title__block title__block-form"><span class="wrapper-form main-title-else">Направления</span></h1>
       <section class="user-information">
-        <div class="wrapper user-information__block">
+        <div class="wrapper-form user-information__block">
           <img class="user-information__level" src="img/catalog/ico-level/lv-80.svg" width="100" height="100" alt="Уровень пользователя 80">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.webp 1x, img/catalog/users/form-user-avatar-desktop@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.png 1x, img/catalog/users/form-user-avatar-desktop@2x.png 2x">
+          <div class="user-information__avatar-block">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.webp 1x, img/catalog/users/form-user-avatar-desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.png 1x, img/catalog/users/form-user-avatar-desktop@2x.png 2x">
 
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.webp 1x, img/catalog/users/form-user-avatar-tablet@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.png 1x, img/catalog/users/form-user-avatar-tablet@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.webp 1x, img/catalog/users/form-user-avatar-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.png 1x, img/catalog/users/form-user-avatar-tablet@2x.png 2x">
 
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/form-user-avatar-modile.webp 1x, img/catalog/users/form-user-avatar-modile@2x.webp 2x">
-            <img class="user-information__avatar" src="img/catalog/users/form-user-avatar-modile.png" srcset="img/catalog/users/form-user-avatar-modile@2x.png 2x" width="100" height="100" alt="Аватар пользователя">
-          </picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/form-user-avatar-modile.webp 1x, img/catalog/users/form-user-avatar-modile@2x.webp 2x">
+              <img class="user-information__avatar" src="img/catalog/users/form-user-avatar-modile.png" srcset="img/catalog/users/form-user-avatar-modile@2x.png 2x" width="100" height="100" alt="Аватар пользователя">
+            </picture>
+          </div>
           <button class="user-information__button" type="button"><span class="user-information__button-text">сменить&nbsp;</span>фото</button>
           <fieldset class="user-information__fieldset user-information__hashtags">
             <legend class="user-information__legend">Тэги</legend>
@@ -149,69 +142,416 @@
           </fieldset>
           <fieldset class="user-information__fieldset user-information__transport">
             <legend class="user-information__legend">Транспорт</legend>
-
-
-
             <ul class="user-information__transport-list">
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Air_travel" name="Air-travel" checked>
-                <label class="user-information__checkbox-label" for="Air_travel" title="Авиаперелет">
-                  <svg class="user-information__transport-ico" width="16" height="16">
-                    <use href="#icon-plane"></use>
-                  </svg>
-                </label>
+                <svg class="user-information__transport-ico" width="16" height="16">
+                  <use href="#icon-plane"></use>
+                </svg>
+                <label class="user-information__checkbox-label" for="Air_travel" title="Авиаперелет"></label>
               </li>
-
-
-
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Road_transport" name="Road-transport" checked>
-                <label class="user-information__checkbox-label" for="Road_transport" title="Автотранспорт">
-                  <svg class="user-information__transport-ico" width="16" height="16">
-                    <use href="#icon-bus"></use>
-                  </svg>
-                </label>
+                <svg class="user-information__transport-ico" width="16" height="16">
+                  <use href="#icon-bus"></use>
+                </svg>
+                <label class="user-information__checkbox-label" for="Road_transport" title="Автотранспорт"></label>
               </li>
-
-
-
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Bike_riding" name="Bike-riding">
-                <label class="user-information__checkbox-label" for="Bike_riding" title="Велосипед">
-                  <svg class="user-information__transport-ico" width="16" height="16">
-                    <use href="#icon-bicycle"></use>
-                  </svg>
-                </label>
+                <svg class="user-information__transport-ico" width="16" height="16">
+                  <use href="#icon-bicycle"></use>
+                </svg>
+                <label class="user-information__checkbox-label" for="Bike_riding" title="Велосипед"></label>
               </li>
-
-
-
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="On_foot" name="On-foot" checked>
-                <label class="user-information__checkbox-label" for="On_foot" title="Пешком">
-                  <svg class="user-information__transport-ico" width="16" height="16">
-                    <use href="#icon-run"></use>
-                  </svg>
-                </label>
+                <svg class="user-information__transport-ico" width="16" height="16">
+                  <use href="#icon-run"></use>
+                </svg>
+                <label class="user-information__checkbox-label" for="On_foot" title="Пешком"></label>
               </li>
             </ul>
-
-
-
           </fieldset>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
+      <section class="my-plans">
+        <div class="wrapper-form my-plans__block">
+          <h2 class="my-plans__title title__form-sub-title">Мои планы:</h2>
+          <ul class="my-plans__list">
+            <li class="my-plans__item">
+              <h3 class="my-plans__item-title">Франция, Италия</h3>
+              <span class="my-plans__item-companions">3 попутчика</span>
+              <span class="my-plans__item-dates">26 мар — 29 мар</span>
+              <a class="my-plans__item-button-change" href="change-plan.html">изменить</a>
+            </li>
+            <li class="my-plans__item">
+              <h3 class="my-plans__item-title">Таиланд, Индонезия</h3>
+              <span class="my-plans__item-companions">1 попутчик</span>
+              <span class="my-plans__item-dates">1 июл — 15 июл</span>
+              <a class="my-plans__item-button-change" href="change-plan.html">изменить</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="plan-add">
+        <div class="wrapper-form plan-add__block">
+          <p><a name="step-one"></a></p>
+          <h2 class="plan-add__title title__form-sub-title">Добавить план:</h2>
+          <div class="plan-add__dotts"></div>
+          <form class="plan-add__form" method="POST" action="https://echo.htmlacademy.ru/">
+            <div class="plan-add__form-step-one step-one">
+              <h3 class="step-one__title title__step-title">Шаг 1. <span class="step-one__title-second-line">Даты пребывания</span></h3>
+              <div class="step-one__section--visibility">
+                <p class="step-one__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+                <fieldset class="step-one__fieldset">
+                  <span class="step-one__fieldset-name">ищу попутчиков:</span>
+                  <span class="step-one__fieldset-measure">Чел.</span>
+                  <label class="visually-hidden" for="companions_number" aria-label="Укажите колличество попутчиков"></label>
+                  <button class="step-one__button-minus" type="button">
+                    <svg class="step-one__button-minus-ico" width="14" height="1">
+                      <use href="#icon-minus"></use>
+                    </svg>
+                  </button>
+                  <input class="step-one__input" type="number" id="companions_number" name="companions-number" value="2" minlength="1" maxlength="10">
+                  <button class="step-one__button-plus" type="button">
+                    <svg class="step-one__button-plus-ico" width="14" height="14">
+                      <use href="#icon-plus"></use>
+                    </svg>
+                  </button>
+                  <div class="step-one__chaild-off">
+                    <input class="step-one__chaild-off-checkbox" type="checkbox" id="chaild_off" name="chaild-off" checked>
+                    <label class="step-one__chaild-off-checkbox-label" for="chaild_off">Можно с детьми</label>
+                  </div>
+                </fieldset>
+                <fieldset class="step-one__fieldset">
+                  <span class="step-one__fieldset-name">длительность:</span>
+                  <span class="step-one__fieldset-measure">дн.</span>
+                  <label class="visually-hidden" for="days_number" aria-label="Укажите колличество дней"></label>
+                  <button class="step-one__button-minus" type="button">
+                    <svg class="step-one__button-minus-ico" width="14" height="1">
+                      <use href="#icon-minus"></use>
+                    </svg>
+                  </button>
+                  <input class="step-one__input" type="number" id="days_number" name="days-number" value="2" minlength="1" maxlength="20">
+                  <button class="step-one__button-plus" type="button">
+                    <svg class="step-one__button-plus-ico" width="14" height="14">
+                      <use href="#icon-plus"></use>
+                    </svg>
+                  </button>
+                </fieldset>
+                <fieldset class="step-one__fieldset">
+                  <button class="step-one__button-back" type="button">
+                    <svg class="step-one__button-back-ico" width="15" height="21">
+                      <use href="#icon-button-back"></use>
+                    </svg>
+                  </button>
+                  <span class="step-one__fieldset-month">Март 2019</span>
+                  <button class="step-one__button-next" type="button">
+                    <svg class="step-one__button-next-ico" width="15" height="21">
+                      <use href="#icon-button-next"></use>
+                    </svg>
+                  </button>
+                  <ul class="step-one__calendar">
+                    <li class="step-one__calendar-item step-one__calendar-item--day">П</li>
+                    <li class="step-one__calendar-item step-one__calendar-item--day">В</li>
+                    <li class="step-one__calendar-item step-one__calendar-item--day">С</li>
+                    <li class="step-one__calendar-item step-one__calendar-item--day">Ч</li>
+                    <li class="step-one__calendar-item step-one__calendar-item--day">П</li>
+                    <li class="step-one__calendar-item step-one__calendar-item--day step-one__calendar-item--weekend">С</li>
+                    <li class="step-one__calendar-item step-one__calendar-item--day step-one__calendar-item--weekend">В</li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="23_02">23</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="23_02" name="23.02" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="24_02">24</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="24_02" name="24.02" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="25_02">25</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="25_02" name="25.02" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="26_02">26</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="26_02" name="26.02" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="27_02">27</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="27_02" name="27.02" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="28_02">28</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="28_02" name="28.02" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="1_03">1</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="1_03" name="1.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="2_03">2</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="2_03" name="2.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="3_03">3</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="3_03" name="3.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="4_03">4</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="4_03" name="4.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="5_03">5</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="5_03" name="5.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="6_03">6</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="6_03" name="6.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="7_03">7</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="7_03" name="7.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="8_03">8</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="8_03" name="8.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="9_03">9</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="9_03" name="9.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="10_03">10</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="10_03" name="10.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="11_03">11</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="11_03" name="11.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="12_03">12</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="12_03" name="12.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="13_03">13</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="13_03" name="13.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="14_03">14</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="14_03" name="14.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="15_03">15</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="15_03" name="15.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="16_03">16</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="16_03" name="16.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="17_03">17</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="17_03" name="17.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="18_03">18</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="18_03" name="18.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="19_03">19</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="19_03" name="19.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="20_03">20</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="20_03" name="20.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="21_03">21</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="21_03" name="21.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="22_03">22</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="22_03" name="22.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="23_03">23</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="23_03" name="23.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="24_03">24</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="24_03" name="24.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="25_03">25</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="25_03" name="25.03" disabled>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="26_03">26</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="26_03" name="26.03" checked>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="27_03">27</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="27_03" name="27.03" checked>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="28_03">28</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="28_03" name="28.03" checked>
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="29_03">29</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="29_03" name="29.03">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="30_03">30</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="30_03" name="30.03">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="31_03">31</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="31_03" name="31.03">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="1_04">1</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="1_04" name="1.04">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="2_04">2</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="2_04" name="2.04">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="3_04">3</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="3_04" name="3.04">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="4_04">4</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="4_04" name="4.04">
+                    </li>
+                    <li class="step-one__calendar-item">
+                      <label class="step-one__calendar-label" for="5_04">5</label>
+                      <input class="step-one__calendar-checkdox" type="checkbox" id="5_04" name="5.04">
+                    </li>
+                  </ul>
+                </fieldset>
+                <a class="button step-one__button" href="#step-second">Следующий шаг
+                  <svg class="button__arrow-ico step-one__arrow-ico" width="14" height="16">
+                    <use href="#button-arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="plan-add__form-step-three step-second">
+              <p><a name="step-second"></a></p>
+              <h3 class="step-second__title title__step-title">Шаг 2. <span class="step-second__title-second-line">Маршрут</span></h3>
+              <div class="step-second__section--visibility">
+                <p class="step-second__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+                <ul class="step-second__country-cheese-list">
+                  <li class="step-second__country-cheese-item">
+                    <button class="step-second__button-country-cheese" type="button">Босния и герцеговина
+                      <svg class="step-second__button-country-cheese-ico" width="16" height="12">
+                        <use href="#icon-button-down"></use>
+                      </svg>
+                    </button>
+                    <span class="step-second__flag step-second__flag-first-country"></span>
+                  </li>
+                  <li class="step-second__country-cheese-item">
+                    <button class="step-second__button-country-cheese" type="button">чехия
+                      <svg class="step-second__button-country-cheese-ico" width="16" height="12">
+                        <use href="#icon-button-down"></use>
+                      </svg>
+                    </button>
+                    <span class="step-second__flag step-second__flag-second-country"></span>
+                  </li>
+                  <li class="step-second__country-cheese-item">
+                    <button class="step-second__button-country-cheese" type="button">выберите страну
+                      <svg class="step-second__button-country-cheese-ico" width="16" height="12">
+                        <use href="#icon-button-down"></use>
+                      </svg>
+                    </button>
+                    <span class="step-second__flag step-second__flag-first-country"></span>
+                    <div class="step-second__countrys-block">
+                      <ul class="step-second__countrys-block-list">
+                        <li class="step-second__countrys-block-item">а
+                          <ul class="step-second__countrys-block-item-sub-list">
+                            <li class="step-second__countrys-block-item-sub-list-item">Австралия</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Австрия</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Азербайджан</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Албания</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Алжир</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Ангола</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Андорра</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Антигуа и Барбуда</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Аргентина</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Армения</li>
+                            <li class="step-second__countrys-block-item-sub-list-item">Афганистан</li>
+                          </ul>
+                        </li>
+                        <li class="step-second__countrys-block-item">б</li>
+                        <li class="step-second__countrys-block-item">в</li>
+                        <li class="step-second__countrys-block-item">г</li>
+                        <li class="step-second__countrys-block-item">д</li>
+                        <li class="step-second__countrys-block-item">е</li>
+                        <li class="step-second__countrys-block-item">з</li>
+                        <li class="step-second__countrys-block-item">и</li>
+                        <li class="step-second__countrys-block-item">к</li>
+                        <li class="step-second__countrys-block-item">л</li>
+                        <li class="step-second__countrys-block-item">м</li>
+                        <li class="step-second__countrys-block-item">н</li>
+                        <li class="step-second__countrys-block-item">о</li>
+                        <li class="step-second__countrys-block-item">п</li>
+                        <li class="step-second__countrys-block-item">р</li>
+                        <li class="step-second__countrys-block-item">с</li>
+                        <li class="step-second__countrys-block-item">т</li>
+                        <li class="step-second__countrys-block-item">у</li>
+                        <li class="step-second__countrys-block-item">ф</li>
+                        <li class="step-second__countrys-block-item">х</li>
+                        <li class="step-second__countrys-block-item">ч</li>
+                        <li class="step-second__countrys-block-item">ш</li>
+                        <li class="step-second__countrys-block-item">э</li>
+                        <li class="step-second__countrys-block-item">ю</li>
+                        <li class="step-second__countrys-block-item">я</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="step-second__country-cheese-item">
+                    <button class="step-second__button-country-cheese" type="button">Добавить страну
+                      <svg class="step-second__button-country-add-ico" width="14" height="14">
+                        <use href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <a class="button step-one__button" href="#step-three">Следующий шаг
+                  <svg class="button__arrow-ico step-one__arrow-ico" width="14" height="16">
+                    <use href="#button-arrow"></use>
+                  </svg>
+                </a>
+                <a class="plan-add__button-back step-three__button-back" href="#step-one">На шаг назад</a>
+              </div>
+            </div>
+            <div class="plan-add__form-step-three step-three">
+              <p><a name="step-three"></a></p>
+              <h3 class="step-three__title title__step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
+              <div class="step-three__section--visibility">
+                <p class="step-three__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                <fieldset class="step-three__fieldset">
+                  <ul class="step-three__entertainment-list">
+                    <li class="step-three__entertainment-item">
+                      <span class="step-three__entertainment-title">Босния и Герцеговина<span class="step-three__entertainment-flag step-three__entertainment-flag-first-country"></span></span>
+                      <label class="visually-hidden" for="first_country_action" aria-label="План действий"></label>
+                      <textarea class="step-three__entertainment-textarea" id="first_country_action" name="first-country-action" placeholder="План действий"></textarea>
+                    </li>
+                    <li class="step-three__entertainment-item">
+                      <span class="step-three__entertainment-title">Чехия<span class="step-three__entertainment-flag step-three__entertainment-flag-second-country"></span></span>
+                      <label class="visually-hidden" for="second_country_action" aria-label="План действий"></label>
+                      <textarea class="step-three__entertainment-textarea" id="second_country_action" name="second-country-action" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="button plan-add__button-submit" type="submit">Отправить</button>
+                <a class="plan-add__button-back step-three__button-back" href="#step-second">На шаг назад</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="wrapper footer__block">
