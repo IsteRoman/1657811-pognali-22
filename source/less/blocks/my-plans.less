@@ -1,0 +1,203 @@
+.my-plans {
+  position: relative;
+  background-color: @special-blue-light;
+  padding-bottom: 59px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 129px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 119px;
+  }
+}
+
+.my-plans::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background-color: inherit;
+  border-radius: 30px 30px 0 0;
+
+  @media (min-width: @tablet-width) {
+    top: -57px;
+    height: 57px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -55px;
+    height: 55px;
+    border-radius: 30px 30px 0 0;
+  }
+}
+
+.my-plans__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 124px;
+  }
+}
+
+.my-plans__title {
+  .zero-intervals;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 34px;
+  }
+}
+
+.my-plans__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .zero-intervals;
+  list-style: none;
+  counter-reset: number;
+}
+
+.my-plans__item {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "companions"
+    "dates"
+    "button";
+    margin-top: 10px;
+    padding: 24px 25px 23px 25px;
+    color: @basic-blue-dark;
+    background-color: @basic-white;
+    border-radius: 10px;
+
+    @media (min-width: @tablet-width) {
+      grid-template-areas:
+        "title . ."
+        "companions dates button";
+      margin-top: 11px;
+      padding: 40px 40px 14px 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-areas:
+        "title companions dates button";
+      margin-top: 15px;
+      padding: 36px 42px 36px 42px;
+    }
+}
+
+.my-plans__item::before {
+  counter-increment: number;
+  content: counter(number)".";
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: inline-flex;
+  min-width: 13px;
+  height: 16px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: @basic-blue-dark;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    top: 45px;
+    right: 32px;
+    left: unset;
+    min-width: 16px;
+    height: 15px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 40px;
+    right: unset;
+    left: 42px;
+  }
+}
+
+.my-plans__item-title {
+  grid-area: title;
+  .zero-intervals;
+  margin-bottom: 20px;
+  margin-left: 18px;
+  font-size: 16px;
+  line-height: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 222px;
+    margin-bottom: 54px;
+    margin-left: 0px;
+    font-size: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-left: 53px;
+  }
+}
+
+.my-plans__item-companions,
+.my-plans__item-dates,
+.my-plans__item-button-change {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 2px;
+  }
+}
+
+.my-plans__item-companions {
+  grid-area: companions;
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 139px;
+    margin-bottom: 0;
+  }
+}
+
+.my-plans__item-dates {
+  grid-area: dates;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-left: -120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -160px;
+  }
+}
+
+
+.my-plans__item-button-change {
+  grid-area: button;
+  color: @basic-black-0-3;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
