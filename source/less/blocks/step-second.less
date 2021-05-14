@@ -1,0 +1,268 @@
+.step-second {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 23px 25px 17px 24px;
+  background-color: @basic-white;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+    padding: 48px 38px 54px 43px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 43px;
+    padding: 98px 159px 90px 159px;
+    border-radius: 60px;
+  }
+}
+
+.step-second__title {
+  display: flex;
+  flex-direction: column;
+  .zero-intervals;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+}
+
+.step-second__text {
+  .zero-intervals;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 1.375;
+  color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 411px;
+    margin-bottom: 55px;
+  }
+}
+
+.step-second__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+    border-top: 1px solid @super-light-gray-4;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+  }
+}
+
+.step-second__country-cheese-list {
+  display: flex;
+  flex-direction: column;
+  .zero-intervals;
+}
+
+.step-second__country-cheese-item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.step-second__country-cheese-item::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 49px;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  background-color: @basic-white;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 50%;
+}
+
+.step-second__country-cheese-item:first-of-type::before,
+.step-second__country-cheese-item:nth-of-type(2)::before {
+  background-color: @basic-blue-dark;
+  border: 1px solid @basic-blue-dark;
+}
+
+.step-second__country-cheese-item::after {
+  content: "";
+  position: absolute;
+  top: 47px;
+  right: 49px;
+  width: 8px;
+  height: 10px;
+  background: url(../img/icon/arrow.svg) no-repeat;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.step-second__country-cheese-item:last-of-type::after {
+  content: none;
+}
+
+.step-second__country-cheese-item:last-of-type {
+  margin-bottom: 25px;
+}
+
+.step-second__button-country-add-ico {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  stroke: @basic-black;
+  opacity: 0.2;
+}
+
+.step-second__button-country-cheese {
+  position: relative;
+  flex-grow: 1;
+  height: 42px;
+  padding: 13px 10px;
+  font-size: 14px;
+  line-height: 1.2857;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: start;
+  color: @basic-blue-dark;
+  background: none;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.step-second__button-country-cheese-ico {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 16px;
+
+  @media (max-width: @max-mobile-width) {
+    z-index: 2;
+  }
+}
+
+.step-second__flag {
+  flex-shrink: 0;
+  width: 53px;
+  height: 42px;
+  background: none;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 4px;
+}
+
+.step-second__country-cheese-item:first-of-type .step-second__flag {
+
+  @media (max-width: @max-mobile-width) {
+    box-shadow: -50px 0 10px -3px @basic-white,
+              -67px 0 10px -5px @basic-white;
+    z-index: 1;
+  }
+}
+
+.step-second__flag-first-country {
+  background: url(../img/flags/bosnia-and-herzegovina.png) center center no-repeat;
+  background-size: 35px 24px;
+}
+
+.step-second__flag-second-country {
+  background: url(../img/flags/czechia.png) center center no-repeat;
+  background-size: 35px 24px;
+}
+
+.step-second__button-close {
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  width: 21px;
+  height: 21px;
+  background-color: @super-light-gray-5;
+  border: none;
+  border-radius: 50%;
+
+  @media (max-width: @max-mobile-width) {
+    z-index: 2;
+  }
+}
+
+.step-second__button-close-ico {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  stroke: @basic-black;
+  opacity: 0.1;
+}
+
+
+
+
+
+
+.step-second__countrys-block {
+  display: none;
+}
+
+.step-second__button-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-second__button-back {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 17px;
+  line-height: 1.764;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-self: center;
+  color: @basic-blue;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+    line-height: 0.91;
+  }
+}
+
+.step-second__button-back:hover,
+.step-second__button-back:focus {
+  opacity: 0.6;
+}
+
+.step-second__button-back:active {
+  opacity: 0.3;
+}
+
+.step-second__arrow-back-ico {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 19px;
+  }
+}

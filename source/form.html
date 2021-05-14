@@ -196,7 +196,7 @@
       </section>
       <section class="plan-add">
         <div class="wrapper-form plan-add__block">
-          <p><a name="step-one"></a></p>
+          <p class="visually-hidden"><a name="step-one"></a></p>
           <h2 class="plan-add__title title__form-sub-title">Добавить план:</h2>
           <div class="plan-add__steps-indicator">
             <span class="plan-add__steps-dotts plan-add__steps-dotts--active"><span class="plan-add__steps-text">даты</span></span>
@@ -461,19 +461,24 @@
                 </a>
               </div>
             </div>
-            <div class="plan-add__form-step-three step-second form-no-js">
-              <p><a name="step-second"></a></p>
+            <div class="plan-add__form-step-second step-second form-no-js">
+              <p class="visually-hidden"><a name="step-second"></a></p>
               <h3 class="step-second__title title__step-title">Шаг 2. <span class="step-second__title-second-line">Маршрут</span></h3>
-              <div class="step-second__section--visibility">
-                <p class="step-second__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <p class="step-second__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <div class="step-second__section">
                 <ul class="step-second__country-cheese-list">
                   <li class="step-second__country-cheese-item">
-                    <button class="step-second__button-country-cheese" type="button">Босния и герцеговина
+                    <button class="step-second__button-country-cheese" type="button">Босния&nbsp;и&nbsp;герцеговина
                       <svg class="step-second__button-country-cheese-ico" width="16" height="12">
                         <use href="#icon-button-down"></use>
                       </svg>
                     </button>
                     <span class="step-second__flag step-second__flag-first-country"></span>
+                    <button class="step-second__button-close" type="button" aria-label="Удалить">
+                      <svg class="step-second__button-close-ico" width="24" height="20">
+                        <use href="#icon-close"></use>
+                      </svg>
+                    </button>
                   </li>
                   <li class="step-second__country-cheese-item">
                     <button class="step-second__button-country-cheese" type="button">чехия
@@ -482,6 +487,11 @@
                       </svg>
                     </button>
                     <span class="step-second__flag step-second__flag-second-country"></span>
+                    <button class="step-second__button-close" type="button" aria-label="Удалить">
+                      <svg class="step-second__button-close-ico" width="24" height="20">
+                        <use href="#icon-close"></use>
+                      </svg>
+                    </button>
                   </li>
                   <li class="step-second__country-cheese-item">
                     <button class="step-second__button-country-cheese" type="button">выберите страну
@@ -489,49 +499,63 @@
                         <use href="#icon-button-down"></use>
                       </svg>
                     </button>
-                    <span class="step-second__flag step-second__flag-first-country"></span>
+                    <button class="step-second__button-close" type="button" aria-label="Удалить">
+                      <svg class="step-second__button-close-ico" width="24" height="20">
+                        <use href="#icon-close"></use>
+                      </svg>
+                    </button>
                     <div class="step-second__countrys-block">
-                      <ul class="step-second__countrys-block-list">
-                        <li class="step-second__countrys-block-item">а
-                          <ul class="step-second__countrys-block-item-sub-list">
-                            <li class="step-second__countrys-block-item-sub-list-item">Австралия</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Австрия</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Азербайджан</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Албания</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Алжир</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Ангола</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Андорра</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Антигуа и Барбуда</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Аргентина</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Армения</li>
-                            <li class="step-second__countrys-block-item-sub-list-item">Афганистан</li>
-                          </ul>
-                        </li>
-                        <li class="step-second__countrys-block-item">б</li>
-                        <li class="step-second__countrys-block-item">в</li>
-                        <li class="step-second__countrys-block-item">г</li>
-                        <li class="step-second__countrys-block-item">д</li>
-                        <li class="step-second__countrys-block-item">е</li>
-                        <li class="step-second__countrys-block-item">з</li>
-                        <li class="step-second__countrys-block-item">и</li>
-                        <li class="step-second__countrys-block-item">к</li>
-                        <li class="step-second__countrys-block-item">л</li>
-                        <li class="step-second__countrys-block-item">м</li>
-                        <li class="step-second__countrys-block-item">н</li>
-                        <li class="step-second__countrys-block-item">о</li>
-                        <li class="step-second__countrys-block-item">п</li>
-                        <li class="step-second__countrys-block-item">р</li>
-                        <li class="step-second__countrys-block-item">с</li>
-                        <li class="step-second__countrys-block-item">т</li>
-                        <li class="step-second__countrys-block-item">у</li>
-                        <li class="step-second__countrys-block-item">ф</li>
-                        <li class="step-second__countrys-block-item">х</li>
-                        <li class="step-second__countrys-block-item">ч</li>
-                        <li class="step-second__countrys-block-item">ш</li>
-                        <li class="step-second__countrys-block-item">э</li>
-                        <li class="step-second__countrys-block-item">ю</li>
-                        <li class="step-second__countrys-block-item">я</li>
-                      </ul>
+                      <table class="step-second__table">
+                        <tr>
+                          <td class="step-second__table-item">a
+                            <ul class="step-second__countrys-block-item-sub-list">
+                              <li class="step-second__countrys-block-item-sub-list-item">Австралия</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Австрия</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Азербайджан</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Албания</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Алжир</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Ангола</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Андорра</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Антигуа и Барбуда</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Аргентина</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Армения</li>
+                              <li class="step-second__countrys-block-item-sub-list-item">Афганистан</li>
+                            </ul>
+                          </td>
+                          <td class="step-second__table-item">б</td>
+                          <td class="step-second__table-item">в</td>
+                          <td class="step-second__table-item">г</td>
+                          <td class="step-second__table-item">д</td>
+                        </tr>
+                        <tr>
+                          <td class="step-second__table-item">е</td>
+                          <td class="step-second__table-item">з</td>
+                          <td class="step-second__table-item">и</td>
+                          <td class="step-second__table-item">к</td>
+                          <td class="step-second__table-item">л</td>
+                        </tr>
+                        <tr>
+                          <td class="step-second__table-item">м</td>
+                          <td class="step-second__table-item">н</td>
+                          <td class="step-second__table-item">о</td>
+                          <td class="step-second__table-item">п</td>
+                          <td class="step-second__table-item">р</td>
+                        </tr>
+                        <tr>
+                          <td class="step-second__table-item">с</td>
+                          <td class="step-second__table-item">т</td>
+                          <td class="step-second__table-item">у</td>
+                          <td class="step-second__table-item">ф</td>
+                          <td class="step-second__table-item">х</td>
+                        </tr>
+                        <tr>
+                          <td class="step-second__table-item">ч</td>
+                          <td class="step-second__table-item">ш</td>
+                          <td class="step-second__table-item">э</td>
+                          <td class="step-second__table-item">ю</td>
+                          <td class="step-second__table-item">я</td>
+                        </tr>
+                      </table>
                     </div>
                   </li>
                   <li class="step-second__country-cheese-item">
@@ -542,16 +566,22 @@
                     </button>
                   </li>
                 </ul>
-                <a class="button step-one__button" href="#step-three">Следующий шаг
-                  <svg class="button__arrow-ico step-one__arrow-ico" width="14" height="16">
-                    <use href="#button-arrow"></use>
-                  </svg>
-                </a>
-                <a class="plan-add__button-back step-three__button-back" href="#step-one">На шаг назад</a>
+                <div class="step-second__button-block">
+                  <a class="button step-second__button" href="#step-three">Следующий шаг
+                    <svg class="button__arrow-ico step-second__arrow-ico" width="14" height="16">
+                      <use href="#button-arrow"></use>
+                    </svg>
+                  </a>
+                  <a class="plan-add__button-back step-second__button-back" href="#step-one">
+                    <svg class="button__arrow-ico step-second__arrow-back-ico" width="14" height="16">
+                      <use href="#button-arrow-back"></use>
+                    </svg>
+                    На шаг назад</a>
+                </div>
               </div>
             </div>
             <div class="plan-add__form-step-three step-three">
-              <p><a name="step-three"></a></p>
+              <p class="visually-hidden"><a name="step-three"></a></p>
               <h3 class="step-three__title title__step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
               <p class="step-three__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <div class="step-three__section">
