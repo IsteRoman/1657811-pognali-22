@@ -138,7 +138,7 @@
           <fieldset class="user-information__fieldset user-information__hashtags">
             <legend class="user-information__legend">Тэги</legend>
             <label class="visually-hidden" for="user-hashtags-input">Введите свои хаштеги</label>
-            <textarea class="user-information__textarea" id="user-hashtags-input" rows="2" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
+            <textarea class="user-information__textarea" id="user-hashtags-input" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
           <fieldset class="user-information__fieldset user-information__transport">
             <legend class="user-information__legend">Транспорт</legend>
@@ -550,11 +550,11 @@
                 <a class="plan-add__button-back step-three__button-back" href="#step-one">На шаг назад</a>
               </div>
             </div>
-            <div class="plan-add__form-step-three step-three form-no-js">
+            <div class="plan-add__form-step-three step-three">
               <p><a name="step-three"></a></p>
               <h3 class="step-three__title title__step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
-              <div class="step-three__section--visibility">
-                <p class="step-three__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <p class="step-three__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="step-three__section">
                 <fieldset class="step-three__fieldset">
                   <ul class="step-three__entertainment-list">
                     <li class="step-three__entertainment-item">
@@ -565,12 +565,22 @@
                     <li class="step-three__entertainment-item">
                       <span class="step-three__entertainment-title">Чехия<span class="step-three__entertainment-flag step-three__entertainment-flag-second-country"></span></span>
                       <label class="visually-hidden" for="second_country_action" aria-label="План действий"></label>
-                      <textarea class="step-three__entertainment-textarea" id="second_country_action" name="second-country-action" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <textarea class="step-three__entertainment-textarea" id="second_country_action" name="second-country-action" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                     </li>
                   </ul>
                 </fieldset>
-                <button class="button plan-add__button-submit" type="submit">Отправить</button>
-                <a class="plan-add__button-back step-three__button-back" href="#step-second">На шаг назад</a>
+                <div class="step-three__button-block">
+                  <button class="button plan-add__button-submit" type="submit">Отправить
+                    <svg class="button__arrow-ico step-three__arrow-ico" width="14" height="16">
+                      <use href="#button-arrow"></use>
+                    </svg>
+                  </button>
+                  <a class="plan-add__button-back step-three__button-back" href="#step-second">
+                    <svg class="button__arrow-ico step-three__arrow-back-ico" width="14" height="16">
+                      <use href="#button-arrow-back"></use>
+                    </svg>
+                    На шаг назад</a>
+                </div>
               </div>
             </div>
           </form>

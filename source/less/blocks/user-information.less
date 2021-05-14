@@ -100,6 +100,7 @@
   border-radius: 20px;
   cursor: pointer;
   outline: 0;
+  transition: @default-transition;
 
   @media (min-width: @tablet-width) {
     min-height: 60px;
@@ -121,6 +122,15 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.user-information__button:focus,
+.user-information__button:hover {
+  background-color: @super-light-gray-11;
+}
+
+.user-information__button:active {
+  opacity: 0.3;
 }
 
 .user-information__fieldset {
@@ -156,6 +166,7 @@
 .user-information__hashtags {
   grid-area: hashtags;
   margin-bottom: 25px;
+  border: none;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -178,19 +189,22 @@
 
 .user-information__textarea {
   width: 100%;
-  height: 89px;
+  height: 95px;
   padding: 26px 28px 26px 25px;
   font-size: 16px;
   line-height: 1.125;
   font-weight: 400;
   color: @special-grey-0-6;
   background-color: transparent;
-  border: none;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 10px;
   resize: none;
   overflow-y: none;
+  outline: 0;
+  transition: @default-transition;
 
   @media (min-width: @tablet-width) {
-    height: 94px;
+    height: 100px;
     padding: 35px 40px 46px 40px;
     font-size: 20px;
     line-height: 1.1;
@@ -205,6 +219,16 @@
 
 .user-information__textarea::placeholder {
   color: @special-grey-0-6;
+}
+
+.user-information__textarea:hover,
+.user-information__textarea:focus {
+  border: 1px solid @super-light-gray-10;
+}
+
+.user-information__textarea:focus {
+  color: @special-grey;
+  border: 1px solid @basic-blue;
 }
 
 .user-information__transport {
@@ -277,6 +301,7 @@
   position: absolute;
   top: 7px;
   left: 8px;
+  transition: @default-transition;
 
   @media (min-width: @tablet-width) {
     top: 10px;
@@ -294,4 +319,15 @@
   opacity: 0.15;
 }
 
+.user-information__checkbox-label:hover, .user-information__transport-ico,
+.user-information__checkbox-label:focus, .user-information__transport-ico {
+  opacity: 0.7;
+}
 
+.user-information__checkbox-label:active {
+  background-color: @super-light-gray-9;
+}
+
+.user-information__checkbox-label:active, .user-information__transport-ico {
+  opacity: 0.7;
+}
