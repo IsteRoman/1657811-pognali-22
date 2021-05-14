@@ -198,237 +198,261 @@
         <div class="wrapper-form plan-add__block">
           <p><a name="step-one"></a></p>
           <h2 class="plan-add__title title__form-sub-title">Добавить план:</h2>
-          <div class="plan-add__dotts"></div>
+          <div class="plan-add__steps-indicator">
+            <span class="plan-add__steps-dotts plan-add__steps-dotts--active"><span class="plan-add__steps-text">даты</span></span>
+            <span class="plan-add__steps-dotts"><span class="plan-add__steps-text">маршрут</span></span>
+            <span class="plan-add__steps-dotts"><span class="plan-add__steps-text">развлечения</span></span>
+          </div>
           <form class="plan-add__form" method="POST" action="https://echo.htmlacademy.ru/">
-            <div class="plan-add__form-step-one step-one">
+            <div class="plan-add__form-step-one step-one form-no-js step-one--visibility">
               <h3 class="step-one__title title__step-title">Шаг 1. <span class="step-one__title-second-line">Даты пребывания</span></h3>
-              <div class="step-one__section--visibility">
-                <p class="step-one__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-                <fieldset class="step-one__fieldset">
+              <p class="step-one__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="step-one__section">
+                <fieldset class="step-one__fieldset step-one__fieldset-companions">
                   <span class="step-one__fieldset-name">ищу попутчиков:</span>
                   <span class="step-one__fieldset-measure">Чел.</span>
-                  <label class="visually-hidden" for="companions_number" aria-label="Укажите колличество попутчиков"></label>
-                  <button class="step-one__button-minus" type="button">
-                    <svg class="step-one__button-minus-ico" width="14" height="1">
-                      <use href="#icon-minus"></use>
-                    </svg>
-                  </button>
-                  <input class="step-one__input" type="number" id="companions_number" name="companions-number" value="2" minlength="1" maxlength="10">
-                  <button class="step-one__button-plus" type="button">
-                    <svg class="step-one__button-plus-ico" width="14" height="14">
-                      <use href="#icon-plus"></use>
-                    </svg>
-                  </button>
+                  <div class="step-one__fieldset-input-block">
+                    <label class="visually-hidden" for="companions_number" aria-label="Укажите колличество попутчиков"></label>
+                    <button class="step-one__button-minus" type="button">
+                      <svg class="step-one__button-minus-ico" width="14" height="1">
+                        <use href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <input class="step-one__input" type="number" id="companions_number" name="companions-number" value="2" min="1" max="10">
+                    <button class="step-one__button-plus" type="button">
+                      <svg class="step-one__button-plus-ico" width="14" height="14">
+                        <use href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
                   <div class="step-one__chaild-off">
                     <input class="step-one__chaild-off-checkbox" type="checkbox" id="chaild_off" name="chaild-off" checked>
-                    <label class="step-one__chaild-off-checkbox-label" for="chaild_off">Можно с детьми</label>
+                    <label class="step-one__chaild-off-checkbox-label" for="chaild_off" tabindex="0">Можно с детьми</label>
                   </div>
                 </fieldset>
-                <fieldset class="step-one__fieldset">
+                <fieldset class="step-one__fieldset step-one__fieldset-duration">
                   <span class="step-one__fieldset-name">длительность:</span>
                   <span class="step-one__fieldset-measure">дн.</span>
-                  <label class="visually-hidden" for="days_number" aria-label="Укажите колличество дней"></label>
-                  <button class="step-one__button-minus" type="button">
-                    <svg class="step-one__button-minus-ico" width="14" height="1">
-                      <use href="#icon-minus"></use>
-                    </svg>
-                  </button>
-                  <input class="step-one__input" type="number" id="days_number" name="days-number" value="2" minlength="1" maxlength="20">
-                  <button class="step-one__button-plus" type="button">
-                    <svg class="step-one__button-plus-ico" width="14" height="14">
-                      <use href="#icon-plus"></use>
-                    </svg>
-                  </button>
+                  <div class="step-one__fieldset-input-block">
+                    <label class="visually-hidden" for="days_number" aria-label="Укажите колличество дней"></label>
+                    <button class="step-one__button-minus" type="button">
+                      <svg class="step-one__button-minus-ico" width="14" height="1">
+                        <use href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <input class="step-one__input" type="number" id="days_number" name="days-number" value="2" min="1" max="20">
+                    <button class="step-one__button-plus" type="button">
+                      <svg class="step-one__button-plus-ico" width="14" height="14">
+                        <use href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </fieldset>
-                <fieldset class="step-one__fieldset">
-                  <button class="step-one__button-back" type="button">
-                    <svg class="step-one__button-back-ico" width="15" height="21">
-                      <use href="#icon-button-back"></use>
-                    </svg>
-                  </button>
-                  <span class="step-one__fieldset-month">Март 2019</span>
-                  <button class="step-one__button-next" type="button">
-                    <svg class="step-one__button-next-ico" width="15" height="21">
-                      <use href="#icon-button-next"></use>
-                    </svg>
-                  </button>
-                  <ul class="step-one__calendar">
-                    <li class="step-one__calendar-item step-one__calendar-item--day">П</li>
-                    <li class="step-one__calendar-item step-one__calendar-item--day">В</li>
-                    <li class="step-one__calendar-item step-one__calendar-item--day">С</li>
-                    <li class="step-one__calendar-item step-one__calendar-item--day">Ч</li>
-                    <li class="step-one__calendar-item step-one__calendar-item--day">П</li>
-                    <li class="step-one__calendar-item step-one__calendar-item--day step-one__calendar-item--weekend">С</li>
-                    <li class="step-one__calendar-item step-one__calendar-item--day step-one__calendar-item--weekend">В</li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="23_02">23</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="23_02" name="23.02" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="24_02">24</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="24_02" name="24.02" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="25_02">25</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="25_02" name="25.02" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="26_02">26</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="26_02" name="26.02" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="27_02">27</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="27_02" name="27.02" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="28_02">28</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="28_02" name="28.02" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="1_03">1</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="1_03" name="1.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="2_03">2</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="2_03" name="2.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="3_03">3</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="3_03" name="3.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="4_03">4</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="4_03" name="4.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="5_03">5</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="5_03" name="5.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="6_03">6</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="6_03" name="6.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="7_03">7</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="7_03" name="7.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="8_03">8</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="8_03" name="8.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="9_03">9</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="9_03" name="9.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="10_03">10</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="10_03" name="10.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="11_03">11</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="11_03" name="11.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="12_03">12</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="12_03" name="12.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="13_03">13</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="13_03" name="13.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="14_03">14</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="14_03" name="14.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="15_03">15</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="15_03" name="15.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="16_03">16</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="16_03" name="16.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="17_03">17</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="17_03" name="17.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="18_03">18</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="18_03" name="18.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="19_03">19</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="19_03" name="19.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="20_03">20</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="20_03" name="20.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="21_03">21</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="21_03" name="21.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="22_03">22</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="22_03" name="22.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="23_03">23</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="23_03" name="23.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="24_03">24</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="24_03" name="24.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="25_03">25</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="25_03" name="25.03" disabled>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="26_03">26</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="26_03" name="26.03" checked>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="27_03">27</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="27_03" name="27.03" checked>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="28_03">28</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="28_03" name="28.03" checked>
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="29_03">29</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="29_03" name="29.03">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="30_03">30</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="30_03" name="30.03">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="31_03">31</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="31_03" name="31.03">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="1_04">1</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="1_04" name="1.04">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="2_04">2</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="2_04" name="2.04">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="3_04">3</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="3_04" name="3.04">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="4_04">4</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="4_04" name="4.04">
-                    </li>
-                    <li class="step-one__calendar-item">
-                      <label class="step-one__calendar-label" for="5_04">5</label>
-                      <input class="step-one__calendar-checkdox" type="checkbox" id="5_04" name="5.04">
-                    </li>
-                  </ul>
+                <fieldset class="step-one__fieldset step-one__fieldset-calendar">
+                  <div class="step-one__fieldset-month-block">
+                    <button class="step-one__button-back" type="button">
+                      <svg class="step-one__button-back-ico" width="15" height="21">
+                        <use href="#icon-button-back"></use>
+                      </svg>
+                    </button>
+                    <span class="step-one__fieldset-month">Март 2019</span>
+                    <button class="step-one__button-next" type="button">
+                      <svg class="step-one__button-next-ico" width="15" height="21">
+                        <use href="#icon-button-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <table class="step-one__calendar">
+                    <tr>
+                      <td class="step-one__calendar-item">П<span class="step-one__calendar-item-text">н</span></td>
+                      <td class="step-one__calendar-item">В<span class="step-one__calendar-item-text">т</span></td>
+                      <td class="step-one__calendar-item">С<span class="step-one__calendar-item-text">р</span></td>
+                      <td class="step-one__calendar-item">Ч<span class="step-one__calendar-item-text">т</span></td>
+                      <td class="step-one__calendar-item">П<span class="step-one__calendar-item-text">т</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item--weekend">С<span class="step-one__calendar-item-text">б</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item--weekend">В<span class="step-one__calendar-item-text">с</span></td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="23_02" name="23.02" disabled>
+                        <label class="step-one__calendar-label" for="23_02">23</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="24_02" name="24.02" disabled>
+                        <label class="step-one__calendar-label" for="24_02">24</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="25_02" name="25.02" disabled>
+                        <label class="step-one__calendar-label" for="25_02">25</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="26_02" name="26.02" disabled>
+                        <label class="step-one__calendar-label" for="26_02">26</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="27_02" name="27.02" disabled>
+                        <label class="step-one__calendar-label" for="27_02">27</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="28_02" name="28.02" disabled>
+                        <label class="step-one__calendar-label" for="28_02">28</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="1_03" name="1.03" disabled>
+                        <label class="step-one__calendar-label" for="1_03">1&nbsp;<span class="step-one__calendar-label-data-text">мар</span></label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="2_03" name="2.03" disabled>
+                        <label class="step-one__calendar-label" for="2_03">2</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="3_03" name="3.03" disabled>
+                        <label class="step-one__calendar-label" for="3_03">3</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="4_03" name="4.03" disabled>
+                        <label class="step-one__calendar-label" for="4_03">4</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="5_03" name="5.03" disabled>
+                        <label class="step-one__calendar-label" for="5_03">5</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="6_03" name="6.03" disabled>
+                        <label class="step-one__calendar-label" for="6_03">6</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="7_03" name="7.03" disabled>
+                        <label class="step-one__calendar-label" for="7_03">7</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="8_03" name="8.03" disabled>
+                        <label class="step-one__calendar-label" for="8_03">8</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="9_03" name="9.03" disabled>
+                        <label class="step-one__calendar-label" for="9_03">9</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="10_03" name="10.03" disabled>
+                        <label class="step-one__calendar-label" for="10_03">10</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="11_03" name="11.03" disabled>
+                        <label class="step-one__calendar-label" for="11_03">11</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="12_03" name="12.03" disabled>
+                        <label class="step-one__calendar-label" for="12_03">12</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="13_03" name="13.03" disabled>
+                        <label class="step-one__calendar-label" for="13_03">13</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="14_03" name="14.03" disabled>
+                        <label class="step-one__calendar-label" for="14_03">14</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="15_03" name="15.03" disabled>
+                        <label class="step-one__calendar-label" for="15_03">15</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="16_03" name="16.03" disabled>
+                        <label class="step-one__calendar-label" for="16_03">16</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="17_03" name="17.03" disabled>
+                        <label class="step-one__calendar-label" for="17_03">17</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="18_03" name="18.03" disabled>
+                        <label class="step-one__calendar-label" for="18_03">18</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="19_03" name="19.03" disabled>
+                        <label class="step-one__calendar-label" for="19_03">19</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="20_03" name="20.03" disabled>
+                        <label class="step-one__calendar-label" for="20_03">20</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="21_03" name="21.03" disabled>
+                        <label class="step-one__calendar-label" for="21_03">21</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="22_03" name="22.03" disabled>
+                        <label class="step-one__calendar-label" for="22_03">22</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="23_03" name="23.03" disabled>
+                        <label class="step-one__calendar-label" for="23_03">23</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="24_03" name="24.03" disabled>
+                        <label class="step-one__calendar-label" for="24_03">24</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="25_03" name="25.03" disabled>
+                        <label class="step-one__calendar-label" for="25_03">25</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="26_03" name="26.03" checked>
+                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="26_03">26<span class="step-one__calendar-label-text">Заезд</span></label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="27_03" name="27.03" checked>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="27_03">27</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="28_03" name="28.03" checked>
+                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="28_03">28<span class="step-one__calendar-label-text">Выезд</span></label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="29_03" name="29.03">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="29_03">29</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="30_03" name="30.03">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="30_03">30</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="31_03" name="31.03">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="31_03">31</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="1_04" name="1.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="1_04">1&nbsp;<span class="step-one__calendar-label-data-text">апр</span></label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="2_04" name="2.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="2_04">2</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="3_04" name="3.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="3_04">3</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="4_04" name="4.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="4_04">4</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="5_04" name="5.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="5_04">5</label>
+                      </td>
+                    </tr>
+                  </table>
                 </fieldset>
                 <a class="button step-one__button" href="#step-second">Следующий шаг
                   <svg class="button__arrow-ico step-one__arrow-ico" width="14" height="16">
@@ -437,7 +461,7 @@
                 </a>
               </div>
             </div>
-            <div class="plan-add__form-step-three step-second">
+            <div class="plan-add__form-step-three step-second form-no-js">
               <p><a name="step-second"></a></p>
               <h3 class="step-second__title title__step-title">Шаг 2. <span class="step-second__title-second-line">Маршрут</span></h3>
               <div class="step-second__section--visibility">
@@ -526,7 +550,7 @@
                 <a class="plan-add__button-back step-three__button-back" href="#step-one">На шаг назад</a>
               </div>
             </div>
-            <div class="plan-add__form-step-three step-three">
+            <div class="plan-add__form-step-three step-three form-no-js">
               <p><a name="step-three"></a></p>
               <h3 class="step-three__title title__step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
               <div class="step-three__section--visibility">

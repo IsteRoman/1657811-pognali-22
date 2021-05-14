@@ -1,0 +1,629 @@
+.step-one {
+  margin-bottom: 10px;
+  padding: 24px 25px 23px 25px;
+  background-color: @basic-white;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+    padding: 48px 40px 56px 40px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 44px;
+    padding: 101px 160px 106px 160px;
+    border-radius: 60px;
+  }
+}
+
+.step-one__title {
+  display: flex;
+  flex-direction: column;
+  .zero-intervals;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    margin-bottom: 33px;
+  }
+}
+
+.step-one__text {
+  color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 581px;
+    margin-bottom: 55px;
+  }
+}
+
+.step-one__section {
+  display: none;
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 30px;
+    border-top: 1px solid @super-light-gray-4;
+  }
+}
+
+.form-no-js, .step-one__section,
+.step-one--visibility, .step-one__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-one__fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .zero-intervals;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 26px;
+    border-top: 1px solid @super-light-gray-4;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    width: 475px;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.step-one__fieldset-companions {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.step-one__fieldset-name,
+.step-one__fieldset-measure {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 0.9;
+  }
+}
+
+.step-one__fieldset-name {
+  width: 151px;
+
+  @media (min-width: @tablet-width) {
+    width: 192px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    width: 164px;
+    margin-right: 57px;
+  }
+}
+
+.step-one__fieldset-measure {
+  width: 35px;
+  text-align: end;
+  margin-left: auto;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    width: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    width: 39px;
+    margin-left: 35px;
+    text-align: start;
+  }
+}
+
+.step-one__fieldset-input-block {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+    width: 180px;
+    margin-top: 0;
+  }
+}
+
+.step-one__input {
+  width: 100%;
+  height: 43px;
+  .zero-intervals;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  color: @basic-blue-dark;
+  text-align: center;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 4px;
+  outline: 0;
+
+  @media (min-width: @tablet-width) {
+    height: 70px;
+    font-size: 20px;
+  }
+}
+
+.step-one__input:hover,
+.step-one__input:focus {
+  border: 1px solid @special-grey-4;
+}
+
+.step-one__input:active {
+  border: 1px solid @basic-blue;
+}
+
+.step-one__button-minus,
+.step-one__button-plus {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  .zero-intervals;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 25px;
+    height: 28px;
+  }
+}
+
+.step-one__button-minus {
+  top: 11px;
+  left: 10px;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    left: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 10px;
+  }
+}
+
+.step-one__button-plus {
+  top: 12px;
+  right: 10px;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 10px;
+  }
+}
+
+.step-one__button-minus-ico,
+.step-one__button-plus-ico {
+  width: 16px;
+  height: 16px;
+  stroke: @special-grey-2;
+
+  @media (min-width: @tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.step-one__button-minus:hover .step-one__button-minus-ico,
+.step-one__button-minus:focus .step-one__button-minus-ico,
+.step-one__button-plus:hover .step-one__button-plus-ico,
+.step-one__button-plus:focus .step-one__button-plus-ico {
+  stroke: @special-grey-4;
+}
+
+.step-one__button-minus:active .step-one__button-minus-ico,
+.step-one__button-plus:active .step-one__button-plus-ico {
+  stroke: @basic-blue;
+}
+
+.step-one__fieldset-duration {
+  margin-bottom: 71px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.step-one__chaild-off {
+  position: absolute;
+  top: 180px;
+  left: 39px;
+
+  @media (min-width: @tablet-width) {
+    top: 160px;
+    left: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 15px;
+    left: unset;
+    right: -541px;
+  }
+}
+
+.step-one__chaild-off-checkbox {
+  display: none;
+}
+
+.step-one__chaild-off-checkbox-label {
+  position: relative;
+  display: inline-block;
+  height: 26px;
+  font-size: 15px;
+  line-height: 1;
+  color: @basic-blue-dark;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    height: 36px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.step-one__chaild-off-checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -39px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid @basic-blue;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    top: -9px;
+    left: -58px;
+    width: 36px;
+    height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -9px;
+    left: -58px;
+  }
+}
+
+.step-one__chaild-off-checkbox-label::after {
+  content: none;
+  position: absolute;
+  top: 0;
+  left: -33px;
+  width: 15px;
+  height: 15px;
+  background: url(../img/icon/icon-check-mark.svg) no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    top: -1px;
+    left: -51px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/icon/icon-check-mark.svg) no-repeat;
+    background-size: cover;
+  }
+}
+
+.step-one__chaild-off-checkbox:checked + .step-one__chaild-off-checkbox-label::after {
+  content: "";
+}
+
+.step-one__fieldset-calendar {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 57px;
+  }
+}
+
+.step-one__chaild-off-checkbox-label:hover .step-one__chaild-off-checkbox-label::before,
+.step-one__chaild-off-checkbox-label:focus .step-one__chaild-off-checkbox-label::before {
+  border: 1px solid @special-grey-4;
+}
+
+.step-one__chaild-off-checkbox-label:active .step-one__chaild-off-checkbox-label::before {
+  background-color: @super-light-gray-9;
+  border: 1px solid transparent;
+}
+
+.step-one__chaild-off-checkbox-label:active .step-one__chaild-off-checkbox-label::after {
+  opacity: 0.3;
+}
+
+.step-one__fieldset-month-block {
+  position: relative;
+  width: 100%;
+  margin-bottom: 22px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  border-top: 1px solid @super-light-gray-4;
+  border-bottom: 1px solid @super-light-gray-4;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 39px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 18px;
+    padding-top: 28px;
+    padding-bottom: 22px;
+  }
+}
+
+.step-one__fieldset-month {
+  font-size: 20;
+  line-height: 1;
+  font-weight: 700;
+  color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+  }
+}
+
+.step-one__button-back,
+.step-one__button-next {
+  position: absolute;
+  top: 8px;
+  display: inline-flex;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  .zero-intervals;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    top: 22px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.step-one__button-back {
+  left: -4px;
+
+  @media (min-width: @tablet-width) {
+    left: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -7px;
+  }
+}
+
+.step-one__button-next {
+  right: -4px;
+
+  @media (min-width: @tablet-width) {
+    right: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -7px;
+  }
+}
+
+.step-one__button-back-ico,
+.step-one__button-next-ico {
+  width: 25px;
+  height: 25px;
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.step-one__button-back-ico:focus,
+.step-one__button-next-ico:focus,
+.step-one__button-back-ico:hover,
+.step-one__button-next-ico:hover {
+  opacity: 1;
+}
+
+.step-one__button-back-ico:active,
+.step-one__button-next-ico:active {
+  opacity: 0.1;
+}
+
+.step-one__calendar {
+  width: 100%;
+  color: @special-grey;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.step-one__calendar-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.2857%;
+  min-height: 32px;
+  .zero-intervals;
+  font-size: 14px;
+  line-height: 1.2857;
+  border: 1px solid @super-light-gray-8;
+
+  @media (min-width: @tablet-width) {
+    min-height: 69px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 72px;
+  }
+}
+
+.step-one__calendar-item--weekend {
+  color: @special-orange-dark-2;
+}
+
+.step-one__calendar-item-text {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+}
+
+.step-one__calendar-checkdox {
+  display: none;
+}
+
+.step-one__calendar-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    min-height: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 72px;
+    padding-top: 14px;
+    padding-left: 16px;
+  }
+}
+
+.step-one__calendar-label--valid {
+  font-weight: 500;
+  color: @basic-blue-dark;
+  background-color: @super-light-gray-5;
+}
+
+.step-one__calendar-label-data-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
+.step-one__calendar-label--inportant {
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.step-one__calendar-label-text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin-top: 9px;
+  }
+}
+
+.step-one__calendar-checkdox:disabled + .step-one__calendar-label {
+  opacity: 0.3;
+}
+
+.step-one__calendar-checkdox:checked + .step-one__calendar-label {
+  color: @basic-white;
+  background-color: @basic-blue-dark;
+}
+
+.step-one__calendar-label:hover,
+.step-one__calendar-label:focus {
+  border: 2px solid @special-orange-dark-2;
+
+  @media (min-width: @tablet-width) {
+    border: 4px solid @special-orange-dark-2;
+  }
+}
+
+.step-one__button {
+  width: 100%;
+  min-height: 40px;
+  justify-content: center;
+  border-radius: 20px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: 284px;
+    min-height: 80px;
+    justify-content: space-between;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 286px;
+  }
+}
+
+.step-one__arrow-ico {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
