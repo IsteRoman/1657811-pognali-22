@@ -72,7 +72,6 @@
   @media (min-width: @tablet-width) {
     width: 94px;
     height: 94px;
-
   }
 
   @media (min-width: @desktop-width) {
@@ -311,23 +310,20 @@
   }
 }
 
-.user-information__checkbox:checked + .user-information__transport-ico {
+.user-information__checkbox:checked ~ .user-information__transport-ico {
   opacity: 1;
 }
 
-.user-information__checkbox + .user-information__transport-ico {
+.user-information__checkbox ~ .user-information__transport-ico {
   opacity: 0.15;
 }
 
-.user-information__checkbox-label:hover, .user-information__transport-ico,
-.user-information__checkbox-label:focus, .user-information__transport-ico {
+.user-information__checkbox-label:hover + .user-information__transport-ico,
+.user-information__checkbox-label:focus + .user-information__transport-ico,
+.user-information__checkbox-label:active + .user-information__transport-ico {
   opacity: 0.7;
 }
 
 .user-information__checkbox-label:active {
   background-color: @super-light-gray-9;
-}
-
-.user-information__checkbox-label:active, .user-information__transport-ico {
-  opacity: 0.7;
 }

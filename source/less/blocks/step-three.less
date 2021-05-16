@@ -202,17 +202,14 @@
 }
 
 .step-three__entertainment-flag-first-country {
-  background: url(../img/flags/bosnia-and-herzegovina.png) no-repeat;
+  background: url("../img/flags/bosnia-and-herzegovina.png") no-repeat;
   background-size: contain;
 }
 
 .step-three__entertainment-flag-second-country {
-  background: url(../img/flags/czechia.png) no-repeat;
+  background: url("../img/flags/czechia.png") no-repeat;
   background-size: contain;
 }
-
-
-
 
 .step-three__entertainment-textarea {
   width: 100%;
@@ -256,6 +253,43 @@
 .step-three__entertainment-textarea:focus::placeholder {
   color: @special-grey;
   opacity: 1;
+}
+
+.step-three__textarea-warning {
+  position: absolute;
+  top: 202px;
+  left: 1px;
+  z-index: 0;
+  display: none;
+  width: 99%;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 1.2857;
+  color: @error-red;
+  background-color: @error-red-background;
+
+  @media (min-width: @tablet-width) {
+    top: 151px;
+    width: 99.5%;
+    padding-left: 21px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 152px;
+    left: 1.5px;
+  }
+}
+
+.step-three__entertainment-item--error .step-three__entertainment-textarea {
+  border-color: @special-red;
+}
+
+.step-three__entertainment-item--error .step-three__textarea-warning {
+  display: block;
 }
 
 .step-three__button-block {
@@ -334,4 +368,3 @@
     margin-right: 19px;
   }
 }
-

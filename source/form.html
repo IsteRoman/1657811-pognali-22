@@ -145,31 +145,31 @@
             <ul class="user-information__transport-list">
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Air_travel" name="Air-travel" checked>
+                <label class="user-information__checkbox-label" for="Air_travel" title="Авиаперелет"></label>
                 <svg class="user-information__transport-ico" width="16" height="16">
                   <use href="#icon-plane"></use>
                 </svg>
-                <label class="user-information__checkbox-label" for="Air_travel" title="Авиаперелет"></label>
               </li>
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Road_transport" name="Road-transport" checked>
+                <label class="user-information__checkbox-label" for="Road_transport" title="Автотранспорт"></label>
                 <svg class="user-information__transport-ico" width="16" height="16">
                   <use href="#icon-bus"></use>
                 </svg>
-                <label class="user-information__checkbox-label" for="Road_transport" title="Автотранспорт"></label>
               </li>
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Bike_riding" name="Bike-riding">
+                <label class="user-information__checkbox-label" for="Bike_riding" title="Велосипед"></label>
                 <svg class="user-information__transport-ico" width="16" height="16">
                   <use href="#icon-bicycle"></use>
                 </svg>
-                <label class="user-information__checkbox-label" for="Bike_riding" title="Велосипед"></label>
               </li>
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="On_foot" name="On-foot" checked>
+                <label class="user-information__checkbox-label" for="On_foot" title="Пешком"></label>
                 <svg class="user-information__transport-ico" width="16" height="16">
                   <use href="#icon-run"></use>
                 </svg>
-                <label class="user-information__checkbox-label" for="On_foot" title="Пешком"></label>
               </li>
             </ul>
           </fieldset>
@@ -240,7 +240,7 @@
                         <use href="#icon-minus"></use>
                       </svg>
                     </button>
-                    <input class="step-one__input" type="number" id="days_number" name="days-number" value="2" min="1" max="20">
+                    <input class="step-one__input" type="number" id="days_number" name="days-number" value="3" min="1" max="20">
                     <button class="step-one__button-plus" type="button">
                       <svg class="step-one__button-plus-ico" width="14" height="14">
                         <use href="#icon-plus"></use>
@@ -699,12 +699,14 @@
                     <li class="step-three__entertainment-item">
                       <span class="step-three__entertainment-title">Босния и Герцеговина<span class="step-three__entertainment-flag step-three__entertainment-flag-first-country"></span></span>
                       <label class="visually-hidden" for="first_country_action" aria-label="План действий"></label>
-                      <textarea class="step-three__entertainment-textarea" id="first_country_action" name="first-country-action" placeholder="План действий"></textarea>
+                      <textarea class="step-three__entertainment-textarea" id="first_country_action" name="first-country-action" placeholder="План действий" required></textarea>
+                      <span class="step-three__textarea-warning">Это поле должно быть заполнено</span>
                     </li>
                     <li class="step-three__entertainment-item">
                       <span class="step-three__entertainment-title">Чехия<span class="step-three__entertainment-flag step-three__entertainment-flag-second-country"></span></span>
                       <label class="visually-hidden" for="second_country_action" aria-label="План действий"></label>
-                      <textarea class="step-three__entertainment-textarea" id="second_country_action" name="second-country-action" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <textarea class="step-three__entertainment-textarea" id="second_country_action" name="second-country-action" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <span class="step-three__textarea-warning">Это поле должно быть заполнено</span>
                     </li>
                   </ul>
                 </fieldset>

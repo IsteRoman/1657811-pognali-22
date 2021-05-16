@@ -164,7 +164,7 @@
   right: 49px;
   width: 8px;
   height: 10px;
-  background: url(../img/icon/arrow.svg) no-repeat;
+  background: url("../img/icon/arrow.svg") no-repeat;
 
   @media (min-width: @tablet-width) {
     content: none;
@@ -307,13 +307,13 @@
 .step-second__country-cheese-item:first-of-type .step-second__flag {
   @media (max-width: @max-mobile-width) {
     box-shadow: -50px 0 10px -3px @basic-white,
-              -67px 0 10px -5px @basic-white;
+      -67px 0 10px -5px @basic-white;
     z-index: 1;
   }
 }
 
 .step-second__flag-first-country {
-  background: url(../img/flags/bosnia-and-herzegovina.png) center center no-repeat;
+  background: url("../img/flags/bosnia-and-herzegovina.png") center center no-repeat;
   background-size: 35px 24px;
 
   @media (min-width: @tablet-width) {
@@ -322,7 +322,7 @@
 }
 
 .step-second__flag-second-country {
-  background: url(../img/flags/czechia.png) center center no-repeat;
+  background: url("../img/flags/czechia.png") center center no-repeat;
   background-size: 35px 24px;
 
   @media (min-width: @tablet-width) {
@@ -387,24 +387,25 @@
 }
 
 
-.step-second__button-country-cheese--active .step-second__button-close {
+.step-second__button-country-cheese--active ~ .step-second__button-close {
   top: 10px;
   right: 10px;
   z-index: 2;
   background-color: transparent;
   stroke: @basic-white-0-3;
+
+  @media (min-width: @tablet-width) {
+    top: 23px;
+    right: 20px;
+  }
 }
 
-.step-second__button-country-cheese--active .step-second__button-close:hover,
-.step-second__button-country-cheese--active .step-second__button-close:focus {
-  top: 10px;
-  right: 10px;
-  z-index: 2;
-  background-color: transparent;
+.step-second__button-country-cheese--active ~ .step-second__button-close:hover,
+.step-second__button-country-cheese--active ~ .step-second__button-close:focus {
   stroke: @basic-white;
 }
 
-.step-second__button-country-cheese--active .step-second__button-close:active {
+.step-second__button-country-cheese--active ~ .step-second__button-close:active {
   stroke: @basic-white-0-1;
 }
 
@@ -422,7 +423,7 @@
     min-width: 575px;
     padding: 35px 286px 33px 27px;
     background-color: @basic-white;
-    box-shadow: 0px 8px 16px rgba(54, 80, 148, 0.18);
+    box-shadow: 0 8px 16px @box-shadow-color;
   }
 
   @media (min-width: @desktop-width) {
@@ -437,13 +438,13 @@
 
 .step-second__countrys-block::before {
   @media (min-width: @tablet-width) {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 200px;
-  width: 1px;
-  height: 100%;
-  background-color: @super-light-gray-8;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 200px;
+    width: 1px;
+    height: 100%;
+    background-color: @super-light-gray-8;
   }
 
   @media (min-width: @desktop-width) {
@@ -487,7 +488,7 @@
 }
 
 .step-second__table-item:hover {
-  border-color:  @special-grey-4;
+  border-color: @special-grey-4;
 }
 
 .step-second__radio {
@@ -535,6 +536,7 @@
   @media (min-width: @desktop-width) {
     top: 46px;
     right: 57px;
+    overflow-y: hidden;
   }
 }
 

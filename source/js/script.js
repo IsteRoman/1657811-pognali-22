@@ -147,6 +147,188 @@ const map_block = function() {
   })
 }
 
+const form_page = function() {
+  const plans_block = document.querySelector('.plan-add');
+  if (!plans_block) {
+    return;
+  }
+
+  const plans_indicator = plans_block.querySelector('.plan-add__steps-indicator');
+  const plans_indicator_item = plans_indicator.getElementsByClassName('plan-add__steps-dotts');
+  const button_minus = plans_block.querySelectorAll('.step-one__button-minus');
+  const button_plus = plans_block.querySelectorAll('.step-one__button-plus');
+
+  const form_start = function() {
+    plans_block.classList.remove('no-js-form');
+  }
+
+  const step_by_step = function() {
+    const button_next_second = plans_block.querySelector('.step-one__button');
+    const button_next_third = plans_block.querySelector('.step-second__button');
+    const button_back_first = plans_block.querySelector('.step-second__button-back');
+    const button_back_second = plans_block.querySelector('.step-three__button-back');
+
+    const go_second_step = function() {
+      button_next_second.addEventListener('click', function() {
+        plans_block.classList.remove('step-one--visibility');
+        plans_block.classList.add('step-second--visibility');
+        plans_indicator_item[0].classList.remove('plan-add__steps-dotts--active');
+        plans_indicator_item[1].classList.add('plan-add__steps-dotts--active');
+      });
+    }
+
+    const back_first_step = function() {
+      button_back_first.addEventListener('click', function() {
+        plans_block.classList.remove('step-second--visibility');
+        plans_block.classList.add('step-one--visibility');
+        plans_indicator_item[1].classList.remove('plan-add__steps-dotts--active');
+        plans_indicator_item[0].classList.add('plan-add__steps-dotts--active');
+      });
+    }
+
+    const go_third_step = function() {
+      button_next_third.addEventListener('click', function() {
+        plans_block.classList.remove('step-second--visibility');
+        plans_block.classList.add('step-three--visibility');
+        plans_indicator_item[1].classList.remove('plan-add__steps-dotts--active');
+        plans_indicator_item[2].classList.add('plan-add__steps-dotts--active');
+      });
+    }
+
+    const back_second_step = function() {
+      button_back_second.addEventListener('click', function() {
+        plans_block.classList.remove('step-three--visibility');
+        plans_block.classList.add('step-second--visibility');
+        plans_indicator_item[2].classList.remove('plan-add__steps-dotts--active');
+        plans_indicator_item[1].classList.add('plan-add__steps-dotts--active');
+      });
+    }
+
+    go_second_step();
+
+    back_first_step();
+
+    go_third_step();
+
+    back_second_step();
+  }
+
+  const ipnut_work = function() {
+    const min_input_value = 1;
+    const max_input_value = 14;
+    Array.prototype.forEach.call(button_minus, function(v) {
+      v.addEventListener('click', dec);
+    });
+
+    Array.prototype.forEach.call(button_plus, function(v) {
+      v.addEventListener('click', inc);
+    });
+
+    function dec() {
+      var div = this.parentElement;
+      var input = div.children.item(2)
+      if (input.value > min_input_value) {
+        input.setAttribute('value', (parseInt(input.getAttribute('value')) - 1).toString());
+      } else {
+        button_minus.setAttribute('disabled');
+      }
+    }
+
+    function inc() {
+      var div = this.parentElement;
+      var input = div.children.item(2)
+      if (input.value < max_input_value) {
+        input.setAttribute('value', (parseInt(input.getAttribute('value')) + 1).toString());
+      } else {
+        button_plus.setAttribute('disabled');
+      }
+    }
+  }
+
+  const country_select = function() {
+    const button_select = plans_block.getElementsByClassName('step-second__button-country-cheese');
+    const country_block = plans_block.querySelector('.step-second__countrys-block');
+    const button_close = plans_block.getElementsByClassName('step-second__button-close');
+
+    const open_country_menu = function() {
+      button_select[2].addEventListener('click', function() {
+        country_block.classList.add('step-second__countrys-block--show');
+        button_select[2].classList.add('step-second__button-country-cheese--active');
+      });
+    }
+
+    const close_by_button_country_menu = function() {
+      button_close[2].addEventListener('click', function() {
+        button_select[2].classList.remove('step-second__button-country-cheese--active');
+        country_block.classList.remove('step-second__countrys-block--show');
+      })
+    }
+
+    const close_country_menu_by_full_path = function() {
+      const country_label = plans_block.querySelectorAll('.step-second__radio-label-country');
+      const country_label_value = plans_block.querySelectorAll('.step-second__radio-country');
+
+      const exit_menu = function() {
+        button_select[2].classList.remove('step-second__button-country-cheese--active');
+        country_block.classList.remove('step-second__countrys-block--show');
+      }
+
+      country_label.forEach(function(v) {
+        v.addEventListener('click', checkIndex);
+      })
+
+      function checkIndex(event) {
+        const i = Array.from(country_label).indexOf(event.target);
+        button_select[2].innerText = country_label[i].innerText;
+        exit_menu();
+      }
+    }
+
+    open_country_menu();
+
+    close_by_button_country_menu();
+
+    close_country_menu_by_full_path();
+  }
+
+  const textarea_validation = function () {
+
+    const textarea = plans_block.querySelectorAll('.step-three__entertainment-textarea');
+    const min_lenght_textarea = 3;
+    const button_submit = plans_block.querySelector('.plan-add__button-submit');
+
+    const lenght_check = function() {
+      Array.prototype.forEach.call(textarea, function(k) {
+        k.addEventListener('input', textarea_check)
+      });
+
+      function textarea_check() {
+        const textarea_block = this.parentElement;
+        if (this.value.length < min_lenght_textarea) {
+          textarea_block.classList.add('step-three__entertainment-item--error');
+          button_submit.setAttribute('disabled', 'disabled');
+        } else if (this.value.length > min_lenght_textarea) {
+          textarea_block.classList.remove('step-three__entertainment-item--error');
+          button_submit.removeAttribute('disabled', 'disabled');
+        }
+      }
+    }
+
+    lenght_check();
+  }
+
+  form_start();
+
+  step_by_step();
+
+  ipnut_work();
+
+  country_select();
+
+  textarea_validation();
+
+}
+
 header();
 
 business_tariffs();
@@ -154,3 +336,5 @@ business_tariffs();
 validation();
 
 map_block();
+
+form_page();
