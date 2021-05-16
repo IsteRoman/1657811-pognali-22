@@ -34,6 +34,23 @@
   }
 }
 
+.no-js-form .step-one__section,
+.step-one--visibility .step-one__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-js-form .step-second__section,
+.step-second--visibility .step-second__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-js-form .step-three__section,
+.step-three--visibility .step-three__section {
+  display: block;
+}
+
 .plan-add__title {
   .zero-intervals;
   margin-bottom: 29px;
@@ -65,18 +82,23 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -20px;
+    top: 150px;
     right: 282px;
+    z-index: 5;
     flex-direction: column;
     width: unset;
   }
 }
 
-.form-no-js, .plan-add__steps-indicator,
-.step-one--visibility, .plan-add__steps-indicator {
+.step-second--visibility .plan-add__steps-indicator {
   @media (min-width: @desktop-width) {
-    top: 150px;
-    right: 282px;
+    top: 600px;
+  }
+}
+
+.step-three--visibility .plan-add__steps-indicator {
+  @media (min-width: @desktop-width) {
+    top: 1020px;
   }
 }
 

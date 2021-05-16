@@ -54,8 +54,7 @@
 }
 
 .step-second__section {
-  display: flex;
-  flex-direction: column;
+  display: none;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -94,7 +93,7 @@
     content: "";
     position: absolute;
     top: -43px;
-    right: -25px;
+    right: 193px;
     width: 1px;
     height: 370px;
     background-color: @super-light-gray-4;
@@ -115,7 +114,12 @@
   margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
+    width: 70%;
     margin-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
