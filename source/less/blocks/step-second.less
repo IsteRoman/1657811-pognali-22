@@ -68,10 +68,43 @@
   }
 }
 
+.step-second__fieldset {
+  .zero-intervals;
+  border: none;
+}
+
 .step-second__country-cheese-list {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
   .zero-intervals;
+
+  @media (min-width: @tablet-width) {
+    width: 70%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 730px;
+  }
+}
+
+.step-second__country-cheese-list::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -43px;
+    right: -25px;
+    width: 1px;
+    height: 370px;
+    background-color: @super-light-gray-4;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -68px;
+    right: -55px;
+    height: 540px;
+  }
 }
 
 .step-second__country-cheese-item {
@@ -80,6 +113,10 @@
   flex-direction: row;
   width: 100%;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+  }
 }
 
 .step-second__country-cheese-item::before {
@@ -90,15 +127,30 @@
   z-index: 2;
   width: 8px;
   height: 8px;
-  background-color: @basic-white;
+  background-color: @basic-blue-light;
   border: 1px solid @super-light-gray-7;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 30px;
+    right: -32px;
+    width: 14px;
+    height: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -61px;
+  }
 }
 
 .step-second__country-cheese-item:first-of-type::before,
 .step-second__country-cheese-item:nth-of-type(2)::before {
   background-color: @basic-blue-dark;
   border: 1px solid @basic-blue-dark;
+}
+
+.step-second__country-cheese-item:last-of-type::before {
+  background-color: @basic-white;
 }
 
 .step-second__country-cheese-item::after {
@@ -121,6 +173,14 @@
 
 .step-second__country-cheese-item:last-of-type {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .step-second__button-country-add-ico {
@@ -131,6 +191,14 @@
   height: 14px;
   stroke: @basic-black;
   opacity: 0.2;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+    right: 20px;
+    width: 21px;
+    height: 21px;
+  }
 }
 
 .step-second__button-country-cheese {
@@ -147,7 +215,46 @@
   background: none;
   border: 1px solid @super-light-gray-7;
   border-radius: 4px;
+  cursor: pointer;
   overflow: hidden;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    height: 70px;
+    padding: 27px 25px 23px 24px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.step-second__button-country-cheese:hover,
+.step-second__button-country-cheese:focus {
+  border-color: @special-grey-4;
+}
+
+.step-second__button-country-cheese--active {
+  color: @basic-white;
+  background-color: @basic-blue-dark;
+  border-color: @basic-blue-dark;
+}
+
+.step-second__button-country-cheese--active .step-second__button-country-cheese-ico {
+  display: none;
+}
+
+.step-second__button-country-cheese--add:hover,
+.step-second__button-country-cheese--add:focus,
+.step-second__button-country-cheese--add:active {
+  background-color: @special-blue-light;
+}
+
+.step-second__button-country-cheese--add:hover .step-second__button-country-add-ico,
+.step-second__button-country-cheese--add:focus .step-second__button-country-add-ico {
+  opacity: 0.3;
+}
+
+.step-second__button-country-cheese--add:active .step-second__button-country-add-ico {
+  opacity: 0.1;
 }
 
 .step-second__button-country-cheese-ico {
@@ -156,9 +263,17 @@
   right: 10px;
   width: 12px;
   height: 16px;
+  transition: @default-transition;
 
   @media (max-width: @max-mobile-width) {
     z-index: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 25px;
+    right: 20px;
+    width: 20px;
+    height: 17px;
   }
 }
 
@@ -169,10 +284,23 @@
   background: none;
   border: 1px solid @super-light-gray-7;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 10px;
+    right: -120px;
+    width: 70px;
+    height: 47px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 12px;
+    right: -175px;
+  }
 }
 
 .step-second__country-cheese-item:first-of-type .step-second__flag {
-
   @media (max-width: @max-mobile-width) {
     box-shadow: -50px 0 10px -3px @basic-white,
               -67px 0 10px -5px @basic-white;
@@ -183,11 +311,19 @@
 .step-second__flag-first-country {
   background: url(../img/flags/bosnia-and-herzegovina.png) center center no-repeat;
   background-size: 35px 24px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 70px 47px;
+  }
 }
 
 .step-second__flag-second-country {
   background: url(../img/flags/czechia.png) center center no-repeat;
   background-size: 35px 24px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 70px 47px;
+  }
 }
 
 .step-second__button-close {
@@ -199,10 +335,34 @@
   background-color: @super-light-gray-5;
   border: none;
   border-radius: 50%;
+  stroke: @basic-black-0-1;
+  cursor: pointer;
+  transition: @default-transition;
 
   @media (max-width: @max-mobile-width) {
     z-index: 2;
   }
+
+  @media (min-width: @tablet-width) {
+    top: 23px;
+    right: -162px;
+    width: 22px;
+    height: 24px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -300px;
+  }
+}
+
+.step-second__button-close:hover,
+.step-second__button-close:focus {
+  stroke: @basic-black-0-3;
+}
+
+.step-second__button-close:active {
+  stroke: @basic-black-0-05;
 }
 
 .step-second__button-close-ico {
@@ -211,22 +371,249 @@
   left: 6px;
   width: 10px;
   height: 10px;
-  stroke: @basic-black;
-  opacity: 0.1;
+  stroke: inherit;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 24px;
+  }
 }
 
 
+.step-second__button-country-cheese--active .step-second__button-close {
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background-color: transparent;
+  stroke: @basic-white-0-3;
+}
 
+.step-second__button-country-cheese--active .step-second__button-close:hover,
+.step-second__button-country-cheese--active .step-second__button-close:focus {
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background-color: transparent;
+  stroke: @basic-white;
+}
 
-
+.step-second__button-country-cheese--active .step-second__button-close:active {
+  stroke: @basic-white-0-1;
+}
 
 .step-second__countrys-block {
   display: none;
+  position: absolute;
+  top: 41px;
+  left: 0;
+  z-index: 3;
+  min-width: 220px;
+
+  @media (min-width: @tablet-width) {
+    top: 70px;
+    left: 0;
+    min-width: 575px;
+    padding: 35px 286px 33px 27px;
+    background-color: @basic-white;
+    box-shadow: 0px 8px 16px rgba(54, 80, 148, 0.18);
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 730px;
+    padding: 32px 320px 36px 26px;
+  }
+}
+
+.step-second__countrys-block--show {
+  display: block;
+}
+
+.step-second__countrys-block::before {
+  @media (min-width: @tablet-width) {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 200px;
+  width: 1px;
+  height: 100%;
+  background-color: @super-light-gray-8;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: none;
+  }
+}
+
+.step-second__table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: @basic-white;
+
+  @media (min-width: @desktop-width) {
+    border-collapse: separate;
+    border-spacing: 0 14px;
+  }
+}
+
+.step-second__table-item {
+  display: inline-flex;
+  width: 20%;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.2857;
+  font-weight: 500;
+  border: 1px solid @super-light-gray-7;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 60px;
+    margin-right: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+
+.step-second__table-item:hover {
+  border-color:  @special-grey-4;
+}
+
+.step-second__radio {
+  display: none;
+}
+
+.step-second__radio-label {
+  text-align: center;
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 14px;
+  color: @basic-blue-dark;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}
+
+.step-second__item-sub-list {
+  position: absolute;
+  top: 220px;
+  display: none;
+  min-width: 220px;
+  max-height: 332px;
+  .zero-intervals;
+  padding: 20px 20px 15px 19px;
+  background-color: @basic-white;
+  overflow-y: scroll;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    top: 35px;
+    left: unset;
+    right: 5px;
+    min-width: 175px;
+    max-height: 400px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 46px;
+    right: 57px;
+  }
+}
+
+.step-second__item-sub-list-item {
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.step-second__radio-country {
+  display: none;
+}
+
+.step-second__radio-label-country {
+  font-size: 16px;
+  line-height: 1.375;
+  font-weight: 400;
+  color: @special-grey;
+  cursor: pointer;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.step-second__radio-label-country:hover {
+  color: @basic-blue-dark;
+}
+
+.step-second__radio-country:checked + .step-second__radio-label-country {
+  color: @basic-blue-dark;
+  opacity: 0.3;
+}
+
+.step-second__radio:checked + .step-second__item-sub-list {
+  display: block;
+}
+
+.step-second__radio:checked ~ .step-second__radio-label {
+  color: @basic-white;
+  background-color: @basic-blue-dark;
 }
 
 .step-second__button-block {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.step-second__button {
+  border: none;
+  justify-content: center;
+  min-height: 40px;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    width: 100%;
+    min-height: 80px;
+    margin-bottom: 0;
+    margin-right: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 286px;
+    min-height: 81px;
+  }
+}
+
+.step-second__arrow-ico {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .step-second__button-back {
@@ -244,6 +631,7 @@
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 0.91;
+    text-transform: unset;
   }
 }
 
