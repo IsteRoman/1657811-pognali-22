@@ -6,6 +6,10 @@
   @media (min-width: @tablet-width) {
     padding-top: 151px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 145px;
+  }
 }
 
 .filter::after {
@@ -22,10 +26,17 @@
 .filter__block {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     padding-left: 72px;
     padding-right: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: wrap;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
@@ -41,6 +52,13 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    padding-left: 50px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .filter__title::before {
@@ -52,6 +70,40 @@
   height: 10px;
   background: url("../img/icon/icon-filter.svg");
   background-size: contain;
+
+  @media (min-width: @desktop-width) {
+    width: 23px;
+    height: 15px;
+  }
+}
+
+.filter__title-list {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  z-index: 2;
+  display: none;
+  .zero-intervals;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    position: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 30px;
+  }
+}
+
+.filter__block-menu--open .filter__title-list {
+  @media (max-width: @max-mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .filter__button {
@@ -104,36 +156,27 @@
   background-size: contain;
 }
 
+.filter__block-menu--open .filter__section {
+  display: flex;
+}
+
 .filter__section {
   position: absolute;
   top: 100%;
   left: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
-  padding: 38px 50px 0 50px;
+  padding: 158px 50px 0 50px;
   background-color: @super-light-gray-3;
 
   @media (min-width: @tablet-width) {
     padding: 62px 72px 0 72px;
   }
-}
 
-.filter__title-list {
-  display: flex;
-  flex-direction: column;
-  .zero-intervals;
-  margin-bottom: 12px;
-  list-style: none;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    top: -32px;
-    left: 72px;
-    z-index: 1;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: 0;
+  @media (min-width: @desktop-width) {
+    position: unset;
+    padding: 23px 95px 0 95px;
   }
 }
 
@@ -143,6 +186,10 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     margin-right: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 32px;
   }
 }
 
@@ -174,6 +221,13 @@
     width: 60%;
     margin-bottom: 77px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0 51px;
+  }
 }
 
 .filter__country-table-item {
@@ -184,11 +238,16 @@
   @media (min-width: @tablet-width) {
     border: none;
   }
+
+  @media (min-width: @desktop-width) {
+    vertical-align: top;
+  }
 }
 
 .filter__country-table-letter-button {
   width: 100%;
   min-height: 41px;
+  .zero-intervals;
   font-size: 14px;
   line-height: 1;
   font-weight: 500;
@@ -202,6 +261,15 @@
     font-weight: 700;
     background: none;
     opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    opacity: 1;
   }
 }
 
@@ -230,6 +298,23 @@
   .zero-intervals;
   list-style: none;
   overflow-y: scroll;
+
+  @media (min-width: @tablet-width) {
+    top: 60px;
+    left: unset;
+    right: 80px;
+    max-width: 156px;
+    max-height: 330px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: unset;
+    max-height: unset;
+  }
 }
 
 .filter__country-table-item--active .filter__country-sub-list {
@@ -246,6 +331,11 @@
   line-height: 1.375;
   font-weight: 400;
   color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }
 
 .filter__country-sub-link:focus,
@@ -272,6 +362,17 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    min-height: 100px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 -50px;
+  }
 }
 
 .filter__section-button-close-text {
@@ -283,6 +384,12 @@
   top: 2px;
   left: -25px;
 
+  @media (min-width: @tablet-width) {
+    top: 3px;
+    left: -35px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .filter__section-button-close:focus,
