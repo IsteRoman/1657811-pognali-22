@@ -15,12 +15,26 @@
 .filter::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 0;
   width: 100%;
-  height: 15px;
+  height: 16px;
   background-color: inherit;
   border-radius: 0 0 10px 10px;
+
+  @media (min-width: @tablet-width) {
+    height: 56px;
+    border-radius: 0 0 30px 30px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 57px;
+  }
+}
+
+.filter__block-menu--open .filter {
+  @media (min-width: @desktop-width) {
+    background-color: @super-light-gray-8;
+  }
 }
 
 .filter__block {

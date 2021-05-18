@@ -1,0 +1,25 @@
+.catalog-main-content {
+  padding-top: 36px;
+  padding-bottom: 83px;
+  background-color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 99px;
+    padding-bottom: 108px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 124px;
+  }
+}
+
+.catalog-main-content__block {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

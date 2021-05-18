@@ -1,0 +1,277 @@
+.users-card {
+  margin-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.users-card__list {
+  display: flex;
+  flex-direction: column;
+  .zero-intervals;
+}
+
+.users-card__item {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+  "picture name ."
+  "tag tag ."
+  "flag flag ."
+  "transport transport level"
+  "button button button";
+  margin-bottom: 10px;
+  padding: 15px 20px 23px 20px;
+  background-color: @basic-white;
+  border-radius: 20px;
+}
+
+.users-card__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.users-card__avatar {
+  grid-area: picture;
+  width: 70px;
+  height: 70px;
+}
+
+.users-card__avatar-img {
+  width: 70px;
+  height: 70px;
+}
+
+.users-card__name {
+  position: relative;
+  grid-area: name;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  color: @basic-blue-dark;
+}
+
+.users-card__name--online::before,
+.users-card__name--offline::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 140px;
+  width: 6px;
+  height: 6px;
+  background-color: @online;
+  border-radius: 50%;
+}
+
+.companion__card-name--offline::before {
+  background-color: @offline;
+}
+
+.users-card__hashtags {
+  grid-area: tag;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: @special-grey;
+}
+
+.users-card__button-heart {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  background: none;
+  border: none;
+}
+
+.users-card__button-heart-ico {
+  width: 12px;
+  height: 10px;
+  fill: red;
+}
+
+.users-card__button-heart-text {
+  position: relative;
+  margin-left: 15px;
+  font-size: 14px;
+  line-height: 1.1428;
+  font-weight: 700;
+  color: @basic-blue;
+}
+
+.users-card__button-heart-text::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -45px;
+  z-index: 0;
+  width: 30px;
+  height: 30px;
+  background-color: @super-light-gray-3;
+  border-radius: 50%;
+}
+
+.users-card__desire-to-visit {
+  grid-area: flag;
+  display: flex;
+  flex-direction: column;
+}
+
+.users-card__desire-to-visit-title {
+  position: relative;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.066666;
+  text-transform: lowercase;
+  color: @special-grey;
+}
+
+.users-card__desire-to-visit-list {
+  display: flex;
+  flex-direction: column;
+  .zero-intervals;
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.users-card__desire-to-visit-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.users-card__desire-to-visit-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.users-card__flags {
+  width: 26px;
+  height: 18px;
+  margin-right: 14px;
+}
+
+.users-card__flags-img {
+  width: 26px;
+  height: 18px;
+}
+
+.users-card__desire-to-visit-country-name {
+  font-size: 15px;
+  line-height: 1.06666;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: @basic-blue-dark;
+}
+
+.users-card__transport {
+  grid-area: transport;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.users-card__transport-title {
+  font-size: 15px;
+  line-height: 1.066666;
+  text-transform: lowercase;
+  color: @special-grey;
+  margin-bottom: 14px;
+}
+
+.users-card__transport-list {
+  display: flex;
+  flex-direction: row;
+  .zero-intervals;
+  list-style: none;
+}
+
+.users-card__transport-item {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background-color: @basic-blue-light;
+  border-radius: 50%;
+}
+
+.users-card__transport-ico {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+}
+
+.users-card__transport-item:nth-of-type(2) .users-card__transport-ico {
+  left: 10px;
+}
+
+.users-card__transport-signature {
+  position: absolute;
+  top: 40px;
+  left: -35px;
+  display: none;
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  line-height: 1;
+  color: @basic-white;
+  background-color: @special-blue-dark-6;
+  border-radius: 4px;
+}
+
+.users-card__transport-signature::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 45%;
+  width: 13px;
+  height: 10px;
+  background: url(../img/icon/arrow-signature.svg) no-repeat;
+  background-size: contain;
+}
+
+.users-card__transport-item:nth-of-type(2) .users-card__transport-signature {
+  left: -37px;
+}
+
+.users-card__transport-item:nth-of-type(3) .users-card__transport-signature {
+  left: -27px;
+}
+
+.users-card__transport-item:nth-of-type(4) .users-card__transport-signature {
+  left: -20px;
+}
+
+
+.users-card__transport-item:hover .users-card__transport-signature,
+.users-card__transport-item:focus .users-card__transport-signature {
+  display: block;
+}
+
+.users-card__level {
+  grid-area: level;
+}
+
+.users-card__level-title {
+  font-size: 15px;
+  line-height: 1.066666;
+  text-transform: lowercase;
+  color: @special-grey;
+  margin-bottom: 8px;
+}
+
+.users-card__level-img {
+  width: 45px;
+  height: 45px;
+}
+
+.users-card__button {
+  grid-area: button;
+  justify-content: center;
+  min-height: 40px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 25px;
+}
