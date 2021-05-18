@@ -778,114 +778,213 @@
       <section class="catalog-main-content">
         <h2 class="visually-hidden">общий блок попутчиков</h2>
         <div class="wrapper catalog-main-content__block">
-          <section class="catalog-main-content__select-partners select-partners">
-            <h3 class="select-partners__title">Подберите идеального попутчика</h3>
-            <form class="select-partners__form" method="POST" action="https://echo.htmlacademy.ru/">
-              <fieldset class="select-partners__fieldset">
-                <span class="select-partners__legend">Хобби</span>
-                <ul class="select-partners__hobby-list">
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="hobby_gym" name="hobby-gym" checked>
-                    <label class="select-partners__label" for="hobby_gym">Спортзал</label>
+          <form class="catalog-main-content__select-partners select-partners" method="POST" action="https://echo.htmlacademy.ru/">
+            <fieldset class="select-partners__fieldset">
+              <span class="select-partners__legend">Хобби</span>
+              <button class="select-partners__button" title="открыть меню">
+                <svg class="select-partners__button-ico" width="10" height="6">
+                  <use href="#catalog-select-open"></use>
+                </svg>
+              </button>
+              <ul class="select-partners__hobby-list">
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="hobby_gym" name="hobby-gym" checked>
+                  <label class="select-partners__label" for="hobby_gym">Спортзал</label>
+                </li>
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="hobby_hookah" name="hobby-hookah">
+                  <label class="select-partners__label" for="hobby_hookah">Кальян</label>
+                </li>
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="hobby_sofa" name="hobby-sofa">
+                  <label class="select-partners__label" for="hobby_sofa">Диван</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="select-partners__fieldset">
+              <span class="select-partners__legend">Музыка</span>
+              <button class="select-partners__button" title="открыть меню">
+                <svg class="select-partners__button-ico" width="10" height="6">
+                  <use href="#catalog-select-open"></use>
+                </svg>
+              </button>
+              <ul class="select-partners__hobby-list">
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="music_hard-rock" name="music-hard-rock" checked>
+                  <label class="select-partners__label" for="music_hard-rock">Тяжелый рок</label>
+                </li>
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="music_russian-rap" name="music-russian-rap">
+                  <label class="select-partners__label" for="music_russian-rap">Русский рэп</label>
+                </li>
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="music_eurodance" name="music-eurodance">
+                  <label class="select-partners__label" for="music_eurodance">Евроденс</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="select-partners__fieldset">
+              <span class="select-partners__legend">Еда</span>
+              <button class="select-partners__button" title="открыть меню">
+                <svg class="select-partners__button-ico" width="10" height="6">
+                  <use href="#catalog-select-open"></use>
+                </svg>
+              </button>
+              <ul class="select-partners__hobby-list">
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="food_meat-eater" name="food-meat-eater" checked>
+                  <label class="select-partners__label" for="food_meat-eater">Мясоед</label>
+                </li>
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="food_sits-on-pp" name="food-sits-on-pp">
+                  <label class="select-partners__label" for="food_sits-on-pp">Сидит на ПП</label>
+                </li>
+                <li class="select-partners__hobby-item">
+                  <input class="select-partners__checkbox" type="checkbox" id="food_raw-vegan" name="food-raw-vegan">
+                  <label class="select-partners__label" for="food_raw-vegan">Веган-сыроед</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="select-partners__fieldset">
+              <span class="select-partners__legend">Транспорт</span>
+              <button class="select-partners__button" title="открыть меню">
+                <svg class="select-partners__button-ico" width="10" height="6">
+                  <use href="#catalog-select-open"></use>
+                </svg>
+              </button>
+              <ul class="select-partners__transport-list">
+                <li class="select-partners__transport-item">
+                  <input class="select-partners__checkbox-transport" type="checkbox" id="Air_travel" name="Air-travel" checked>
+                  <label class="select-partners__label-transport" for="Air_travel" title="Авиаперелет"></label>
+                  <svg class="select-partners__transport-ico" width="16" height="16">
+                    <use href="#icon-plane"></use>
+                  </svg>
+                </li>
+                <li class="select-partners__transport-item">
+                  <input class="select-partners__checkbox-transport" type="checkbox" id="Road_transport" name="Road-transport" checked>
+                  <label class="select-partners__label-transport" for="Road_transport" title="Автотранспорт"></label>
+                  <svg class="select-partners__transport-ico" width="16" height="16">
+                    <use href="#icon-bus"></use>
+                  </svg>
+                </li>
+                <li class="select-partners__transport-item">
+                  <input class="select-partners__checkbox-transport" type="checkbox" id="Bike_riding" name="Bike-riding">
+                  <label class="select-partners__label-transport" for="Bike_riding" title="Велосипед"></label>
+                  <svg class="select-partners__transport-ico" width="16" height="16">
+                    <use href="#icon-bicycle"></use>
+                  </svg>
+                </li>
+                <li class="select-partners__transport-item">
+                  <input class="select-partners__checkbox-transport" type="checkbox" id="On_foot" name="On-foot" checked>
+                  <label class="select-partners__label-transport" for="On_foot" title="Пешком"></label>
+                  <svg class="select-partners__transport-ico" width="16" height="16">
+                    <use href="#icon-run"></use>
+                  </svg>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="select-partners__fieldset">
+              <span class="select-partners__legend">Левел</span>
+              <button class="select-partners__button" title="открыть меню">
+                <svg class="select-partners__button-ico" width="10" height="6">
+                  <use href="#catalog-select-open"></use>
+                </svg>
+              </button>
+              <div class="select-partners__level-filter">
+                <div class="select-partners__level-controls">
+                  <label class="visually-hidden" for="min_level" aria-label="Минимальный уровень"></label>
+                  <input class="select-partners__level select-partners__level--min" type="text" id="min_level" name="min-level" value="30">
+                  <label class="visually-hidden" for="max_level" aria-label="Максимальный уровень"></label>
+                  <input class="select-partners__level select-partners__level--max" type="text" id="max_level" name="max-level" value="100">
+                </div>
+                <div class="select-partners__level-controls">
+                  <div class="select-partners__scale">
+                    <div class="select-partners__bar"></div>
+                  </div>
+                  <div class="select-partners__toggle select-partners__toggle--min" tabindex="0"></div>
+                  <div class="select-partners__toggle select-partners__toggle--max" tabindex="0"></div>
+                </div>
+              </div>
+            </fieldset>
+            <button class="select-partners__button-submit" type="submit">показать</button>
+          </form>
+          <ul class="catalog-main-content__users-card users-card">
+            <li class="users-card__item">
+              <div class="users-card__avatar">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.jpg 1x, img/catalog/users/main-firsova-tablet-desktop@2x.jpg 2x">
+
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
+                  <img class="users-card__avatar-img" src="img/catalog/users/main-firsova-mobile.jpg" srcset="img/catalog/users/main-firsova-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+                </picture>
+              </div>
+              <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
+              <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
+              <button class="users-card__button-heart">
+                <svg class="users-card__button-heart-ico" width="12" height="10">
+                  <use href="#icon-heart"></use>
+                </svg>
+                <span class="users-card__button-heart-text">1,5 М</span>
+              </button>
+              <div class="users-card__desire-to-visit">
+                <span class="users-card__desire-to-visit-title">хочет посетить:</span>
+                <ul class="users-card__desire-to-visit-list">
+                  <li class="users-card__desire-to-visit-item">
+                    <picture>
+                      <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
+                      <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                    </picture>
+                    <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
                   </li>
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="hobby_hookah" name="hobby-hookah">
-                    <label class="select-partners__label" for="hobby_hookah">Кальян</label>
+                  <li class="users-card__desire-to-visit-item">
+                    <picture>
+                      <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
+                      <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                    </picture>
+                    <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
                   </li>
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="hobby_sofa" name="hobby-sofa">
-                    <label class="select-partners__label" for="hobby_sofa">Диван</label>
+                  <li class="users-card__desire-to-visit-item">
+                    <picture>
+                      <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
+                      <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                    </picture>
+                    <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
                   </li>
                 </ul>
-              </fieldset>
-              <fieldset class="select-partners__fieldset">
-                <span class="select-partners__legend">Музыка</span>
-                <ul class="select-partners__hobby-list">
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="music_hard-rock" name="music-hard-rock" checked>
-                    <label class="select-partners__label" for="music_hard-rock">Тяжелый рок</label>
-                  </li>
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="music_russian-rap" name="music-russian-rap">
-                    <label class="select-partners__label" for="music_russian-rap">Русский рэп</label>
-                  </li>
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="music_eurodance" name="music-eurodance">
-                    <label class="select-partners__label" for="music_eurodance">Евроденс</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="select-partners__fieldset">
-                <span class="select-partners__legend">Еда</span>
-                <ul class="select-partners__hobby-list">
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="food_meat-eater" name="food-meat-eater" checked>
-                    <label class="select-partners__label" for="food_meat-eater">Мясоед</label>
-                  </li>
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="food_sits-on-pp" name="food-sits-on-pp">
-                    <label class="select-partners__label" for="food_sits-on-pp">Сидит на ПП</label>
-                  </li>
-                  <li class="select-partners__hobby-item">
-                    <input class="select-partners__checkbox" type="checkbox" id="food_raw-vegan" name="food-raw-vegan">
-                    <label class="select-partners__label" for="food_raw-vegan">Веган-сыроед</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="select-partners__fieldset">
-                <span class="select-partners__legend">Транспорт</span>
-                <ul class="select-partners__transport-list">
-                  <li class="select-partners__transport-item">
-                    <input class="select-partners__checkbox-transport" type="checkbox" id="Air_travel" name="Air-travel" checked>
-                    <label class="select-partners__label-transport" for="Air_travel" title="Авиаперелет"></label>
-                    <svg class="select-partners__transport-ico" width="16" height="16">
+              </div>
+              <div class="users-card__transport">
+                <span class="users-card__transport-title">транспорт:</span>
+                <ul class="users-card__transport-list">
+                  <li class="users-card__transport-item" title="Авиаперелет">
+                    <svg class="users-card__transport-ico" width="14" height="16">
                       <use href="#icon-plane"></use>
                     </svg>
                   </li>
-                  <li class="select-partners__transport-item">
-                    <input class="select-partners__checkbox-transport" type="checkbox" id="Road_transport" name="Road-transport" checked>
-                    <label class="select-partners__label-transport" for="Road_transport" title="Автотранспорт"></label>
-                    <svg class="select-partners__transport-ico" width="16" height="16">
+                  <li class="users-card__transport-item users-card__transport-item--unselected" title="Автотранспорт">
+                    <svg class="users-card__transport-ico" width="13" height="16">
                       <use href="#icon-bus"></use>
                     </svg>
                   </li>
-                  <li class="select-partners__transport-item">
-                    <input class="select-partners__checkbox-transport" type="checkbox" id="Bike_riding" name="Bike-riding">
-                    <label class="select-partners__label-transport" for="Bike_riding" title="Велосипед"></label>
-                    <svg class="select-partners__transport-ico" width="16" height="16">
+                  <li class="users-card__transport-item users-card__transport-item--unselected" title="Велосипед">
+                    <svg class="users-card__transport-ico" width="14" height="17">
                       <use href="#icon-bicycle"></use>
                     </svg>
                   </li>
-                  <li class="select-partners__transport-item">
-                    <input class="select-partners__checkbox-transport" type="checkbox" id="On_foot" name="On-foot" checked>
-                    <label class="select-partners__label-transport" for="On_foot" title="Пешком"></label>
-                    <svg class="select-partners__transport-ico" width="16" height="16">
+                  <li class="users-card__transport-item users-card__transport-item--unselected" title="Пешком">
+                    <svg class="users-card__transport-ico" width="13" height="17">
                       <use href="#icon-run"></use>
                     </svg>
                   </li>
                 </ul>
-              </fieldset>
-              <fieldset class="select-partners__fieldset">
-                <span class="select-partners__legend">Левел</span>
-                <div class="select-partners__level-filter">
-                  <div class="select-partners__level-controls">
-                    <label class="visually-hidden" for="min_level" aria-label="Минимальный уровень"></label>
-                    <input class="select-partners__level select-partners__level--min" type="text" id="min_level" name="min-level" value="30">
-                    <label class="visually-hidden" for="max_level" aria-label="Максимальный уровень"></label>
-                    <input class="select-partners__level select-partners__level--max" type="text" id="max_level" name="max-level" value="100">
-                  </div>
-                  <div class="select-partners__level-controls">
-                    <div class="select-partners__scale">
-                      <div class="select-partners__bar"></div>
-                    </div>
-                    <div class="select-partners__toggle select-partners__toggle--min" tabindex="0"></div>
-                    <div class="select-partners__toggle select-partners__toggle--max" tabindex="0"></div>
-                  </div>
-                </div>
-              </fieldset>
-              <button class="select-partners__button-submit" type="submit">показать</button>
-            </form>
-          </section>
+              </div>
+              <div class="users-card__level">
+                <span class="users-card__level-title">левел:</span>
+                <img class="users-card__level-img" src="img/catalog/ico-level/lv-80.svg" width="45" height="45" alt="Уровень пользователя 99">
+              </div>
+              <button class="button users-card__button" type="button">Позвать!</button>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
