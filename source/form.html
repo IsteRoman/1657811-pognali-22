@@ -121,7 +121,11 @@
       <h1 class="title__block title__block-form"><span class="wrapper-form main-title-form">Направления</span></h1>
       <section class="user-information">
         <div class="wrapper-form user-information__block">
-          <img class="user-information__level" src="img/catalog/ico-level/form-lv-80.svg" width="100" height="100" alt="Уровень пользователя 80">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/catalog/ico-level/form-desc-lv-80.svg">
+
+            <img class="user-information__level" src="img/catalog/ico-level/form-lv-80.svg" width="100" height="100" alt="Уровень пользователя 80">
+          </picture>
           <div class="user-information__avatar-block">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.webp 1x, img/catalog/users/form-user-avatar-desktop@2x.webp 2x">
@@ -202,7 +206,7 @@
           </ul>
         </div>
       </section>
-      <section class="plan-add no-js-form step-one--visibility">
+      <section class="plan-add step-three--visibility">
         <div class="wrapper-form plan-add__block">
           <p class="visually-hidden"><a name="step-one"></a></p>
           <h2 class="plan-add__title title__form-sub-title">Добавить план:</h2>
@@ -234,8 +238,8 @@
                     </button>
                   </div>
                   <div class="step-one__chaild-off">
-                    <input class="step-one__chaild-off-checkbox" type="checkbox" id="chaild_off" name="chaild-off" checked>
-                    <label class="step-one__chaild-off-checkbox-label" for="chaild_off" tabindex="0">Можно с детьми</label>
+                    <input class="step-one__chaild-off-checkbox" type="checkbox" id="chaild_on" name="chaild-on" checked>
+                    <label class="step-one__chaild-off-checkbox-label" for="chaild_on" tabindex="0">Можно с детьми</label>
                   </div>
                 </fieldset>
                 <fieldset class="step-one__fieldset step-one__fieldset-duration">

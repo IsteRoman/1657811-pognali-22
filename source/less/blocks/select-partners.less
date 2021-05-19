@@ -86,6 +86,7 @@
 }
 
 .select-partners__legend {
+  padding-bottom: 14px;
   font-size: 16px;
   line-height: 1.125;
   font-weight: 700;
@@ -95,13 +96,19 @@
   transition: @default-transition;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 0;
     font-size: 20px;
     line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 19px;
     line-height: 1.1;
   }
+}
+
+.select-partners__fieldset--open .select-partners__legend {
+  padding-bottom: 0;
 }
 
 .select-partners__button {
@@ -138,12 +145,12 @@
   opacity: 0.3;
 }
 
-.select-partners__button--active .select-partners__button-ico{
+.select-partners__fieldset--open .select-partners__button-ico{
   transform: rotate(180deg);
 }
 
 .select-partners__hobby-list {
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
   .zero-intervals;
@@ -152,6 +159,7 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 79%;
@@ -160,12 +168,17 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
     margin-top: 23px;
     margin-bottom: 32px;
   }
+}
+
+.select-partners__fieldset--open .select-partners__hobby-list {
+  display: flex;
 }
 
 .select-partners__hobby-item {
@@ -257,7 +270,7 @@
 }
 
 .select-partners__transport-list {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
@@ -268,16 +281,22 @@
   list-style: none;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     width: 79%;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
+    display: none;
     width: 100%;
     margin-top: 17px;
     margin-bottom: 34px;
   }
+}
+
+.select-partners__fieldset--open .select-partners__transport-list {
+  display: flex;
 }
 
 .select-partners__transport-item {
@@ -340,7 +359,7 @@
 }
 
 .select-partners__level-filter {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
@@ -349,6 +368,7 @@
   padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -358,6 +378,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -365,6 +386,10 @@
     margin-top: 20px;
     margin-bottom: 38px;
   }
+}
+
+.select-partners__fieldset--open .select-partners__level-filter {
+  display: flex;
 }
 
 .select-partners__level-input {
