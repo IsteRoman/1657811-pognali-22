@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    width: 951px;
     margin-top: 0;
   }
 }
@@ -15,6 +15,15 @@
   display: flex;
   flex-direction: column;
   .zero-intervals;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .users-card__item {
@@ -690,5 +699,61 @@
   @media (min-width: @tablet-width) {
     height: 50px;
     margin-top: 0;
+  }
+}
+
+.users-card__item-add {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 32px;
+  }
+}
+
+.users-card__item-add-link {
+  display: inline-flex;
+  align-items: center;
+  transition: @default-transition;
+}
+
+.users-card__item-add-link-ico {
+  flex-shrink: 0;
+  stroke: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.users-card__item-add-link:focus .users-card__item-add-link-ico,
+.users-card__item-add-link:hover .users-card__item-add-link-ico {
+  opacity: 0.6;
+}
+
+.users-card__item-add-link:active .users-card__item-add-link-ico {
+  opacity: 0.3;
+}
+
+.users-card__item-add-link-text {
+  margin-left: 15px;
+  font-size: 17px;
+  line-height: 1.764;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+    font-size: 20px;
+    line-height: 1;
   }
 }

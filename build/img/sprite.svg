@@ -26,6 +26,10 @@
 <path d="M0 7L12 0.0717964L12 13.9282L0 7Z" fill="#1D2E5B"/>
 </symbol><symbol id="button-arrow" viewBox="0 0 13 14">
 <path d="M12.8601 7L0.965004 13.0622L0.965004 0.937822L12.8601 7Z"/>
+</symbol><symbol id="catalog-arrows-back" viewBox="0 0 10 18">
+<path d="M0 9L9.75 0.339745L9.75 17.6603L0 9Z" fill="#1D2E5B"/>
+</symbol><symbol id="catalog-arrows-next" viewBox="0 0 10 18">
+<path d="M10 8.89478L0.25 17.555L0.25 0.234521L10 8.89478Z" fill="#1D2E5B"/>
 </symbol><symbol id="catalog-select-close" viewBox="0 0 10 5">
 <path d="M5 0L9.33013 4.5H0.669873L5 0Z" fill="#192144"/>
 </symbol><symbol id="catalog-select-open" viewBox="0 0 10 5">
