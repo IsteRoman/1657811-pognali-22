@@ -920,21 +920,29 @@
               <li class="users-card__item">
                 <div class="users-card__avatar">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.jpg 1x, img/catalog/users/main-firsova-tablet-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-firsova-desktop.webp 1x, img/catalog/users/catalog-firsova-desktop@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-firsova-desktop.png 1x, img/catalog/users/catalog-firsova-desktop@2x.png 2x">
 
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
-                    <img class="users-card__avatar-img" src="img/catalog/users/main-firsova-mobile.jpg" srcset="img/catalog/users/main-firsova-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/catalog-firsova-tablet.webp 1x, img/catalog/users/catalog-firsova-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/users/catalog-firsova-tablet.png 1x, img/catalog/users/catalog-firsova-tablet@2x.png 2x">
+
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-firsova-mobile.webp 1x, img/catalog/users/catalog-firsova-mobile@2x.webp 2x">
+                    <img class="users-card__avatar-img" src="img/catalog/users/catalog-firsova-mobile.png" srcset="img/catalog/users/catalog-firsova-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
                 </div>
                 <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
                 <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
-                <button class="users-card__button-heart">
-                  <svg class="users-card__button-heart-ico" width="12" height="10">
-                    <use href="#icon-heart"></use>
-                  </svg>
+                <div class="users-card__button-heart-block">
+                  <button class="users-card__button-heart users-card__button-heart--active">
+                    <svg class="users-card__button-heart-ico-off" width="12" height="10">
+                      <use href="#icon-heart-not-active"></use>
+                    </svg>
+                    <svg class="users-card__button-heart-ico-on" width="12" height="10">
+                      <use href="#icon-heart-active"></use>
+                    </svg>
+                  </button>
                   <span class="users-card__button-heart-text">1,5 М</span>
-                </button>
+                </div>
                 <div class="users-card__desire-to-visit">
                   <span class="users-card__desire-to-visit-title">хочет посетить:</span>
                   <ul class="users-card__desire-to-visit-list">
@@ -950,20 +958,20 @@
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/thailand.webp 1x, img/flags/thailand.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/thailand.png" srcset="img/flags/thailand.png 2x" width="26" height="18" alt="Таиланд">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Таиланд</span>
                     </li>
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/seychelles.webp 1x, img/flags/seychelles.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/seychelles.png" srcset="img/flags/seychelles.png 2x" width="26" height="18" alt="Сейшелы">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">сейшелы</span>
                     </li>
                   </ul>
                 </div>
@@ -998,57 +1006,56 @@
                 </div>
                 <div class="users-card__level">
                   <span class="users-card__level-title">левел:</span>
-                  <img class="users-card__level-img" src="img/catalog/ico-level/lv-80.svg" width="45" height="45" alt="Уровень пользователя 99">
+                  <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-99.svg" width="45" height="45" alt="Уровень пользователя 99">
                 </div>
                 <button class="button users-card__button" type="button">Позвать!</button>
               </li>
               <li class="users-card__item">
                 <div class="users-card__avatar">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.jpg 1x, img/catalog/users/main-firsova-tablet-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-demin-desktop.webp 1x, img/catalog/users/catalog-demin-desktop@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-demin-desktop.png 1x, img/catalog/users/catalog-demin-desktop@2x.png 2x">
 
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
-                    <img class="users-card__avatar-img" src="img/catalog/users/main-firsova-mobile.jpg" srcset="img/catalog/users/main-firsova-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/catalog-demin-tablet.webp 1x, img/catalog/users/catalog-demin-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/users/catalog-demin-tablet.png 1x, img/catalog/users/catalog-demin-tablet@2x.png 2x">
+
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-demin-mobile.webp 1x, img/catalog/users/catalog-demin-mobile@2x.webp 2x">
+                    <img class="users-card__avatar-img" src="img/catalog/users/catalog-demin-mobile.png" srcset="img/catalog/users/catalog-demin-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
                 </div>
-                <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
-                <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
-                <button class="users-card__button-heart">
-                  <svg class="users-card__button-heart-ico" width="12" height="10">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                  <span class="users-card__button-heart-text">1,5 М</span>
-                </button>
+                <a class="users-card__name users-card__name--offline" href="user-id-02.html">Петя Демин</a>
+                <span class="users-card__hashtags">#бургер #бар #футбол #концерт #крафт</span>
+                <div class="users-card__button-heart-block">
+                  <button class="users-card__button-heart">
+                    <svg class="users-card__button-heart-ico-off" width="12" height="10">
+                      <use href="#icon-heart-not-active"></use>
+                    </svg>
+                    <svg class="users-card__button-heart-ico-on" width="12" height="10">
+                      <use href="#icon-heart-active"></use>
+                    </svg>
+                  </button>
+                  <span class="users-card__button-heart-text">1500</span>
+                </div>
                 <div class="users-card__desire-to-visit">
                   <span class="users-card__desire-to-visit-title">хочет посетить:</span>
                   <ul class="users-card__desire-to-visit-list">
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/belgium.webp 1x, img/flags/belgium.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/belgium.png" srcset="img/flags/belgium.png 2x" width="26" height="18" alt="Бельгия">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Бельгия</span>
                     </li>
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/czechia.webp 1x, img/flags/czechia.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/czechia.png" srcset="img/flags/czechia.png 2x" width="26" height="18" alt="Чехия">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
-                    </li>
-                    <li class="users-card__desire-to-visit-item">
-                      <div class="users-card__flags">
-                        <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
-                        </picture>
-                      </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Чехия</span>
                     </li>
                   </ul>
                 </div>
@@ -1061,7 +1068,7 @@
                       </svg>
                       <span class="users-card__transport-signature">Авиаперелет</span>
                     </li>
-                    <li class="users-card__transport-item users-card__transport-item--unselected">
+                    <li class="users-card__transport-item">
                       <svg class="users-card__transport-ico" width="13" height="16">
                         <use href="#icon-bus"></use>
                       </svg>
@@ -1073,7 +1080,7 @@
                       </svg>
                       <span class="users-card__transport-signature">Велосипед</span>
                     </li>
-                    <li class="users-card__transport-item users-card__transport-item--unselected">
+                    <li class="users-card__transport-item">
                       <svg class="users-card__transport-ico" width="13" height="17">
                         <use href="#icon-run"></use>
                       </svg>
@@ -1083,57 +1090,65 @@
                 </div>
                 <div class="users-card__level">
                   <span class="users-card__level-title">левел:</span>
-                  <img class="users-card__level-img" src="img/catalog/ico-level/lv-80.svg" width="45" height="45" alt="Уровень пользователя 99">
+                  <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-80.svg" width="45" height="45" alt="Уровень пользователя 80">
                 </div>
                 <button class="button users-card__button" type="button">Позвать!</button>
               </li>
               <li class="users-card__item">
                 <div class="users-card__avatar">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.jpg 1x, img/catalog/users/main-firsova-tablet-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-smolov-desktop.webp 1x, img/catalog/users/catalog-smolov-desktop@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-smolov-desktop.png 1x, img/catalog/users/catalog-smolov-desktop@2x.png 2x">
 
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
-                    <img class="users-card__avatar-img" src="img/catalog/users/main-firsova-mobile.jpg" srcset="img/catalog/users/main-firsova-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/catalog-smolov-tablet.webp 1x, img/catalog/users/catalog-smolov-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/users/catalog-smolov-tablet.png 1x, img/catalog/users/catalog-smolov-tablet@2x.png 2x">
+
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-smolov-mobile.webp 1x, img/catalog/users/catalog-smolov-mobile@2x.webp 2x">
+                    <img class="users-card__avatar-img" src="img/catalog/users/catalog-smolov-mobile.png" srcset="img/catalog/users/catalog-smolov-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
                 </div>
-                <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
-                <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
-                <button class="users-card__button-heart">
-                  <svg class="users-card__button-heart-ico" width="12" height="10">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                  <span class="users-card__button-heart-text">1,5 М</span>
-                </button>
+                <a class="users-card__name users-card__name--offline" href="user-id-03.html">Марк Смолов</a>
+                <span class="users-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</span>
+                <div class="users-card__button-heart-block">
+                  <button class="users-card__button-heart">
+                    <svg class="users-card__button-heart-ico-off" width="12" height="10">
+                      <use href="#icon-heart-not-active"></use>
+                    </svg>
+                    <svg class="users-card__button-heart-ico-on" width="12" height="10">
+                      <use href="#icon-heart-active"></use>
+                    </svg>
+                  </button>
+                  <span class="users-card__button-heart-text">170</span>
+                </div>
                 <div class="users-card__desire-to-visit">
                   <span class="users-card__desire-to-visit-title">хочет посетить:</span>
                   <ul class="users-card__desire-to-visit-list">
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/usa.webp 1x, img/flags/usa.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/usa.png" srcset="img/flags/usa.png 2x" width="26" height="18" alt="США">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">США</span>
                     </li>
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/australia.webp 1x, img/flags/australia.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/australia.png" srcset="img/flags/australia.png 2x" width="26" height="18" alt="Австралия">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Австралия</span>
                     </li>
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/dominica.webp 1x, img/flags/dominica.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/dominica.png" srcset="img/flags/dominica.png 2x" width="26" height="18" alt="Доминика">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Доминика</span>
                     </li>
                   </ul>
                 </div>
@@ -1152,7 +1167,7 @@
                       </svg>
                       <span class="users-card__transport-signature">Автотранспорт</span>
                     </li>
-                    <li class="users-card__transport-item users-card__transport-item--unselected">
+                    <li class="users-card__transport-item">
                       <svg class="users-card__transport-ico" width="14" height="17">
                         <use href="#icon-bicycle"></use>
                       </svg>
@@ -1168,57 +1183,56 @@
                 </div>
                 <div class="users-card__level">
                   <span class="users-card__level-title">левел:</span>
-                  <img class="users-card__level-img" src="img/catalog/ico-level/lv-80.svg" width="45" height="45" alt="Уровень пользователя 99">
+                  <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-25.svg" width="45" height="45" alt="Уровень пользователя 25">
                 </div>
                 <button class="button users-card__button" type="button">Позвать!</button>
               </li>
               <li class="users-card__item">
                 <div class="users-card__avatar">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.jpg 1x, img/catalog/users/main-firsova-tablet-desktop@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-rogovaya-desktop.webp 1x, img/catalog/users/catalog-rogovaya-desktop@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-rogovaya-desktop.png 1x, img/catalog/users/catalog-rogovaya-desktop@2x.png 2x">
 
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
-                    <img class="users-card__avatar-img" src="img/catalog/users/main-firsova-mobile.jpg" srcset="img/catalog/users/main-firsova-mobile@2x.jpg 2x" width="270" height="270" alt="аватар">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/catalog-rogovaya-tablet.webp 1x, img/catalog/users/catalog-rogovaya-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/catalog/users/catalog-rogovaya-tablet.png 1x, img/catalog/users/catalog-rogovaya-tablet@2x.png 2x">
+
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-rogovaya-mobile.webp 1x, img/catalog/users/catalog-rogovaya-mobile@2x.webp 2x">
+                    <img class="users-card__avatar-img" src="img/catalog/users/catalog-rogovaya-mobile.png" srcset="img/catalog/users/catalog-rogovaya-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
                 </div>
-                <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
-                <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
-                <button class="users-card__button-heart">
-                  <svg class="users-card__button-heart-ico" width="12" height="10">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                  <span class="users-card__button-heart-text">1,5 М</span>
-                </button>
+                <a class="users-card__name users-card__name--online" href="user-id-04.html">Лариса Роговая</a>
+                <span class="users-card__hashtags">#образование #карьера #учеба #линкедин</span>
+                <div class="users-card__button-heart-block">
+                  <button class="users-card__button-heart">
+                    <svg class="users-card__button-heart-ico-off" width="12" height="10">
+                      <use href="#icon-heart-not-active"></use>
+                    </svg>
+                    <svg class="users-card__button-heart-ico-on" width="12" height="10">
+                      <use href="#icon-heart-active"></use>
+                    </svg>
+                  </button>
+                  <span class="users-card__button-heart-text">23</span>
+                </div>
                 <div class="users-card__desire-to-visit">
                   <span class="users-card__desire-to-visit-title">хочет посетить:</span>
                   <ul class="users-card__desire-to-visit-list">
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/uk.webp 1x, img/flags/uk.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/uk.png" srcset="img/flags/uk.png 2x" width="26" height="18" alt="Великобритания">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Великобритания</span>
                     </li>
                     <li class="users-card__desire-to-visit-item">
                       <div class="users-card__flags">
                         <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
+                          <source type="image/webp" srcset="img/flags/germany.webp 1x, img/flags/germany.webp 2x">
+                          <img class="users-card__flags-img" src="img/flags/germany.png" srcset="img/flags/germany.png 2x" width="26" height="18" alt="Германия">
                         </picture>
                       </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
-                    </li>
-                    <li class="users-card__desire-to-visit-item">
-                      <div class="users-card__flags">
-                        <picture>
-                          <source type="image/webp" srcset="img/flags/sri-lanka.webp 1x, img/flags/sri-lanka.webp 2x">
-                          <img class="users-card__flags-img" src="img/flags/sri-lanka.png" srcset="img/flags/sri-lanka.png 2x" width="26" height="18" alt="Шри-Ланка">
-                        </picture>
-                      </div>
-                      <span class="users-card__desire-to-visit-country-name">шри-ланка</span>
+                      <span class="users-card__desire-to-visit-country-name">Германия</span>
                     </li>
                   </ul>
                 </div>
@@ -1231,7 +1245,7 @@
                       </svg>
                       <span class="users-card__transport-signature">Авиаперелет</span>
                     </li>
-                    <li class="users-card__transport-item users-card__transport-item--unselected">
+                    <li class="users-card__transport-item">
                       <svg class="users-card__transport-ico" width="13" height="16">
                         <use href="#icon-bus"></use>
                       </svg>
@@ -1253,7 +1267,7 @@
                 </div>
                 <div class="users-card__level">
                   <span class="users-card__level-title">левел:</span>
-                  <img class="users-card__level-img" src="img/catalog/ico-level/lv-80.svg" width="45" height="45" alt="Уровень пользователя 99">
+                  <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-50.svg" width="45" height="45" alt="Уровень пользователя 50">
                 </div>
                 <button class="button users-card__button" type="button">Позвать!</button>
               </li>

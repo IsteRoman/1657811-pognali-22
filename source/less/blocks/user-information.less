@@ -312,6 +312,66 @@
   }
 }
 
+.user-information__transport-signature {
+  position: absolute;
+  top: 40px;
+  left: -35px;
+  display: none;
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  line-height: 1;
+  color: @basic-white;
+  background-color: @special-blue-dark-6;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    top: 50px;
+    left: -50px;
+    padding: 18px 20px 18px 20px;
+    font-size: 20px;
+  }
+}
+
+.user-information__transport-signature::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 45%;
+  width: 13px;
+  height: 10px;
+  background: url(../img/icon/arrow-signature.svg) no-repeat;
+  background-size: contain;
+}
+
+.user-information__transport-item:nth-of-type(2) .user-information__transport-signature {
+  left: -37px;
+
+  @media (min-width: @tablet-width) {
+    left: -58px;
+  }
+}
+
+.user-information__transport-item:nth-of-type(3) .user-information__transport-signature {
+  left: -27px;
+
+  @media (min-width: @tablet-width) {
+    left: -43px;
+  }
+}
+
+.user-information__transport-item:nth-of-type(4) .user-information__transport-signature {
+  left: -20px;
+
+  @media (min-width: @tablet-width) {
+    left: -33px;
+  }
+}
+
+.user-information__transport-item:hover .user-information__transport-signature,
+.user-information__transport-item:focus .user-information__transport-signature {
+  display: block;
+}
+
 .user-information__checkbox:checked + .user-information__checkbox-label .user-information__transport-ico {
   opacity: 1;
 }
