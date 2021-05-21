@@ -4,11 +4,11 @@
   background-color: @special-blue-dark-2;
 
   @media (min-width: @tablet-width) {
-    margin-top: 90px;
+    padding-top: 88px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 99px;
+    padding-top: 105px;
   }
 }
 
@@ -28,7 +28,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 315px;
+    top: 380px;
     height: 612px;
     background: url("../img/background/globe-back-tablet.png") no-repeat;
     background-size: cover;
@@ -40,7 +40,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -100px;
+    top: 0;
     height: 750px;
     background: url("../img/background/globe-back-desktop.png") no-repeat;
     background-size: cover;
@@ -87,8 +87,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    top: 335px;
-    left: 240px;
+    top: 315px;
+    left: 285px;
     width: 372px;
     height: 451px;
     background: url("../img/index/traveller-illustration-tablet.png") no-repeat;
@@ -100,8 +100,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 10px;
-    left: 540px;
+    top: 5px;
+    left: 605px;
     width: 431px;
     height: 640px;
     background: url("../img/index/traveller-illustration-desktop.png") no-repeat;
@@ -142,13 +142,14 @@
   margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
-    width: 264px;
+    width: 265px;
     margin-left: 33px;
-    margin-bottom: 211px;
+    margin-bottom: 210px;
   }
 
   @media (min-width: @desktop-width) {
     grid-area: quote;
+    width: 300px;
     margin-left: 0;
     margin-bottom: 0;
   }
@@ -176,7 +177,13 @@
   color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 45px;
+    width: 280px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+    margin-left: 14px;
   }
 }
 
@@ -186,8 +193,14 @@
   color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    display: inline-block;
+    max-height: 75px;
     font-size: 21px;
-    line-height: 1.1904;
+    line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 14px;
   }
 }
 
@@ -215,8 +228,9 @@
 
   @media (min-width: @desktop-width) {
     grid-area: description;
+    flex-wrap: nowrap;
     width: unset;
-    margin-top: 101px;
+    margin-top: 105px;
   }
 }
 
@@ -232,6 +246,10 @@
   @media (min-width: @tablet-width) {
     padding: 31px 0 61px 32px;
     font-size: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 0 61px 33px;
   }
 }
 
@@ -260,14 +278,16 @@
   @media (min-width: @tablet-width) {
     width: 344px;
     margin-top: 0;
-    margin-left: -16px;
+    margin-left: -13px;
+    padding-left: 34px;
     padding-bottom: 61px;
     border-radius: 20px 20px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 345px;
+    width: 365px;
     margin-left: -30px;
+    padding-left: 30px;
     padding-bottom: 29px;
     border-radius: 20px;
   }
@@ -281,14 +301,16 @@
   @media (min-width: @tablet-width) {
     width: 355px;
     margin-top: 0;
-    padding-bottom: 61px;
+    padding-top: 30px;
+    padding-bottom: 62px;
     border-radius: 0 0 0 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 345px;
-    margin-left: -30px;
-    padding-bottom: 29px;
+    width: 355px;
+    margin-left: -20px;
+    padding-top: 28px;
+    padding-bottom: 31px;
     border-radius: 20px;
   }
 }
@@ -300,14 +322,17 @@
   @media (min-width: @tablet-width) {
     width: 344px;
     margin-top: 0;
-    margin-left: -16px;
-    padding-bottom: 61px;
+    margin-left: -13px;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-bottom: 62px;
     border-radius: 0 0 20px 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 345px;
-    margin-left: -30px;
+    width: 313px;
+    margin-left: -10px;
+    padding-left: 30px;
     padding-bottom: 29px;
     border-radius: 20px;
   }
@@ -374,5 +399,18 @@
   @media (min-width: @desktop-width) {
     top: 28px;
     left: 268px;
+    font-size: 24px;
+  }
+}
+
+.intro__description-item:nth-of-type(2)::before {
+  @media (min-width: @desktop-width) {
+    left: 300px;
+  }
+}
+
+.intro__description-item:nth-of-type(3)::before {
+  @media (min-width: @desktop-width) {
+    left: 300px;
   }
 }

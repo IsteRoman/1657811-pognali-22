@@ -29,14 +29,14 @@
 
   @media (min-width: @tablet-width) {
     top: 36%;
-    height: 47px;
-    border-radius: 0 0 30px 30px;
+    height: 58px;
+    border-radius: 0 0 50px 50px;
   }
 
   @media (min-width: @desktop-width) {
     top: 25%;
-    height: 56px;
-    border-radius: 0 0 40px 40px;
+    height: 88px;
+    border-radius: 0 0 55px 55px;
   }
 }
 
@@ -47,10 +47,16 @@
   justify-content: flex-start;
   align-items: center;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: center;
-    padding-top: 116px;
+    padding-top: 118px;
+    padding-left: 220px;
   }
 }
 
@@ -67,8 +73,8 @@
 
   @media (min-width: @tablet-width) {
     align-self: flex-start;
-    margin-bottom: 62px;
-    padding-top: 124px;
+    margin-bottom: 63px;
+    padding-top: 115px;
     padding-left: 94px;
     line-height: 1;
   }
@@ -93,13 +99,13 @@
   background-size: cover;
 
   @media (min-width: @tablet-width) {
-    top: 100px;
+    top: 98px;
     width: 68px;
     height: 68px;
   }
 
   @media (min-width: @desktop-width) {
-    top: -36px;
+    top: -30px;
     width: 90px;
     height: 90px;
   }
@@ -116,6 +122,8 @@
   @media (min-width: @tablet-width) {
     min-height: 80px;
     margin-bottom: 37px;
+    padding-left: 35px;
+    padding-right: 32px;
     font-size: 24px;
     line-height: 1;
   }
@@ -142,6 +150,14 @@
   z-index: -2;
   width: 100%;
   height: 334px;
+
+  @media (min-width: @tablet-width) {
+    height: 550px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 498px;
+  }
 }
 
 .contacts__static-map-image {
@@ -152,11 +168,11 @@
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    height: 581px;
+    height: 550px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 584px;
+    height: 498px;
   }
 }
 
@@ -169,10 +185,10 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    height: 581px;
+    height: 550px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 584px;
+    height: 498px;
   }
 }
