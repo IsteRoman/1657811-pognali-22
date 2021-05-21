@@ -14,7 +14,7 @@
     <div class="visually-hidden">
       @@include("build/img/sprite.svg")
     </div>
-    <heaber class="header header--no-js">
+    <header class="header header--no-js">
       <div class="wrapper header__block">
         <a class="header__logo header__logo-static header__logo--scrol">
           <picture>
@@ -116,7 +116,7 @@
           <a class="button header__button-authorization-out-trail">авторизация</a>
         </div>
       </div>
-    </heaber>
+    </header>
     <main>
       <section class="intro">
         <div class="wrapper intro__block">
@@ -138,7 +138,7 @@
             <div class="wrapper about-service__block">
               <h2 class="main-sub-title about-service__subtitle">О сервисе</h2>
               <p class="about-service__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной&nbsp;волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
-              <b class="about-service__tagline">А если найдете кого-то близкого&nbsp;по&nbsp;духу — скорее зовите&nbsp;в&nbsp;совместный трип!</b>
+              <b class="about-service__tagline">А если найдете кого-то близкого&nbsp;по&nbsp;духу &mdash; скорее зовите&nbsp;в&nbsp;совместный трип!</b>
               <a class="button about-service__button" href="#">Подробнее
               <svg class="button__arrow-ico about-service__arrow-ico" width="14" height="16">
                 <use href="#button-arrow"></use>
@@ -227,7 +227,7 @@
           </div>
           <ul class="companion__list">
             <li class="companion__card">
-              <div class="companion__card-avatar">
+              <a class="companion__card-avatar" href="user-id-01.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.webp 1x, img/catalog/users/main-firsova-tablet-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog/users/main-firsova-tablet-desktop.png 1x, img/catalog/users/main-firsova-tablet-desktop@2x.png 2x">
@@ -235,7 +235,8 @@
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-firsova-mobile.webp 1x, img/catalog/users/main-firsova-mobile@2x.webp 2x">
                   <img class="companion__card-avatar-ico" src="img/catalog/users/main-firsova-mobile.png" srcset="img/catalog/users/main-firsova-mobile@2x.png 2x" width="270" height="270" alt="аватар">
                 </picture>
-              </div>
+              </a>
+              <img class="companion__card-level-img" src="img/catalog/ico-level/lv-99.svg" width="60" height="60" alt="Уровень пользователя 99">
               <ul class="companion__card-countries">
                 <li class="companion__card-flags">
                   <picture>
@@ -286,7 +287,7 @@
               </ul>
             </li>
             <li class="companion__card">
-              <div class="companion__card-avatar">
+              <a class="companion__card-avatar" href="user-id-02.html">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/main-demin-tablet-desktop.webp 1x, img/catalog/users/main-demin-tablet-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog/users/main-demin-tablet-desktop.png 1x, img/catalog/users/main-demin-tablet-desktop@2x.png 2x">
@@ -294,7 +295,8 @@
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/main-demin-mobile.webp 1x, img/catalog/users/main-demin-mobile@2x.webp 2x">
                   <img class="companion__card-avatar-ico" src="img/catalog/users/main-demin-mobile.png" srcset="img/catalog/users/main-demin-mobile@2x.png 2x" width="270" height="270" alt="аватар">
                 </picture>
-              </div>
+              </a>
+              <img class="companion__card-level-img" src="img/catalog/ico-level/lv-80.svg" width="60" height="60" alt="Уровень пользователя 80">
               <ul class="companion__card-countries">
                 <li class="companion__card-flags">
                   <picture>
@@ -388,7 +390,7 @@
                 <span class="tariffs__business-price">Индивидуально</span>
               </li>
             </ul>
-            <span class="tariffs__close-business">Закрыть окно</span>
+            <span class="tariffs__close-business" tabindex="0">Закрыть окно</span>
           </div>
         </div>
       </section>
@@ -406,7 +408,7 @@
               </svg>
             </button>
           </form>
-          <p class="check-in__text">Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на&nbsp;них&nbsp;ответим!</p>
+          <p class="check-in__text-bottom">Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на&nbsp;них&nbsp;ответим!</p>
           <ul class="check-in__ours-contacts our-contacts">
             <li class="our-contacts__item">
               <a class="our-contacts__link our-contacts__link--check-out" href="tel:88005558628">
@@ -444,7 +446,7 @@
             <source media="(min-width: 768px)" srcset="img/map/map-and-marker-tablet.jpg 1x, img/map/map-and-marker-tablet@2x.jpg 2x">
 
             <source type="image/webp" media="(min-width: 320px)" srcset="img/map/map-and-marker-mobile.webp 1x, img/map/map-and-marker-mobile@2x.webp 2x">
-            <img class="contacts__static-map-image" src="img/map/map-and-marker-mobile.jpg" srcset="img/map/map-and-marker-mobile@2x.jpg 2x" width="320" height="424" alt="Карта с адресом Санкт-Петербург ул. Большая Конюшенная, 19/8">
+            <img class="contacts__static-map-image" src="img/map/map-and-marker-mobile.jpg" srcset="img/map/map-and-marker-mobile@2x.jpg 2x" width="320" height="334" alt="Карта с адресом Санкт-Петербург ул. Большая Конюшенная, 19/8">
           </picture>
         </div>
         <div class="contacts__interactive-map" id="map"></div>

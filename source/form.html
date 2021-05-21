@@ -14,7 +14,7 @@
     <div class="visually-hidden">
       @@include("build/img/sprite.svg")
     </div>
-    <heaber class="header header--no-js">
+    <header class="header header--no-js">
       <div class="wrapper header__block">
         <a class="header__logo header__logo-static header__logo--scrol" href="index.html">
           <picture>
@@ -96,7 +96,7 @@
             </li>
           </ul>
         </div>
-        <div  class="header__out-trail header--form">
+        <div  class="header__out-trail header__out-trail--form">
           <ul class="header__contacts">
             <li class="header__contacts__item">
               <a class="header__contacts-link" href="tel:88005558628" title="Позвоните нам">
@@ -116,9 +116,9 @@
           <a class="button header__button-authorization-out-trail">авторизация</a>
         </div>
       </div>
-    </heaber>
-    <main>
-      <h1 class="title__block title__block-form"><span class="wrapper-form main-title-form">Направления</span></h1>
+    </header>
+    <main class="form-page">
+      <h1 class="form-page__block"><span class="form-page__title main-title-form">Направления</span></h1>
       <section class="user-information">
         <div class="wrapper-form user-information__block">
           <picture>
@@ -149,7 +149,7 @@
             <ul class="user-information__transport-list">
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Air_travel" name="Air-travel" checked>
-                <label class="user-information__checkbox-label" for="Air_travel">
+                <label class="user-information__checkbox-label" for="Air_travel" tabindex="0">
                   <svg class="user-information__transport-ico" width="16" height="16">
                     <use href="#icon-plane"></use>
                   </svg>
@@ -158,7 +158,7 @@
               </li>
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Road_transport" name="Road-transport" checked>
-                <label class="user-information__checkbox-label" for="Road_transport">
+                <label class="user-information__checkbox-label" for="Road_transport" tabindex="0">
                   <svg class="user-information__transport-ico" width="16" height="16">
                     <use href="#icon-bus"></use>
                   </svg>
@@ -167,7 +167,7 @@
               </li>
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="Bike_riding" name="Bike-riding">
-                <label class="user-information__checkbox-label" for="Bike_riding">
+                <label class="user-information__checkbox-label" for="Bike_riding" tabindex="0">
                   <svg class="user-information__transport-ico" width="16" height="16">
                     <use href="#icon-bicycle"></use>
                   </svg>
@@ -176,7 +176,7 @@
               </li>
               <li class="user-information__transport-item">
                 <input class="user-information__checkbox" type="checkbox" id="On_foot" name="On-foot" checked>
-                <label class="user-information__checkbox-label" for="On_foot">
+                <label class="user-information__checkbox-label" for="On_foot" tabindex="0">
                   <svg class="user-information__transport-ico" width="16" height="16">
                     <use href="#icon-run"></use>
                   </svg>
@@ -189,7 +189,7 @@
       </section>
       <section class="my-plans">
         <div class="wrapper-form my-plans__block">
-          <h2 class="my-plans__title title__form-sub-title">Мои планы:</h2>
+          <h2 class="my-plans__title form-sub-title">Мои планы:</h2>
           <ul class="my-plans__list">
             <li class="my-plans__item">
               <h3 class="my-plans__item-title">Франция, Италия</h3>
@@ -209,7 +209,7 @@
       <section class="plan-add">
         <div class="wrapper-form plan-add__block">
           <p class="visually-hidden"><a name="step-one"></a></p>
-          <h2 class="plan-add__title title__form-sub-title">Добавить план:</h2>
+          <h2 class="plan-add__title form-sub-title">Добавить план:</h2>
           <div class="plan-add__steps-indicator">
             <span class="plan-add__steps-dotts plan-add__steps-dotts--active"><span class="plan-add__steps-text">даты</span></span>
             <span class="plan-add__steps-dotts"><span class="plan-add__steps-text">маршрут</span></span>
@@ -217,7 +217,7 @@
           </div>
           <form class="plan-add__form" method="POST" action="https://echo.htmlacademy.ru/">
             <div class="plan-add__form-step-one step-one">
-              <h3 class="step-one__title title__step-title">Шаг 1. <span class="step-one__title-second-line">Даты пребывания</span></h3>
+              <h3 class="step-one__title step-title">Шаг 1. <span class="step-one__title-second-line">Даты пребывания</span></h3>
               <p class="step-one__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
               <div class="step-one__section">
                 <fieldset class="step-one__fieldset step-one__fieldset-companions">
@@ -225,13 +225,13 @@
                   <span class="step-one__fieldset-measure">Чел.</span>
                   <div class="step-one__fieldset-input-block">
                     <label class="visually-hidden" for="companions_number" aria-label="Укажите колличество попутчиков"></label>
-                    <button class="step-one__button-minus" type="button">
+                    <button class="step-one__button-minus" type="button" aria-label="Уменьшить значение">
                       <svg class="step-one__button-minus-ico" width="14" height="1">
                         <use href="#icon-minus"></use>
                       </svg>
                     </button>
                     <input class="step-one__input" type="number" id="companions_number" name="companions-number" value="2" min="1" max="10">
-                    <button class="step-one__button-plus" type="button">
+                    <button class="step-one__button-plus" type="button" aria-label="Увеличить значение">
                       <svg class="step-one__button-plus-ico" width="14" height="14">
                         <use href="#icon-plus"></use>
                       </svg>
@@ -247,13 +247,13 @@
                   <span class="step-one__fieldset-measure">дн.</span>
                   <div class="step-one__fieldset-input-block">
                     <label class="visually-hidden" for="days_number" aria-label="Укажите колличество дней"></label>
-                    <button class="step-one__button-minus" type="button">
+                    <button class="step-one__button-minus" type="button" aria-label="Уменьшить значение">
                       <svg class="step-one__button-minus-ico" width="14" height="1">
                         <use href="#icon-minus"></use>
                       </svg>
                     </button>
                     <input class="step-one__input" type="number" id="days_number" name="days-number" value="3" min="1" max="20">
-                    <button class="step-one__button-plus" type="button">
+                    <button class="step-one__button-plus" type="button" aria-label="Увеличить значение">
                       <svg class="step-one__button-plus-ico" width="14" height="14">
                         <use href="#icon-plus"></use>
                       </svg>
@@ -419,55 +419,55 @@
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="26_03" name="26.03" checked>
-                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="26_03">26<span class="step-one__calendar-label-text">Заезд</span></label>
+                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="26_03" tabindex="0">26<span class="step-one__calendar-label-text">Заезд</span></label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="27_03" name="27.03" checked>
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="27_03">27</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="27_03" tabindex="0">27</label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="28_03" name="28.03" checked>
-                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="28_03">28<span class="step-one__calendar-label-text">Выезд</span></label>
+                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="28_03" tabindex="0">28<span class="step-one__calendar-label-text">Выезд</span></label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="29_03" name="29.03">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="29_03">29</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="29_03" tabindex="0">29</label>
                       </td>
                     </tr>
                     <tr>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="30_03" name="30.03">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="30_03">30</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="30_03" tabindex="0">30</label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="31_03" name="31.03">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="31_03">31</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="31_03" tabindex="0">31</label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="1_04" name="1.04">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="1_04">1&nbsp;<span class="step-one__calendar-label-data-text">апр</span></label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="1_04" tabindex="0">1&nbsp;<span class="step-one__calendar-label-data-text">апр</span></label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="2_04" name="2.04">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="2_04">2</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="2_04" tabindex="0">2</label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="3_04" name="3.04">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="3_04">3</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="3_04" tabindex="0">3</label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="4_04" name="4.04">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="4_04">4</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="4_04" tabindex="0">4</label>
                       </td>
                       <td class="step-one__calendar-item">
                         <input class="step-one__calendar-checkdox" type="checkbox" id="5_04" name="5.04">
-                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="5_04">5</label>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="5_04" tabindex="0">5</label>
                       </td>
                     </tr>
                   </table>
                 </fieldset>
                 <a class="button step-one__button" href="#step-second">Следующий шаг
-                  <svg class="button__arrow-ico step-one__arrow-ico" width="14" height="16">
+                  <svg class="arrow-ico step-one__arrow-ico" width="14" height="16">
                     <use href="#button-arrow"></use>
                   </svg>
                 </a>
@@ -475,7 +475,7 @@
             </div>
             <div class="plan-add__form-step-second step-second">
               <p class="visually-hidden"><a name="step-second"></a></p>
-              <h3 class="step-second__title title__step-title">Шаг 2. <span class="step-second__title-second-line">Маршрут</span></h3>
+              <h3 class="step-second__title step-title">Шаг 2. <span class="step-second__title-second-line">Маршрут</span></h3>
               <p class="step-second__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
               <div class="step-second__section">
                 <fieldset class="step-second__fieldset">
@@ -689,12 +689,12 @@
                 </fieldset>
                 <div class="step-second__button-block">
                   <a class="button step-second__button" href="#step-three">Следующий шаг
-                    <svg class="button__arrow-ico step-second__arrow-ico" width="14" height="16">
+                    <svg class="arrow-ico step-second__arrow-ico" width="14" height="16">
                       <use href="#button-arrow"></use>
                     </svg>
                   </a>
                   <a class="plan-add__button-back step-second__button-back" href="#step-one">
-                    <svg class="button__arrow-ico step-second__arrow-back-ico" width="14" height="16">
+                    <svg class="arrow-ico step-second__arrow-back-ico" width="14" height="16">
                       <use href="#button-arrow-back"></use>
                     </svg>
                     На шаг назад</a>
@@ -703,7 +703,7 @@
             </div>
             <div class="plan-add__form-step-three step-three">
               <p class="visually-hidden"><a name="step-three"></a></p>
-              <h3 class="step-three__title title__step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
+              <h3 class="step-three__title step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
               <p class="step-three__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <div class="step-three__section">
                 <fieldset class="step-three__fieldset">
@@ -724,12 +724,12 @@
                 </fieldset>
                 <div class="step-three__button-block">
                   <button class="button plan-add__button-submit" type="submit">Отправить
-                    <svg class="button__arrow-ico step-three__arrow-ico" width="14" height="16">
+                    <svg class="arrow-ico step-three__arrow-ico" width="14" height="16">
                       <use href="#button-arrow"></use>
                     </svg>
                   </button>
                   <a class="plan-add__button-back step-three__button-back" href="#step-second">
-                    <svg class="button__arrow-ico step-three__arrow-back-ico" width="14" height="16">
+                    <svg class="arrow-ico step-three__arrow-back-ico" width="14" height="16">
                       <use href="#button-arrow-back"></use>
                     </svg>
                     На шаг назад</a>

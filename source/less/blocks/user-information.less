@@ -177,8 +177,9 @@
   left: 100px;
 
   @media (min-width: @tablet-width) {
-    top: 90px;
+    top: unset;
     left: 300px;
+    bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -249,8 +250,9 @@
   left: 80px;
 
   @media (min-width: @tablet-width) {
-    top: 90px;
+    top: unset;
     left: 110px;
+    bottom: -10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -262,6 +264,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   .zero-intervals;
   list-style: none;

@@ -361,6 +361,70 @@
   background-color: @super-light-gray-9;
 }
 
+.select-partners__transport-signature {
+  position: absolute;
+  top: 40px;
+  left: -35px;
+  z-index: 1;
+  display: none;
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  line-height: 1;
+  color: @basic-white;
+  background-color: @special-blue-dark-6;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    top: 50px;
+    left: -60px;
+    padding: 18px 20px 18px 20px;
+    font-size: 20px;
+  }
+}
+
+.select-partners__transport-signature::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 45%;
+  width: 13px;
+  height: 10px;
+  background: url("../img/icon/arrow-signature.svg") no-repeat;
+  background-size: contain;
+}
+
+.select-partners__transport-item:nth-of-type(2) .select-partners__transport-signature {
+  left: -37px;
+
+  @media (min-width: @tablet-width) {
+    left: -58px;
+  }
+}
+
+.select-partners__transport-item:nth-of-type(3) .select-partners__transport-signature {
+  left: -27px;
+
+  @media (min-width: @tablet-width) {
+    left: -43px;
+  }
+}
+
+.select-partners__transport-item:nth-of-type(4) .select-partners__transport-signature {
+  left: -20px;
+
+  @media (min-width: @tablet-width) {
+    left: -33px;
+  }
+}
+
+.select-partners__transport-item:hover .select-partners__transport-signature,
+.select-partners__transport-item:focus-within .select-partners__transport-signature {
+  display: block;
+}
+
+
+
+
 .select-partners__level-filter {
   display: none;
   flex-direction: column;

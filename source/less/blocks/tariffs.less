@@ -16,7 +16,7 @@
   width: 100%;
   height: 33px;
   background-color: @super-light-gray-2;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 25px 25px;
 
   @media (min-width: @tablet-width) {
     height: 57px;
@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 70px 25px 0 49px;
+  padding: 63px 25px 0 49px;
 
   @media (min-width: @tablet-width) {
     padding: 135px 40px 0 40px;
@@ -53,8 +53,8 @@
 .tariffs__block::before {
   content: "";
   position: absolute;
-  top: 100px;
-  right: 50px;
+  top: 70px;
+  right: 25px;
   z-index: 2;
   width: 100px;
   height: 100px;
@@ -148,8 +148,8 @@
   counter-increment: number;
   content: counter(number);
   position: absolute;
-  top: 5px;
-  right: -30px;
+  top: 4px;
+  right: -25px;
   display: inline-flex;
   width: 34px;
   height: 34px;
@@ -195,7 +195,7 @@
 
 .tariffs__commoner-price {
   position: relative;
-  padding-bottom: 18px;
+  padding-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -326,7 +326,7 @@
 
 .tariffs__business-block {
   position: absolute;
-  top: 45px;
+  top: 20px;
   right: 25px;
   display: flex;
   flex-direction: column;
@@ -423,7 +423,7 @@
 }
 
 .tariffs__business-service {
-  padding-top: 11px;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -443,11 +443,12 @@
   align-self: center;
   display: block;
   width: calc(100% + 50px);
-  padding: 21px 0;
+  padding: 21px 0 15px 0;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
   color: @basic-blue-dark;
   background-color: @super-light-gray-6;
   cursor: pointer;

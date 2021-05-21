@@ -5,11 +5,25 @@
   @media (min-width: @tablet-width) {
     background: url("../img/background/flags-tablet.png") 40px 156px no-repeat,
       @super-light-gray-5;
+    background-size: 90%;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/background/flags-tablet@2x.png") 40px 156px no-repeat,
+        @super-light-gray-5;
+          background-size: 90%;
+      }
   }
 
   @media (min-width: @desktop-width) {
     background: url("../img/background/flags-desktop.png") 40px 180px no-repeat,
       @super-light-gray-5;
+      background-size: 88%;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/background/flags-desktop@2x.png") 40px 180px no-repeat,
+        @super-light-gray-5;
+          background-size: 88%;
+      }
   }
 }
 
@@ -22,7 +36,7 @@
   width: 100%;
   height: 34px;
   background-color: @super-light-gray-5;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 25px 25px;
 
   @media (min-width: @tablet-width) {
     top: 99%;
@@ -40,7 +54,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 101px;
+  padding-top: 98px;
 
   @media (min-width: @tablet-width) {
     padding: 149px 76px 13px 76px;
@@ -61,7 +75,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-bottom: 60px;
+  margin-bottom: 61px;
   margin-left: 24px;
 
   @media (min-width: @tablet-width) {
@@ -103,7 +117,7 @@
   flex-direction: column;
   justify-content: flex-start;
   .zero-intervals;
-  margin-bottom: 14px;
+  margin-bottom: 21px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -124,12 +138,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  margin-bottom: 11px;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: flex-start;
-    align-items: unset;
+    align-items: stretch;
   }
 }
 
@@ -218,12 +232,11 @@
   display: inline-block;
   vertical-align: bottom;
   width: 100%;
-  height: 110px;
+  height: 100%;
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
     width: 185px;
-    height: 140px;
   }
 }
 
@@ -303,6 +316,7 @@
 
 .directions__item-visitors {
   grid-area: visitors;
+  margin-top: 2px;
   text-align: start;
   position: relative;
   line-height: 1.125;

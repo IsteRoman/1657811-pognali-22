@@ -497,16 +497,20 @@
 .users-card__transport-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 170px;
   .zero-intervals;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: center;
+    max-width: unset;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    width: 120px;
   }
 }
 
@@ -522,7 +526,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 14px;
+    width: 23px;
+    margin-right: 8px;
   }
 }
 

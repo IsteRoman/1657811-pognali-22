@@ -14,7 +14,7 @@
     <div class="visually-hidden">
       @@include("build/img/sprite.svg")
     </div>
-    <heaber class="header header--no-js">
+    <header class="header header--no-js">
       <div class="wrapper header__block">
         <a class="header__logo header__logo-static header__logo--scrol" href="index.html">
           <picture>
@@ -96,7 +96,7 @@
             </li>
           </ul>
         </div>
-        <div  class="header__out-trail header--form">
+        <div  class="header__out-trail header__out-trail--form">
           <ul class="header__contacts">
             <li class="header__contacts__item">
               <a class="header__contacts-link" href="tel:88005558628" title="Позвоните нам">
@@ -116,9 +116,19 @@
           <a class="button header__button-authorization-out-trail">авторизация</a>
         </div>
       </div>
-    </heaber>
-    <main>
-      <h1 class="title__block title__block-catalog"><span class="wrapper main-title-catalog">Попутчики</span></h1>
+    </header>
+    <main class="catalog-page">
+      <div class="catalog-page__block">
+        <div class="wrapper catalog-page__head-block">
+          <h1 class="catalog-page__title main-title-catalog">Попутчики</h1>
+          <a class="catalog-page__button" href="index.html">
+            <span class="catalog-page__button-text">на главную</span>
+            <svg class="catalog-page__button-ico" width="32" height="16">
+              <use href="#icon-back-on-main"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
       <section class="filter catalog-no-js">
         <div class="wrapper filter__block">
           <h2 class="filter__title">Фильтрация по странам:</h2>
@@ -791,15 +801,15 @@
                 <ul class="select-partners__hobby-list">
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="hobby_gym" name="hobby-gym" checked>
-                    <label class="select-partners__label" for="hobby_gym">Спортзал</label>
+                    <label class="select-partners__label" for="hobby_gym" tabindex="0">Спортзал</label>
                   </li>
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="hobby_hookah" name="hobby-hookah">
-                    <label class="select-partners__label" for="hobby_hookah">Кальян</label>
+                    <label class="select-partners__label" for="hobby_hookah" tabindex="0">Кальян</label>
                   </li>
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="hobby_sofa" name="hobby-sofa">
-                    <label class="select-partners__label" for="hobby_sofa">Диван</label>
+                    <label class="select-partners__label" for="hobby_sofa" tabindex="0">Диван</label>
                   </li>
                 </ul>
               </fieldset>
@@ -813,15 +823,15 @@
                 <ul class="select-partners__hobby-list">
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="music_hard-rock" name="music-hard-rock" checked>
-                    <label class="select-partners__label" for="music_hard-rock">Тяжелый рок</label>
+                    <label class="select-partners__label" for="music_hard-rock" tabindex="0">Тяжелый рок</label>
                   </li>
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="music_russian-rap" name="music-russian-rap">
-                    <label class="select-partners__label" for="music_russian-rap">Русский рэп</label>
+                    <label class="select-partners__label" for="music_russian-rap" tabindex="0">Русский рэп</label>
                   </li>
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="music_eurodance" name="music-eurodance">
-                    <label class="select-partners__label" for="music_eurodance">Евроденс</label>
+                    <label class="select-partners__label" for="music_eurodance" tabindex="0">Евроденс</label>
                   </li>
                 </ul>
               </fieldset>
@@ -835,15 +845,15 @@
                 <ul class="select-partners__hobby-list">
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="food_meat-eater" name="food-meat-eater" checked>
-                    <label class="select-partners__label" for="food_meat-eater">Мясоед</label>
+                    <label class="select-partners__label" for="food_meat-eater" tabindex="0">Мясоед</label>
                   </li>
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="food_sits-on-pp" name="food-sits-on-pp">
-                    <label class="select-partners__label" for="food_sits-on-pp">Сидит на ПП</label>
+                    <label class="select-partners__label" for="food_sits-on-pp" tabindex="0">Сидит на ПП</label>
                   </li>
                   <li class="select-partners__hobby-item">
                     <input class="select-partners__checkbox" type="checkbox" id="food_raw-vegan" name="food-raw-vegan">
-                    <label class="select-partners__label" for="food_raw-vegan">Веган-сыроед</label>
+                    <label class="select-partners__label" for="food_raw-vegan" tabindex="0">Веган-сыроед</label>
                   </li>
                 </ul>
               </fieldset>
@@ -857,35 +867,39 @@
                 <ul class="select-partners__transport-list">
                   <li class="select-partners__transport-item">
                     <input class="select-partners__checkbox-transport" type="checkbox" id="Air_travel" name="Air-travel" checked>
-                    <label class="select-partners__label-transport" for="Air_travel" title="Авиаперелет">
+                    <label class="select-partners__label-transport" for="Air_travel" tabindex="0">
                       <svg class="select-partners__transport-ico" width="16" height="16">
                         <use href="#icon-plane"></use>
                       </svg>
                     </label>
+                    <span class="select-partners__transport-signature">Автотранспорт</span>
                   </li>
                   <li class="select-partners__transport-item">
                     <input class="select-partners__checkbox-transport" type="checkbox" id="Road_transport" name="Road-transport" checked>
-                    <label class="select-partners__label-transport" for="Road_transport" title="Автотранспорт">
+                    <label class="select-partners__label-transport" for="Road_transport" tabindex="0">
                       <svg class="select-partners__transport-ico" width="16" height="16">
                         <use href="#icon-bus"></use>
                       </svg>
                     </label>
+                    <span class="select-partners__transport-signature">Автотранспорт</span>
                   </li>
                   <li class="select-partners__transport-item">
                     <input class="select-partners__checkbox-transport" type="checkbox" id="Bike_riding" name="Bike-riding">
-                    <label class="select-partners__label-transport" for="Bike_riding" title="Велосипед">
+                    <label class="select-partners__label-transport" for="Bike_riding" tabindex="0">
                       <svg class="select-partners__transport-ico" width="16" height="16">
                         <use href="#icon-bicycle"></use>
                       </svg>
                     </label>
+                    <span class="select-partners__transport-signature">Велосипед</span>
                   </li>
                   <li class="select-partners__transport-item">
                     <input class="select-partners__checkbox-transport" type="checkbox" id="On_foot" name="On-foot" checked>
-                    <label class="select-partners__label-transport" for="On_foot" title="Пешком">
+                    <label class="select-partners__label-transport" for="On_foot"tabindex="0">
                       <svg class="select-partners__transport-ico" width="16" height="16">
                         <use href="#icon-run"></use>
                       </svg>
                     </label>
+                    <span class="select-partners__transport-signature">Пешком</span>
                   </li>
                 </ul>
               </fieldset>
@@ -918,7 +932,7 @@
           <div class="catalog-main-content__users-card users-card">
             <ul class="users-card__list">
               <li class="users-card__item">
-                <div class="users-card__avatar">
+                <a class="users-card__avatar" href="user-id-01.html">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-firsova-desktop.webp 1x, img/catalog/users/catalog-firsova-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-firsova-desktop.png 1x, img/catalog/users/catalog-firsova-desktop@2x.png 2x">
@@ -929,7 +943,7 @@
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-firsova-mobile.webp 1x, img/catalog/users/catalog-firsova-mobile@2x.webp 2x">
                     <img class="users-card__avatar-img" src="img/catalog/users/catalog-firsova-mobile.png" srcset="img/catalog/users/catalog-firsova-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
-                </div>
+                </a>
                 <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
                 <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
                 <div class="users-card__button-heart-block">
@@ -1008,10 +1022,10 @@
                   <span class="users-card__level-title">левел:</span>
                   <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-99.svg" width="45" height="45" alt="Уровень пользователя 99">
                 </div>
-                <button class="button users-card__button" type="button">Позвать!</button>
+                <a class="button users-card__button" href="call_user-1.html">Позвать!</a>
               </li>
               <li class="users-card__item">
-                <div class="users-card__avatar">
+                <a class="users-card__avatar" href="user-id-02.html">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-demin-desktop.webp 1x, img/catalog/users/catalog-demin-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-demin-desktop.png 1x, img/catalog/users/catalog-demin-desktop@2x.png 2x">
@@ -1022,7 +1036,7 @@
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-demin-mobile.webp 1x, img/catalog/users/catalog-demin-mobile@2x.webp 2x">
                     <img class="users-card__avatar-img" src="img/catalog/users/catalog-demin-mobile.png" srcset="img/catalog/users/catalog-demin-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
-                </div>
+                </a>
                 <a class="users-card__name users-card__name--offline" href="user-id-02.html">Петя Демин</a>
                 <span class="users-card__hashtags">#бургер #бар #футбол #концерт #крафт</span>
                 <div class="users-card__button-heart-block">
@@ -1092,10 +1106,10 @@
                   <span class="users-card__level-title">левел:</span>
                   <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-80.svg" width="45" height="45" alt="Уровень пользователя 80">
                 </div>
-                <button class="button users-card__button" type="button">Позвать!</button>
+                <a class="button users-card__button" href="call_user-2.html">Позвать!</a>
               </li>
               <li class="users-card__item">
-                <div class="users-card__avatar">
+                <a class="users-card__avatar" href="user-id-03.html">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-smolov-desktop.webp 1x, img/catalog/users/catalog-smolov-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-smolov-desktop.png 1x, img/catalog/users/catalog-smolov-desktop@2x.png 2x">
@@ -1106,7 +1120,7 @@
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-smolov-mobile.webp 1x, img/catalog/users/catalog-smolov-mobile@2x.webp 2x">
                     <img class="users-card__avatar-img" src="img/catalog/users/catalog-smolov-mobile.png" srcset="img/catalog/users/catalog-smolov-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
-                </div>
+                </a>
                 <a class="users-card__name users-card__name--offline" href="user-id-03.html">Марк Смолов</a>
                 <span class="users-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</span>
                 <div class="users-card__button-heart-block">
@@ -1185,10 +1199,10 @@
                   <span class="users-card__level-title">левел:</span>
                   <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-25.svg" width="45" height="45" alt="Уровень пользователя 25">
                 </div>
-                <button class="button users-card__button" type="button">Позвать!</button>
+                <a class="button users-card__button" href="call_user-3.html">Позвать!</a>
               </li>
               <li class="users-card__item">
-                <div class="users-card__avatar">
+                <a class="users-card__avatar" href="user-id-04.html">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/catalog-rogovaya-desktop.webp 1x, img/catalog/users/catalog-rogovaya-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/catalog/users/catalog-rogovaya-desktop.png 1x, img/catalog/users/catalog-rogovaya-desktop@2x.png 2x">
@@ -1199,7 +1213,7 @@
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/catalog-rogovaya-mobile.webp 1x, img/catalog/users/catalog-rogovaya-mobile@2x.webp 2x">
                     <img class="users-card__avatar-img" src="img/catalog/users/catalog-rogovaya-mobile.png" srcset="img/catalog/users/catalog-rogovaya-mobile2x.png 2x" width="70" height="70" alt="аватар">
                   </picture>
-                </div>
+                </a>
                 <a class="users-card__name users-card__name--online" href="user-id-04.html">Лариса Роговая</a>
                 <span class="users-card__hashtags">#образование #карьера #учеба #линкедин</span>
                 <div class="users-card__button-heart-block">
@@ -1269,7 +1283,7 @@
                   <span class="users-card__level-title">левел:</span>
                   <img class="users-card__level-img" src="img/catalog/ico-level/catalog-lv-50.svg" width="45" height="45" alt="Уровень пользователя 50">
                 </div>
-                <button class="button users-card__button" type="button">Позвать!</button>
+                <a class="button users-card__button" href="call_user-4.html">Позвать!</a>
               </li>
               <li class="users-card__item-add">
                 <a class="users-card__item-add-link" href="user-card-2.html">
@@ -1297,16 +1311,16 @@
               </li>
             </ul>
             <div class="catalog-main-content__pagination-button-block">
-              <button class="catalog-main-content__pagination-button catalog-main-content__pagination-button-back" type="button">
+              <a class="catalog-main-content__pagination-button catalog-main-content__pagination-button-back" href="back-page.html">
                 <svg class="catalog-main-content__pagination-button-ico catalog-main-content__pagination-button-back-ico" width="13" height="20">
                   <use href="#catalog-arrows-back"></use>
                 </svg>
-              </button>
-              <button class="catalog-main-content__pagination-button catalog-main-content__pagination-button-next" type="button">
+              </a>
+              <a class="catalog-main-content__pagination-button catalog-main-content__pagination-button-next" href="next-page.html">
                 <svg class="catalog-main-content__pagination-button-ico catalog-main-content__pagination-button-next-ico" width="13" height="20">
                   <use href="#catalog-arrows-next"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </div>
