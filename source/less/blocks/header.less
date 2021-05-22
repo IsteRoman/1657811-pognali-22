@@ -292,8 +292,8 @@
 }
 
 .header__navigation-link {
-  display: inline-flex;
-  flex-direction: column;
+  display: flex;
+  width: 100%;
   font-size: 30px;
   line-height: 1.16666666666;
   font-weight: 500;
@@ -327,6 +327,28 @@
 
 .header__navigation-link--active {
   cursor: default;
+}
+
+.header__navigation-link-text {
+  display: flex;
+  position: relative;
+  padding-right: 20px;
+  transition: @default-transition;
+}
+
+.header__navigation-link-text::before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 100%;
+  width: calc(100% + 1ch);
+  font-weight: 700;
+  text-align: left;
+  transform: translate3d(0, 0, 0);
+}
+
+.header__navigation-link:hover .header__navigation-link-text,
+.header__navigation-link:focus .header__navigation-link-text {
+  transform: translateY(-100%);
 }
 
 .header__button-authorization {

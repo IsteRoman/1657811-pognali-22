@@ -50,7 +50,7 @@
 .step-one__section {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 5px;
 
   @media (min-width: @tablet-width) {
     padding-top: 38px;
@@ -85,7 +85,7 @@
 }
 
 .step-one__fieldset-companions {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 88px;
@@ -102,6 +102,7 @@
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 0.09em;
   color: @basic-blue-dark;
 
   @media (min-width: @tablet-width) {
@@ -111,7 +112,7 @@
 }
 
 .step-one__fieldset-name {
-  width: 151px;
+  width: 155px;
 
   @media (min-width: @tablet-width) {
     width: 192px;
@@ -127,7 +128,7 @@
 .step-one__fieldset-measure {
   width: 35px;
   text-align: end;
-  margin-left: auto;
+  margin-left: 30px;
   opacity: 0.3;
 
   @media (min-width: @tablet-width) {
@@ -205,8 +206,8 @@
 }
 
 .step-one__button-minus {
-  top: 11px;
-  left: 10px;
+  top: 14px;
+  left: 12px;
 
   @media (min-width: @tablet-width) {
     top: 20px;
@@ -219,8 +220,8 @@
 }
 
 .step-one__button-plus {
-  top: 12px;
-  right: 10px;
+  top: 14px;
+  right: 15px;
 
   @media (min-width: @tablet-width) {
     top: 20px;
@@ -258,7 +259,7 @@
 }
 
 .step-one__fieldset-duration {
-  margin-bottom: 71px;
+  margin-bottom: 69px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 60px;
@@ -269,9 +270,13 @@
   }
 }
 
+.step-one__fieldset-duration .step-one__fieldset-input-block {
+  margin-top: 10px;
+}
+
 .step-one__chaild-off {
   position: absolute;
-  top: 180px;
+  top: 176px;
   left: 39px;
 
   @media (min-width: @tablet-width) {
@@ -354,10 +359,25 @@
   content: "";
 }
 
+
+.step-one__chaild-off-checkbox-label:hover::before,
+.step-one__chaild-off-checkbox-label:focus::before {
+  border: 1px solid @special-grey-4;
+}
+
+.step-one__chaild-off-checkbox-label:active::before {
+  background-color: @super-light-gray-9;
+  border: 1px solid transparent;
+}
+
+.step-one__chaild-off-checkbox-label:active::after {
+  opacity: 0.3;
+}
+
 .step-one__fieldset-calendar {
   flex-direction: column;
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 47px;
@@ -369,24 +389,10 @@
   }
 }
 
-.step-one__chaild-off-checkbox-label:hover .step-one__chaild-off-checkbox-label::before,
-.step-one__chaild-off-checkbox-label:focus .step-one__chaild-off-checkbox-label::before {
-  border: 1px solid @special-grey-4;
-}
-
-.step-one__chaild-off-checkbox-label:active .step-one__chaild-off-checkbox-label::before {
-  background-color: @super-light-gray-9;
-  border: 1px solid transparent;
-}
-
-.step-one__chaild-off-checkbox-label:active .step-one__chaild-off-checkbox-label::after {
-  opacity: 0.3;
-}
-
 .step-one__fieldset-month-block {
   position: relative;
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 11px;
   padding-top: 11px;
   padding-bottom: 11px;
   text-align: center;
@@ -407,7 +413,7 @@
 }
 
 .step-one__fieldset-month {
-  font-size: 20;
+  font-size: 20px;
   line-height: 1;
   font-weight: 700;
   color: @basic-blue-dark;
@@ -496,11 +502,8 @@
 
 .step-one__calendar-item {
   position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   width: 14.2857%;
-  min-height: 32px;
+  height: 31.5px;
   .zero-intervals;
   font-size: 14px;
   line-height: 1.2857;
@@ -515,6 +518,10 @@
   @media (min-width: @desktop-width) {
     min-height: 72px;
   }
+}
+
+.step-one__calendar-item-date {
+  text-align: center;
 }
 
 .step-one__calendar-item--weekend {
@@ -611,6 +618,8 @@
   width: 100%;
   min-height: 40px;
   justify-content: center;
+  padding-left: 25px;
+  text-transform: uppercase;
   border-radius: 20px;
 
   @media (min-width: @tablet-width) {

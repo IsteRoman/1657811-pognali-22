@@ -39,6 +39,7 @@
 
 .user-information__level {
   grid-area: level;
+  margin-left: 17px;
 
   @media (min-width: @tablet-width) {
     width: 94px;
@@ -58,7 +59,8 @@
 .user-information__avatar-block {
   grid-area: avatar;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-left: 17px;
 
   @media (min-width: @desktop-width) {
     position: absolute;
@@ -87,7 +89,7 @@
   align-items: center;
   width: 100%;
   min-height: 40px;
-  margin-top: 18px;
+  margin-top: 11px;
   margin-bottom: 33px;
   font-size: 20px;
   line-height: 0.9;
@@ -164,7 +166,7 @@
 
 .user-information__hashtags {
   grid-area: hashtags;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   border: none;
 
   @media (min-width: @tablet-width) {
@@ -173,7 +175,7 @@
 }
 
 .user-information__hashtags .user-information__legend {
-  top: -10px;
+  top: -9px;
   left: 100px;
 
   @media (min-width: @tablet-width) {
@@ -189,7 +191,7 @@
 
 .user-information__textarea {
   width: 100%;
-  height: 95px;
+  height: 90px;
   padding: 26px 28px 26px 25px;
   font-size: 16px;
   line-height: 1.125;
@@ -233,7 +235,7 @@
 
 .user-information__transport {
   grid-area: transport;
-  padding: 16px 10px 15px 10px;
+  padding: 16px 12px 14px 10px;
 
   @media (min-width: @tablet-width) {
     padding: 26px 10px 26px 10px;
@@ -247,7 +249,7 @@
 
 .user-information__transport .user-information__legend {
   top: -10px;
-  left: 80px;
+  left: 76px;
 
   @media (min-width: @tablet-width) {
     top: unset;
@@ -267,6 +269,7 @@
   flex-wrap: wrap;
   align-items: center;
   .zero-intervals;
+  margin-left: -3px;
   list-style: none;
 }
 
