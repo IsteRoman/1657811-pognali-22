@@ -42,6 +42,7 @@
   color: @special-grey;
 
   @media (min-width: @tablet-width) {
+    width: 420px;
     font-size: 20px;
     line-height: 1.2;
     margin-bottom: 33px;
@@ -94,7 +95,7 @@
     content: "";
     position: absolute;
     top: -43px;
-    right: 193px;
+    left: 395px;
     width: 1px;
     height: 370px;
     background-color: @super-light-gray-4;
@@ -116,7 +117,7 @@
 
   @media (min-width: @tablet-width) {
     width: 70%;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   @media (min-width: @desktop-width) {
@@ -137,8 +138,8 @@
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    top: 30px;
-    right: -32px;
+    top: 25px;
+    right: 110px;
     width: 14px;
     height: 14px;
   }
@@ -199,8 +200,8 @@
   transition: @default-transition;
 
   @media (min-width: @tablet-width) {
-    top: 20px;
-    right: 20px;
+    top: 22px;
+    right: 22px;
     width: 21px;
     height: 21px;
   }
@@ -226,8 +227,9 @@
   transition: @default-transition;
 
   @media (min-width: @tablet-width) {
+    width: 72%;
     height: 70px;
-    padding: 27px 25px 23px 24px;
+    padding: 25px 25px 25px 24px;
     font-size: 20px;
     line-height: 1;
   }
@@ -235,7 +237,9 @@
 
 .step-second__country-cheese-item:first-of-type .step-second__button-country-cheese,
 .step-second__country-cheese-item:nth-of-type(2) .step-second__button-country-cheese {
-  width: 68%;
+  @media (max-width: @max-mobile-width) {
+    width: 68%;
+  }
 }
 
 
@@ -253,6 +257,11 @@
 
   @media (max-width: @max-mobile-width) {
     z-index: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 24px;
+    letter-spacing: 00.09em;
   }
 }
 
@@ -305,8 +314,8 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 10px;
-    right: -120px;
+    top: 12px;
+    right: 20px;
     width: 70px;
     height: 47px;
     border: none;
@@ -363,7 +372,7 @@
 
   @media (min-width: @tablet-width) {
     top: 23px;
-    right: -162px;
+    right: -25px;
     width: 22px;
     height: 24px;
     background-color: transparent;
@@ -408,8 +417,8 @@
   stroke: @basic-white-0-3;
 
   @media (min-width: @tablet-width) {
-    top: 23px;
-    right: 20px;
+    top: 25px;
+    right: 165px;
   }
 }
 
@@ -524,8 +533,8 @@
   transition: @default-transition;
 
   @media (min-width: @tablet-width) {
-    padding-top: 27px;
-    padding-bottom: 27px;
+    padding-top: 25px;
+    padding-bottom: 23px;
   }
 }
 
