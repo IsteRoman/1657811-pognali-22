@@ -9,6 +9,14 @@
     <link rel="apple-touch-icon" href="img/favicon/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font">
   </head>
   <body class="body">
     <div class="visually-hidden">
@@ -406,7 +414,7 @@
           <p class="check-in__text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и&nbsp;бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее&nbsp;<a class="check-in__link" href="enter-form.html">авторизуйтесь</a>.</p>
           <form class="check-in__form" action="https://echo.htmlacademy.ru/" method="GET">
             <label class="visually-hidden">Введите адрес электронной почты</label>
-            <input class="check-in__input" type="email" placeholder="E-mail" required>
+            <input class="check-in__input" type="email" name="User-email" placeholder="E-mail" required>
             <button class="button check-in__button" type="submit" title="Отправить">
               <span class="check-in__button-text">Регистрация</span>
               <svg class="button__arrow-ico check-in__arrow-ico" width="14" height="16">

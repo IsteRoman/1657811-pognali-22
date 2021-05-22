@@ -169,6 +169,7 @@
   }
 }
 
+/* stylelint-disable */
 .step-one__input {
   width: 100%;
   height: 43px;
@@ -183,6 +184,7 @@
   outline: 0;
   appearance: none;
   transition: @default-transition;
+  -moz-appearance: textfield;
 
   @media (min-width: @tablet-width) {
     height: 70px;
@@ -193,11 +195,19 @@
 .step-one__input:hover,
 .step-one__input:focus {
   border: 1px solid @special-grey-4;
+  -moz-appearance: number-input;
 }
 
 .step-one__input:active {
   border: 1px solid @basic-blue;
 }
+
+.step-one__input::-webkit-outer-spin-button,
+.step-one__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* stylelint-enable */
 
 .step-one__button-minus,
 .step-one__button-plus {

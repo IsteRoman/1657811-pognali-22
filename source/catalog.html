@@ -9,6 +9,14 @@
     <link rel="apple-touch-icon" href="img/favicon/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font">
   </head>
   <body class="body">
     <div class="visually-hidden">
@@ -927,8 +935,8 @@
                     <div class="select-partners__scale">
                       <div class="select-partners__bar"></div>
                     </div>
-                    <div class="select-partners__toggle select-partners__toggle--min" tabindex="0"></div>
-                    <div class="select-partners__toggle select-partners__toggle--max" tabindex="0"></div>
+                    <div class="select-partners__toggle select-partners__toggle--min" tabindex="0" title="Выберите минимальный уровень"></div>
+                    <div class="select-partners__toggle select-partners__toggle--max" tabindex="0" title="Выберите максимальный уровень"></div>
                   </div>
                 </div>
               </fieldset>
@@ -953,7 +961,7 @@
                 <a class="users-card__name users-card__name--offline" href="user-id-01.html">Таня Фирсова</a>
                 <span class="users-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж  #авокадо #смузи</span>
                 <div class="users-card__button-heart-block">
-                  <button class="users-card__button-heart users-card__button-heart--active">
+                  <button class="users-card__button-heart users-card__button-heart--active" title="Лайк">
                     <svg class="users-card__button-heart-ico-off" width="12" height="10">
                       <use href="#icon-heart-not-active"></use>
                     </svg>
@@ -1050,7 +1058,7 @@
                 <a class="users-card__name users-card__name--offline" href="user-id-02.html">Петя Демин</a>
                 <span class="users-card__hashtags">#бургер #бар #футбол #концерт #крафт</span>
                 <div class="users-card__button-heart-block">
-                  <button class="users-card__button-heart">
+                  <button class="users-card__button-heart" title="Лайк">
                     <svg class="users-card__button-heart-ico-off" width="12" height="10">
                       <use href="#icon-heart-not-active"></use>
                     </svg>
@@ -1138,7 +1146,7 @@
                 <a class="users-card__name users-card__name--offline" href="user-id-03.html">Марк Смолов</a>
                 <span class="users-card__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</span>
                 <div class="users-card__button-heart-block">
-                  <button class="users-card__button-heart">
+                  <button class="users-card__button-heart" title="Лайк">
                     <svg class="users-card__button-heart-ico-off" width="12" height="10">
                       <use href="#icon-heart-not-active"></use>
                     </svg>
@@ -1235,7 +1243,7 @@
                 <a class="users-card__name users-card__name--online" href="user-id-04.html">Лариса Роговая</a>
                 <span class="users-card__hashtags">#образование #карьера #учеба #линкедин</span>
                 <div class="users-card__button-heart-block">
-                  <button class="users-card__button-heart">
+                  <button class="users-card__button-heart" title="Лайк">
                     <svg class="users-card__button-heart-ico-off" width="12" height="10">
                       <use href="#icon-heart-not-active"></use>
                     </svg>
@@ -1333,12 +1341,12 @@
               </li>
             </ul>
             <div class="catalog-main-content__pagination-button-block">
-              <a class="catalog-main-content__pagination-button catalog-main-content__pagination-button-back" href="back-page.html">
+              <a class="catalog-main-content__pagination-button catalog-main-content__pagination-button-back" href="back-page.html" title="Предыдущая страница">
                 <svg class="catalog-main-content__pagination-button-ico catalog-main-content__pagination-button-back-ico" width="13" height="20">
                   <use href="#catalog-arrows-back"></use>
                 </svg>
               </a>
-              <a class="catalog-main-content__pagination-button catalog-main-content__pagination-button-next" href="next-page.html">
+              <a class="catalog-main-content__pagination-button catalog-main-content__pagination-button-next" href="next-page.html" title="Следующая страница">
                 <svg class="catalog-main-content__pagination-button-ico catalog-main-content__pagination-button-next-ico" width="13" height="20">
                   <use href="#catalog-arrows-next"></use>
                 </svg>
