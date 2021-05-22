@@ -255,8 +255,8 @@ const country_select = function() {
       country_block.classList.remove('step-second__countrys-block--show');
     }
 
-    country_label.forEach(function(v) {
-      v.addEventListener('click', checkIndex);
+    country_label.forEach(function(country_selection) {
+      country_selection.addEventListener('click', checkIndex);
     })
 
     function checkIndex(event) {
@@ -286,8 +286,8 @@ const textarea_validation = function () {
   const button_submit = step_three.querySelector('.plan-add__button-submit');
 
   const lenght_check = function() {
-    Array.prototype.forEach.call(textarea, function(k) {
-      k.addEventListener('input', textarea_check)
+    Array.prototype.forEach.call(textarea, function(check) {
+      check.addEventListener('input', textarea_check)
     });
 
     function textarea_check() {
@@ -314,12 +314,12 @@ const ipnut_work = function() {
   const button_plus = step_one.querySelectorAll('.step-one__button-plus');
   const min_input_value = 1;
   const max_input_value = 14;
-  Array.prototype.forEach.call(button_minus, function(v) {
-    v.addEventListener('click', dec);
+  Array.prototype.forEach.call(button_minus, function(minus) {
+    minus.addEventListener('click', dec);
   });
 
-  Array.prototype.forEach.call(button_plus, function(v) {
-    v.addEventListener('click', inc);
+  Array.prototype.forEach.call(button_plus, function(plus) {
+    plus.addEventListener('click', inc);
   });
 
   function dec() {
@@ -392,16 +392,16 @@ const country_filter = function() {
 
   const country_list_show = function() {
     const country_letter_button = country_section.querySelectorAll('.filter__country-table-letter-button');
-    Array.prototype.forEach.call(country_letter_button, function(k) {
-      k.addEventListener('click', country_items_select)
+    Array.prototype.forEach.call(country_letter_button, function(select) {
+      select.addEventListener('click', country_items_select)
     });
 
 
     function country_items_select() {
       country_item = this.parentElement;
       const country_items = country_section.querySelectorAll('.filter__country-table-item');
-      Array.prototype.forEach.call(country_items, function(z) {
-      z.classList.remove('filter__country-table-item--active');
+      Array.prototype.forEach.call(country_items, function(cleaner) {
+      cleaner.classList.remove('filter__country-table-item--active');
       });
       country_item.classList.add('filter__country-table-item--active');
     }
@@ -429,14 +429,14 @@ const partner_select_work = function() {
   const partner_fieldset_button = partner_select_block.querySelectorAll('.select-partners__button');
 
   const remove_js_partner_select = function() {
-    Array.prototype.forEach.call(partner_fieldset, function(d) {
-      d.classList.remove('catalog-no-js');
+    Array.prototype.forEach.call(partner_fieldset, function(clean_no_js) {
+      clean_no_js.classList.remove('catalog-no-js');
     });
   }
 
   const open_partner_select_by_title = function() {
-    Array.prototype.forEach.call(partner_fieldset_title, function(d) {
-      d.addEventListener('click', open_by_title)
+    Array.prototype.forEach.call(partner_fieldset_title, function(title_open) {
+      title_open.addEventListener('click', open_by_title)
     });
 
     function open_by_title() {
@@ -446,8 +446,8 @@ const partner_select_work = function() {
   }
 
   const open_partner_select_by_button = function() {
-    Array.prototype.forEach.call(partner_fieldset_button, function(d) {
-      d.addEventListener('click', open_by_title)
+    Array.prototype.forEach.call(partner_fieldset_button, function(button_open) {
+      button_open.addEventListener('click', open_by_title)
     });
 
     function open_by_title() {
@@ -469,8 +469,8 @@ const like_button = function() {
     return;
   }
 
-  Array.prototype.forEach.call(button_like, function(l) {
-    l.addEventListener('click', put_like)
+  Array.prototype.forEach.call(button_like, function(herrt_button) {
+    herrt_button.addEventListener('click', put_like)
   });
 
   function put_like() {

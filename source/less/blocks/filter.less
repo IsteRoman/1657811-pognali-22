@@ -396,14 +396,14 @@
   max-height: 245px;
   .zero-intervals;
   list-style: none;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   @media (min-width: @tablet-width) {
     top: 52px;
     left: unset;
     right: 95px;
     max-width: 156px;
-    max-height: 390px;
+    max-height: 400px;
   }
 
   @media (min-width: @desktop-width) {
@@ -414,10 +414,11 @@
     max-width: unset;
     max-height: unset;
     margin-bottom: 50px;
+    overflow-y: hidden;
   }
 }
 
-.filter__country-table-item--active .filter__country-sub-list{
+.filter__country-table-item--active .filter__country-sub-list {
   display: flex;
   flex-direction: column;
 }
