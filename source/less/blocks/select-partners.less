@@ -6,7 +6,7 @@
   border-radius: 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 37px 36px 37px 34px;
+    padding: 35px 36px 37px 34px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,7 +14,7 @@
     width: 285px;
     max-height: 1172px;
     margin-left: 84px;
-    padding: 46px 45px 48px 48px;
+    padding: 44px 45px 48px 48px;
   }
 }
 
@@ -23,7 +23,6 @@
   font-size: 22px;
   line-height: 1;
   font-weight: 700;
-  text-transform: uppercase;
   color: @basic-blue-dark;
 
   @media (min-width: @tablet-width) {
@@ -32,7 +31,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 34px;
+    margin-bottom: 40px;
   }
 }
 
@@ -60,7 +59,8 @@
   @media (min-width: @tablet-width) {
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 26px;
+    margin-top: -5px;
+    margin-bottom: 24px;
     padding-top: 0;
     border-top: none;
   }
@@ -86,7 +86,7 @@
 }
 
 .select-partners__legend {
-  padding-bottom: 14px;
+  padding-bottom: 10px;
   font-size: 16px;
   line-height: 1.125;
   font-weight: 700;
@@ -102,7 +102,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 19px;
+    padding-bottom: 22px;
     line-height: 1.1;
   }
 }
@@ -117,7 +117,7 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  width: 20px;
+  width: 22px;
   height: 16px;
   margin-left: auto;
   background: none;
@@ -131,6 +131,8 @@
 
   @media (min-width: @desktop-width) {
     display: inline-flex;
+    margin-top: -28px;
+    margin-right: -4px;
   }
 }
 
@@ -155,15 +157,15 @@
   flex-direction: column;
   width: 100%;
   .zero-intervals;
-  margin-top: 16px;
-  margin-bottom: 21px;
+  margin-top: 13px;
+  margin-bottom: 15px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 79%;
+    width: 80%;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -173,8 +175,8 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    margin-top: 23px;
-    margin-bottom: 32px;
+    margin-top: 20px;
+    margin-bottom: 35px;
   }
 }
 
@@ -184,16 +186,16 @@
 }
 
 .select-partners__hobby-item {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 
   @media (min-width: @tablet-width) {
-    width: 35%;
+    width: 31%;
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: unset;
-    margin-bottom: 16px;
+    margin-bottom: 7px;
   }
 }
 
@@ -250,7 +252,7 @@
 .select-partners__label::after {
   content: none;
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 2px;
   width: 14px;
   height: 14px;
@@ -278,13 +280,13 @@
   align-items: center;
   width: 100%;
   .zero-intervals;
-  margin-top: 19px;
-  margin-bottom: 20px;
+  margin-top: 16px;
+  margin-bottom: 18px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    width: 79%;
+    width: 80%;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -292,8 +294,8 @@
   @media (min-width: @desktop-width) {
     display: none;
     width: 100%;
-    margin-top: 17px;
-    margin-bottom: 34px;
+    margin-top: 20px;
+    margin-bottom: 38px;
   }
 }
 
@@ -422,17 +424,14 @@
   display: block;
 }
 
-
-
-
 .select-partners__level-filter {
   display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 21px;
+  padding-top: 12px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -440,6 +439,7 @@
     justify-content: space-between;
     align-items: center;
     width: 79%;
+    margin-top: -7px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -465,7 +465,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   @media (min-width: @tablet-width) {
     order: 1;
@@ -477,7 +477,7 @@
   @media (min-width: @desktop-width) {
     order: unset;
     width: 100%;
-    margin-bottom: 31px;
+    margin-bottom: 28px;
   }
 }
 
@@ -568,6 +568,10 @@
   height: 2px;
   margin-left: auto;
   background-color: @basic-blue-dark;
+
+  @media (min-width: @tablet-width) {
+    width: 65%;
+  }
 }
 
 .select-partners__toggle {
@@ -580,6 +584,11 @@
   border-radius: 50%;
   cursor: pointer;
   transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .select-partners__toggle:hover,
@@ -592,6 +601,14 @@
 
 .select-partners__toggle--min {
   left: 30%;
+
+  @media (min-width: @tablet-width) {
+    left: 35%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 30%;
+  }
 }
 
 .select-partners__toggle--max {

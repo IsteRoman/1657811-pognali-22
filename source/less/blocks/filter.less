@@ -4,11 +4,11 @@
   background-color: @super-light-gray-3;
 
   @media (min-width: @tablet-width) {
-    padding-top: 151px;
+    padding-top: 122px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 145px;
+    padding-top: 122px;
   }
 }
 
@@ -77,7 +77,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    padding-left: 50px;
+    padding-left: 46px;
     font-size: 20px;
     line-height: 1;
   }
@@ -86,7 +86,7 @@
 .filter__title::before {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 0;
   width: 15px;
   height: 10px;
@@ -101,7 +101,7 @@
 
 .filter__title-list {
   position: absolute;
-  top: 70px;
+  top: 82px;
   left: 50px;
   z-index: 2;
   display: none;
@@ -126,7 +126,7 @@
 }
 
 .filter__title-list-item {
-  margin-bottom: 9px;
+  margin-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -192,8 +192,9 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    width: 21px;
+    width: 24px;
     height: 24px;
+    margin-top: 8px;
   }
 }
 
@@ -222,13 +223,24 @@
 }
 
 .filter__button--close {
-  background: url("../img/icon/icon-close-catalog.svg") no-repeat;
+  background: url("../img/icon/icon-close-catalog.svg") -2px no-repeat;
   background-size: contain;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -2px;
+    margin-right: 52px;
+  }
 }
 
 .filter__button--open {
-  background: url("../img/icon/icon-open-catalog.svg") 0 40% no-repeat;
+  margin-right: 11px;
+  background: url("../img/icon/icon-open-catalog.svg") 0 50% no-repeat;
   background-size: contain;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -2px;
+    margin-right: 52px;
+  }
 }
 
 .filter__button--close .filter__button-text--open {
@@ -255,16 +267,17 @@
   display: none;
   flex-direction: column;
   width: 100%;
-  padding: 158px 50px 0 50px;
+  padding: 155px 50px 0 50px;
   background-color: @super-light-gray-3;
 
   @media (min-width: @tablet-width) {
-    padding: 62px 72px 0 72px;
+    padding: 60px 72px 0 53px;
   }
 
   @media (min-width: @desktop-width) {
     position: unset;
-    padding: 23px 95px 0 95px;
+    margin-left: 15px;
+    padding: 65px 95px 0 0;
     background: none;
   }
 }
@@ -302,16 +315,14 @@
 
   @media (min-width: @tablet-width) {
     width: 60%;
-    margin-top: -30px;
     margin-bottom: 47px;
-    border-collapse: separate;
-    border-spacing: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    width: 1250px;
+    height: 2410px;
     margin-bottom: 0;
-    border-spacing: 0 51px;
+    border-collapse: separate;
   }
 }
 
@@ -331,7 +342,7 @@
 
 .filter__country-table-letter-button {
   width: 100%;
-  min-height: 41px;
+  min-height: 40px;
   .zero-intervals;
   font-size: 14px;
   line-height: 1;
@@ -343,6 +354,7 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 22px;
     font-size: 60px;
     font-weight: 700;
     background: none;
@@ -354,7 +366,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
+    padding-bottom: 0;
     opacity: 1;
   }
 }
@@ -376,7 +389,7 @@
 
 .filter__country-sub-list {
   position: absolute;
-  top: 400px;
+  top: 373px;
   left: 51px;
   display: none;
   max-width: 200px;
@@ -386,9 +399,9 @@
   overflow-y: scroll;
 
   @media (min-width: @tablet-width) {
-    top: 60px;
+    top: 52px;
     left: unset;
-    right: 80px;
+    right: 95px;
     max-width: 156px;
     max-height: 390px;
   }
@@ -400,16 +413,21 @@
     align-items: flex-start;
     max-width: unset;
     max-height: unset;
+    margin-bottom: 50px;
   }
 }
 
-.filter__country-table-item--active .filter__country-sub-list {
+.filter__country-table-item--active .filter__country-sub-list{
   display: flex;
   flex-direction: column;
 }
 
 .filter__country-sub-item {
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: -3px;
+  }
 }
 
 .filter__country-sub-link {
@@ -450,31 +468,36 @@
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
+    width: 95%;
     min-height: 100px;
+    margin: 0;
+    margin-left: 25px;
     padding-left: 40px;
     font-size: 20px;
     line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 -50px;
+    width: 113%;
+    margin: 0 -35px;
   }
 }
 
 .filter__section-button-close-text {
   position: relative;
+  margin-left: 8px;
 }
 
 .filter__section-button-close-ico {
   position: absolute;
   top: 2px;
-  left: -25px;
+  left: -30px;
 
   @media (min-width: @tablet-width) {
     top: 3px;
-    left: -35px;
-    width: 18px;
-    height: 18px;
+    left: -40px;
+    width: 22px;
+    height: 22px;
   }
 }
 

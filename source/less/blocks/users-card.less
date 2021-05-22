@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   .zero-intervals;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 51px;
@@ -31,7 +31,7 @@
   display: grid;
   grid-template-areas:
     "picture name ."
-    "tag tag ."
+    "tag tag tag"
     "flag flag flag"
     "transport transport level"
     "button button button";
@@ -47,7 +47,7 @@
       "picture button buttonHeart level"
       "flag flag flag flag";
     margin-bottom: 39px;
-    padding: 33px 25px 22px 35px;
+    padding: 35px 25px 8px 35px;
   }
 
   @media (min-width: @desktop-width) {
@@ -73,6 +73,7 @@
   @media (min-width: @tablet-width) {
     width: 190px;
     height: 190px;
+    margin-right: -10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,6 +100,8 @@
 .users-card__name {
   position: relative;
   grid-area: name;
+  margin-top: -3px;
+  margin-left: -5px;
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
@@ -107,12 +110,65 @@
 
   @media (min-width: @tablet-width) {
     width: max-content;
+    margin-left: 2px;
     padding-right: 22px;
     font-size: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 47px;
+    margin-top: 44px;
+    margin-left: 20px;
+    padding-right: 0;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__name {
+  width: 50px;
+  margin-left: -35px;
+
+  @media (min-width: @tablet-width) {
+    width: max-content;
+    margin-top: -4px;
+    margin-left: 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 44px;
+    margin-left: 20px;
+    padding-right: 0;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__name {
+  width: 50px;
+  margin-left: -35px;
+
+  @media (min-width: @tablet-width) {
+    width: max-content;
+    margin-top: -4px;
+    margin-left: 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
+    margin-left: 10px;
+    padding-right: 0;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__name {
+  width: 50px;
+  margin-left: -35px;
+
+  @media (min-width: @tablet-width) {
+    width: max-content;
+    margin-top: -5px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 46px;
+    margin-left: 28px;
     padding-right: 0;
   }
 }
@@ -130,21 +186,23 @@
 .users-card__name--offline::before {
   content: "";
   position: absolute;
-  top: 9px;
-  left: 140px;
+  top: 10px;
+  left: 139px;
   width: 6px;
   height: 6px;
   background-color: @online;
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    top: 14px;
+    top: 12px;
     left: unset;
-    right: 0;
+    right: -9px;
+    width: 9px;
+    height: 9px;
   }
 
   @media (min-width: @desktop-width) {
-    left: -18px;
+    left: -26px;
     right: unset;
   }
 }
@@ -153,16 +211,50 @@
   background-color: @offline;
 }
 
+.users-card__item:nth-of-type(2) .users-card__name--offline::before {
+  @media (min-width: @tablet-width) {
+    right: -15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -26px;
+    right: unset;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__name--offline::before {
+  @media (min-width: @tablet-width) {
+    right: -20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -26px;
+    right: unset;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__name--online::before {
+  @media (min-width: @tablet-width) {
+    right: -19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -26px;
+    right: unset;
+  }
+}
+
 .users-card__hashtags {
   grid-area: tag;
   margin-top: 12px;
-  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-bottom: 14px;
   font-size: 15px;
   line-height: 1.2;
   color: @special-grey;
 
   @media (min-width: @tablet-width) {
-    width: 226px;
+    width: 228px;
     margin-top: 19px;
     margin-bottom: 46px;
     font-size: 20px;
@@ -171,8 +263,61 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 20px;
+    margin-top: 6px;
     margin-bottom: 45px;
+    margin-left: 20px;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__hashtags {
+  width: 150px;
+  margin-top: 12px;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+    margin-top: -1px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 22px;
+    margin-bottom: 55px;
+    margin-left: 20px;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__hashtags {
+  width: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+    margin-bottom: 55px;
+    margin-left: 10px;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__hashtags {
+  width: 150px;
+  margin-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 21px;
+    margin-bottom: 55px;
+    margin-left: 28px;
   }
 }
 
@@ -189,23 +334,60 @@
     position: unset;
     grid-area: buttonHeart;
     height: 50px;
+    margin-left: -60px;
   }
 
   @media (min-width: @desktop-width) {
     width: 110px;
+    margin-top: -14px;
+    margin-left: -8px;
   }
 }
 
 .users-card__item:nth-of-type(2) .users-card__button-heart-block {
-  left: 73px;
+  left: 68px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -60px;
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 110px;
+    margin-top: -12px;
+    margin-left: -8px;
+  }
 }
 
 .users-card__item:nth-of-type(3) .users-card__button-heart-block {
-  left: 72px;
+  left: 68px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -66px;
+    margin-top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 110px;
+    margin-top: -12px;
+    margin-left: -20px;
+  }
 }
 
 .users-card__item:nth-of-type(4) .users-card__button-heart-block {
+  top: 57px;
   left: 65px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -76px;
+    margin-top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 110px;
+    margin-top: -10px;
+    margin-left: 0px;
+  }
 }
 
 .users-card__button-heart {
@@ -226,6 +408,10 @@
     width: 50px;
     height: 50px;
     margin-right: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 8px;
   }
 }
 
@@ -319,12 +505,49 @@
   margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 10px;
+    margin-top: 11px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 50px;
+    margin-top: 49px;
     margin-bottom: 54px;
+    margin-left: 68px;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__desire-to-visit {
+  @media (min-width: @tablet-width) {
+    margin-top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 49px;
+    margin-bottom: 54px;
+    margin-left: 66px;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__desire-to-visit {
+  @media (min-width: @tablet-width) {
+    margin-top: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 49px;
+    margin-bottom: 54px;
+    margin-left: 60px;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__desire-to-visit {
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 51px;
+    margin-bottom: 54px;
+    margin-left: 70px;
   }
 }
 
@@ -350,8 +573,8 @@
 .users-card__desire-to-visit-title {
   position: relative;
   width: 120px;
-  margin-bottom: 18px;
-  margin-left: -10px;
+  margin-bottom: 19px;
+  margin-left: -4px;
   padding-right: 10px;
   padding-left: 11px;
   font-size: 15px;
@@ -361,8 +584,8 @@
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 19px;
-    margin-left: 35px;
+    margin-bottom: 21px;
+    margin-left: 37px;
   }
 
   @media (min-width: @desktop-width) {
@@ -370,16 +593,29 @@
   }
 }
 
+.users-card__item:nth-of-type(2) .users-card__desire-to-visit-title {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__desire-to-visit-title {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
 .users-card__desire-to-visit-list {
   display: flex;
   flex-direction: column;
   .zero-intervals;
-  margin-bottom: 15px;
+  margin-left: 5px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     margin-bottom: 0;
+    margin-left: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -394,7 +630,7 @@
   margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 25px;
+    margin-right: 28px;
     margin-bottom: 0;
   }
 
@@ -408,6 +644,12 @@
   margin-bottom: 0;
 }
 
+.users-card__item:nth-of-type(2) .users-card__desire-to-visit-item {
+  @media (min-width: @tablet-width) {
+    margin-right: 31px;
+  }
+}
+
 .users-card__flags {
   width: 26px;
   height: 18px;
@@ -417,6 +659,10 @@
     width: 35px;
     height: 24px;
     margin-right: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 18px;
   }
 }
 
@@ -449,6 +695,7 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+  margin-top: -5px;
 
   @media (min-width: @tablet-width) {
     width: 60px;
@@ -458,7 +705,35 @@
   @media (min-width: @desktop-width) {
     width: 120px;
     height: max-content;
-    margin-left: 0;
+    margin-top: -8px;
+    margin-left: 64px;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__transport {
+  margin-top: 0;
+}
+
+.users-card__item:nth-of-type(3) .users-card__transport {
+  @media (min-width: @tablet-width) {
+    margin-top: -9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -8px;
+    margin-left: 56px;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__transport {
+  @media (min-width: @tablet-width) {
+    margin-top: -10px;
+    margin-right: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -8px;
+    margin-left: 70px;
   }
 }
 
@@ -481,6 +756,7 @@
   z-index: 1;
   width: 90px;
   margin-bottom: 14px;
+  margin-left: -5px;
   padding-right: 10px;
   padding-left: 12px;
   font-size: 15px;
@@ -492,6 +768,14 @@
   @media (min-width: @tablet-width) {
     display: none;
   }
+}
+
+.users-card__item:nth-of-type(2) .users-card__transport-title {
+  margin-bottom: 15px;
+}
+
+.users-card__item:nth-of-type(4) .users-card__transport-title {
+  margin-top: 5px;
 }
 
 .users-card__transport-list {
@@ -511,6 +795,19 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     width: 120px;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__transport-list {
+  margin-left: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -8px;
+    margin-left: 0;
   }
 }
 
@@ -537,7 +834,7 @@
 
 .users-card__transport-ico {
   position: absolute;
-  top: 7px;
+  top: 10px;
   left: 9px;
 
   @media (min-width: @tablet-width) {
@@ -629,7 +926,6 @@
   }
 }
 
-
 .users-card__transport-item:hover .users-card__transport-signature,
 .users-card__transport-item:focus .users-card__transport-signature {
   display: block;
@@ -641,13 +937,70 @@
   display: flex;
   flex-direction: column;
   width: 60px;
+  margin-top: -5px;
+  margin-right: -33px;
 
   @media (min-width: @tablet-width) {
     margin-left: auto;
+    margin-right: 0;
+    margin-top: -4px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: auto;
+    margin-top: -17px;
+    margin-left: 0;
+    margin-right: -5px;
+    margin-bottom: 0;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__level {
+  margin-top: 0;
+  margin-right: -40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 15px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -14px;
+    margin-left: 0;
+    margin-right: -7px;
+    margin-bottom: 0;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__level {
+  margin-top: 0;
+  margin-right: -40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -16px;
+    margin-left: 0;
+    margin-right: -18px;
+    margin-bottom: 0;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__level {
+  margin-top: 0;
+  margin-right: -40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 14px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -12px;
+    margin-left: -40px;
+    margin-right: 0;
     margin-bottom: 0;
   }
 }
@@ -697,13 +1050,61 @@
   grid-area: button;
   justify-content: center;
   min-height: 40px;
-  margin-top: 14px;
+  margin-top: 10px;
+  text-transform: uppercase;
   border: none;
   border-radius: 25px;
 
   @media (min-width: @tablet-width) {
+    width: 150px;
     height: 50px;
-    margin-top: 0;
+    margin-top: 2px;
+    padding-left: 35px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -14px;
+    margin-left: 13px;
+  }
+}
+
+.users-card__item:nth-of-type(2) .users-card__button {
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+    margin-left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -10px;
+    margin-left: 13px;
+  }
+}
+
+.users-card__item:nth-of-type(3) .users-card__button {
+  margin-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    margin-left: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -10px;
+    margin-left: 3px;
+  }
+}
+
+.users-card__item:nth-of-type(4) .users-card__button {
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -8px;
+    margin-left: 20px;
   }
 }
 
@@ -712,14 +1113,14 @@
   justify-content: center;
   align-items: flex-end;
   width: 100%;
-  margin-top: 14px;
+  margin-top: 10px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 7px;
+    margin-top: 4px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 32px;
+    margin-top: 34px;
   }
 }
 
@@ -727,6 +1128,10 @@
   display: inline-flex;
   align-items: center;
   transition: @default-transition;
+
+  @media (min-width: @desktop-width) {
+    margin-left: -70px;
+  }
 }
 
 .users-card__item-add-link-ico {
@@ -760,5 +1165,9 @@
     margin-left: 25px;
     font-size: 20px;
     line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 23px;
   }
 }
