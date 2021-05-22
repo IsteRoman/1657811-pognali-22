@@ -1,0 +1,407 @@
+.user-information {
+  padding-top: 36px;
+  padding-bottom: 62px;
+  background-color: @super-light-gray-5;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 132px;
+    padding-bottom: 107px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 141px;
+    padding-bottom: 108px;
+  }
+}
+
+.user-information__block {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "level avatar"
+    "button button"
+    "hashtags hashtags"
+    "transport transport";
+
+  @media (min-width: @tablet-width) {
+    grid-template-areas:
+      "level transport transport avatar"
+      "button button button button"
+      "hashtags hashtags hashtags hashtags";
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.user-information__level {
+  grid-area: level;
+  margin-left: 17px;
+
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -220px;
+    right: 390px;
+    z-index: 1;
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.user-information__avatar-block {
+  grid-area: avatar;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 17px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -266px;
+    right: 155px;
+    z-index: 1;
+  }
+}
+
+.user-information__avatar {
+  @media (min-width: @tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 190px;
+    height: 190px;
+  }
+}
+
+.user-information__button {
+  grid-area: button;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  margin-top: 11px;
+  margin-bottom: 33px;
+  font-size: 20px;
+  line-height: 0.9;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: none;
+  background-color: @special-blue-light;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: 0;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    min-height: 60px;
+    margin-top: 41px;
+    margin-bottom: 53px;
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -117px;
+    right: 155px;
+    width: 190px;
+    min-height: 47px;
+    border-radius: 3px;
+  }
+}
+
+.user-information__button-text {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.user-information__button:focus,
+.user-information__button:hover {
+  background-color: @super-light-gray-11;
+}
+
+.user-information__button:active {
+  opacity: 0.3;
+}
+
+.user-information__fieldset {
+  position: relative;
+  .zero-intervals;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 10px;
+}
+
+.user-information__legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-right: 17px;
+  padding-left: 17px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @basic-blue-dark;
+  text-align: center;
+  background-color: @super-light-gray-5;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 18px;
+    padding-left: 14px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+  }
+}
+
+.user-information__hashtags {
+  grid-area: hashtags;
+  margin-bottom: 20px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -75px;
+  }
+}
+
+.user-information__hashtags .user-information__legend {
+  top: -9px;
+  left: 100px;
+
+  @media (min-width: @tablet-width) {
+    top: unset;
+    left: 268px;
+    bottom: 0;
+    letter-spacing: 00.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 25px;
+  }
+}
+
+.user-information__textarea {
+  width: 100%;
+  height: 90px;
+  padding: 26px 28px 26px 25px;
+  font-size: 16px;
+  line-height: 1.125;
+  font-weight: 400;
+  color: @special-grey-0-6;
+  background-color: transparent;
+  border: 1px solid @super-light-gray-7;
+  border-radius: 10px;
+  resize: none;
+  overflow-y: none;
+  outline: 0;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    height: 96px;
+    padding: 35px 40px 46px 40px;
+    font-size: 20px;
+    line-height: 1.1;
+    overflow-y: hidden;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 732px;
+    padding: 35px 39px 35px 39px;
+  }
+}
+
+.user-information__textarea::placeholder {
+  color: @special-grey-0-6;
+}
+
+.user-information__textarea:hover,
+.user-information__textarea:focus {
+  border: 1px solid @super-light-gray-10;
+}
+
+.user-information__textarea:focus {
+  color: @special-grey;
+  border: 1px solid @basic-blue;
+}
+
+.user-information__transport {
+  grid-area: transport;
+  padding: 16px 12px 14px 10px;
+
+  @media (min-width: @tablet-width) {
+    height: 94px;
+    padding: 26px 12px 26px 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 384px;
+    padding: 23px 10px 24px 10px;
+  }
+}
+
+.user-information__transport .user-information__legend {
+  top: -10px;
+  left: 76px;
+
+  @media (min-width: @tablet-width) {
+    top: unset;
+    left: 81px;
+    bottom: -10px;
+    letter-spacing: 00.09em;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 120px;
+  }
+}
+
+.user-information__transport-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  .zero-intervals;
+  margin-left: -3px;
+  list-style: none;
+}
+
+.user-information__transport-item {
+  position: relative;
+  width: 31px;
+  height: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.user-information__checkbox {
+  display: none;
+}
+
+.user-information__checkbox-label {
+  position: relative;
+  display: block;
+  width: 31px;
+  height: 31px;
+  background-color: @basic-white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.user-information__transport-ico {
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  transition: @default-transition;
+  opacity: 0.15;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 23px;
+    height: 22px;
+  }
+}
+
+.user-information__transport-signature {
+  position: absolute;
+  top: 40px;
+  left: -35px;
+  display: none;
+  padding: 8px 10px 8px 10px;
+  font-size: 14px;
+  line-height: 1;
+  color: @basic-white;
+  background-color: @special-blue-dark-6;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    top: 50px;
+    left: -50px;
+    padding: 18px 20px 18px 20px;
+    font-size: 20px;
+  }
+}
+
+.user-information__transport-signature::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 45%;
+  width: 13px;
+  height: 10px;
+  background: url("../img/icon/arrow-signature.svg") no-repeat;
+  background-size: contain;
+}
+
+.user-information__transport-item:nth-of-type(2) .user-information__transport-signature {
+  left: -37px;
+
+  @media (min-width: @tablet-width) {
+    left: -58px;
+  }
+}
+
+.user-information__transport-item:nth-of-type(3) .user-information__transport-signature {
+  left: -27px;
+
+  @media (min-width: @tablet-width) {
+    left: -43px;
+  }
+}
+
+.user-information__transport-item:nth-of-type(4) .user-information__transport-signature {
+  left: -20px;
+
+  @media (min-width: @tablet-width) {
+    left: -33px;
+  }
+}
+
+.user-information__transport-item:hover .user-information__transport-signature,
+.user-information__transport-item:focus .user-information__transport-signature {
+  display: block;
+}
+
+.user-information__checkbox:checked + .user-information__checkbox-label .user-information__transport-ico {
+  opacity: 1;
+}
+
+.user-information__checkbox-label:hover .user-information__transport-ico,
+.user-information__checkbox-label:focus .user-information__transport-ico,
+.user-information__checkbox-label:active .user-information__transport-ico {
+  opacity: 0.7;
+}
+
+.user-information__checkbox-label:active {
+  background-color: @super-light-gray-9;
+}

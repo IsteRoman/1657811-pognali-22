@@ -1,0 +1,163 @@
+.catalog-main-content {
+  padding-top: 36px;
+  padding-bottom: 83px;
+  background-color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 99px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 150px;
+    padding-bottom: 117px;
+  }
+}
+
+.catalog-main-content__block {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.catalog-main-content__pagination-block {
+  display: flex;
+  background-color: @basic-white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding-right: 30px;
+    padding-left: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+    width: 949px;
+
+    padding-right: 40px;
+  }
+}
+
+.catalog-main-content__pagination-list {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    .zero-intervals;
+    list-style: none;
+  }
+}
+
+.catalog-main-content__pagination-item {
+  @media (min-width: @tablet-width) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.catalog-main-content__pagination-link {
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    color: @basic-blue-dark;
+    transition: @default-transition;
+  }
+}
+
+.catalog-main-content__pagination-link:focus,
+.catalog-main-content__pagination-link:hover,
+.catalog-main-content__pagination-link:active {
+  opacity: 0.6;
+}
+
+.catalog-main-content__pagination-item--active {
+  background-color: @basic-yellow;
+  border-radius: 50%;
+}
+
+.catalog-main-content__pagination-item--active .catalog-main-content__pagination-link:focus,
+.catalog-main-content__pagination-item--active .catalog-main-content__pagination-link:hover,
+.catalog-main-content__pagination-item--active .catalog-main-content__pagination-link:active {
+  opacity: 1;
+}
+
+.catalog-main-content__pagination-button-block {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 60px;
+  }
+}
+
+.catalog-main-content__pagination-button-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.catalog-main-content__pagination-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 51px;
+  .zero-intervals;
+  background: none;
+  border: none;
+  transition: @default-transition;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    height: 30px;
+  }
+}
+
+.catalog-main-content__pagination-button-back {
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+  }
+}
+
+.catalog-main-content__pagination-button-next {
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+
+.catalog-main-content__pagination-button-ico {
+  width: 13px;
+  height: 20px;
+}
+
+.catalog-main-content__pagination-button:focus .catalog-main-content__pagination-button-ico,
+.catalog-main-content__pagination-button:hover .catalog-main-content__pagination-button-ico {
+  opacity: 0.6;
+}
+
+.catalog-main-content__pagination-button:active .catalog-main-content__pagination-button-ico {
+  opacity: 0.3;
+}

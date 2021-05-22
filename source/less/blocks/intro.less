@@ -1,0 +1,416 @@
+.intro {
+  position: relative;
+  padding-top: 92px;
+  background-color: @special-blue-dark-2;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 105px;
+  }
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 569px;
+  background: url("../img/background/globe-back-mobile.png") top no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/background/globe-back-mobile@2x.png") no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 380px;
+    height: 612px;
+    background: url("../img/background/globe-back-tablet.png") no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/globe-back-tablet@2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    height: 750px;
+    background: url("../img/background/globe-back-desktop.png") no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/background/globe-back-desktop@2x.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.intro__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-areas:
+      "title . quote"
+      "title . quote"
+      "description description description";
+    padding-top: 99px;
+  }
+}
+
+.intro__block::before {
+  content: "";
+  position: absolute;
+  top: 132px;
+  left: 80px;
+  width: 192px;
+  height: 255px;
+  background: url("../img/index/traveller-illustration-mobile.png") no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/index/traveller-illustration-mobile@2x.png") 50% 50% no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 315px;
+    left: 285px;
+    width: 372px;
+    height: 451px;
+    background: url("../img/index/traveller-illustration-tablet.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index/traveller-illustration-tablet@2x.png") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 5px;
+    left: 605px;
+    width: 431px;
+    height: 640px;
+    background: url("../img/index/traveller-illustration-desktop.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/index/traveller-illustration-desktop@2x.png") 50% 50% no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.intro__title {
+  align-self: center;
+  width: 238px;
+  .zero-intervals;
+  margin-bottom: 313px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 399px;
+    margin-bottom: 86px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: title;
+    text-align: start;
+    margin-left: 67px;
+    margin-bottom: 0;
+  }
+}
+
+.intro__quote {
+  position: relative;
+  z-index: 1;
+  width: 161px;
+  .zero-intervals;
+  margin-left: 25px;
+  margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    width: 265px;
+    margin-left: 33px;
+    margin-bottom: 210px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: quote;
+    width: 300px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.intro__quote::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  z-index: -1;
+  width: 100vw;
+  height: 285px;
+  background-color: @basic-blue;
+
+  @media (min-width: @tablet-width) {
+    content: none;
+  }
+}
+
+.intro__quote-text {
+  .zero-intervals;
+  margin-bottom: 18px;
+  font-weight: 300;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 14px;
+    margin-left: 14px;
+  }
+}
+
+.intro__quote-autor {
+  font-weight: 700;
+  font-style: normal;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    max-height: 75px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 14px;
+  }
+}
+
+.intro__description-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: center;
+  z-index: 1;
+  .zero-intervals;
+  list-style: none;
+  counter-reset: number;
+
+  @media (max-width: @max-mobile-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-area: description;
+    flex-wrap: nowrap;
+    width: unset;
+    margin-top: 105px;
+  }
+}
+
+.intro__description-item {
+  position: relative;
+  padding: 22px 21px 24px 24px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: @basic-blue;
+  border-radius: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 31px 0 61px 32px;
+    font-size: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 0 61px 33px;
+  }
+}
+
+.intro__description-item:first-of-type {
+  padding-bottom: 30px;
+  background-color: @special-orange;
+
+  @media (min-width: @tablet-width) {
+    width: 355px;
+    padding-bottom: 61px;
+    border-radius: 20px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 345px;
+    padding-bottom: 29px;
+    border-radius: 20px;
+  }
+}
+
+.intro__description-item:nth-of-type(2) {
+  margin-top: -10px;
+  padding-bottom: 30px;
+  background-color: @special-orange-light;
+
+  @media (min-width: @tablet-width) {
+    width: 344px;
+    margin-top: 0;
+    margin-left: -13px;
+    padding-left: 34px;
+    padding-bottom: 61px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 365px;
+    margin-left: -30px;
+    padding-left: 30px;
+    padding-bottom: 29px;
+    border-radius: 20px;
+  }
+}
+
+.intro__description-item:nth-of-type(3) {
+  margin-top: -8px;
+  padding-bottom: 30px;
+  background-color: @basic-yellow-dark;
+
+  @media (min-width: @tablet-width) {
+    width: 355px;
+    margin-top: 0;
+    padding-top: 30px;
+    padding-bottom: 62px;
+    border-radius: 0 0 0 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 355px;
+    margin-left: -20px;
+    padding-top: 28px;
+    padding-bottom: 31px;
+    border-radius: 20px;
+  }
+}
+
+.intro__description-item:last-of-type {
+  margin-top: -8px;
+  background-color: @basic-yellow;
+
+  @media (min-width: @tablet-width) {
+    width: 344px;
+    margin-top: 0;
+    margin-left: -13px;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-bottom: 62px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 313px;
+    margin-left: -10px;
+    padding-left: 30px;
+    padding-bottom: 29px;
+    border-radius: 20px;
+  }
+}
+
+.intro__description-item-text {
+  display: block;
+}
+
+.intro__description-item:first-of-type .intro__description-item-text {
+  width: 106px;
+
+  @media (min-width: @tablet-width) {
+    width: 143px;
+  }
+}
+
+.intro__description-item:nth-of-type(2) .intro__description-item-text {
+  width: 150px;
+
+  @media (min-width: @tablet-width) {
+    width: 211px;
+  }
+}
+
+.intro__description-item:nth-of-type(3) .intro__description-item-text {
+  width: 138px;
+
+  @media (min-width: @tablet-width) {
+    width: 193px;
+  }
+}
+
+.intro__description-item:last-of-type .intro__description-item-text {
+  width: 125px;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+  }
+}
+
+.intro__description-item::before {
+  counter-increment: number;
+  content: counter(number);
+  position: absolute;
+  top: 22px;
+  right: 17px;
+  width: 15px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    top: 89px;
+    right: unset;
+    left: 33px;
+    width: 17px;
+    height: 30px;
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 28px;
+    left: 268px;
+    font-size: 24px;
+  }
+}
+
+.intro__description-item:nth-of-type(2)::before {
+  @media (min-width: @desktop-width) {
+    left: 300px;
+  }
+}
+
+.intro__description-item:nth-of-type(3)::before {
+  @media (min-width: @desktop-width) {
+    left: 300px;
+  }
+}

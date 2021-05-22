@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Academy: Погнали</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body class="body">
+    <div class="visually-hidden">
+      @@include("build/img/sprite.svg")
+    </div>
+    <header class="header header--no-js">
+      <div class="wrapper header__block">
+        <a class="header__logo header__logo-static header__logo--scrol" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop.webp 1x, img/logo/logo-desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.png 1x, img/logo/logo-desktop@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet.webp 1x, img/logo/logo-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.png 1x, img/logo/logo-tablet@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile.webp 1x, img/logo/logo-mobile@2x.webp 2x">
+            <img class="header__logo-ico" src="img/logo/logo-mobile.png" srcset="img/logo/logo-mobile@2x.png 2x" width="96" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <a class="header__logo header__logo-move" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.webp 1x, img/logo/logo-desktop-scrol@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.png 1x, img/logo/logo-desktop-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.webp 1x, img/logo/logo-tablet-scrol@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.png 1x, img/logo/logo-tablet-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile-scrol.webp 1x, img/logo/logo-mobile-scrol@2x.webp 2x">
+            <img class="header__logo-scrol-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="100" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <button class="header__button header__button--close" type="button" aria-label="открыть меню"></button>
+        <div class="header__navigation-block">
+          <nav class="header__navigation">
+            <ul class="header__navigation-list">
+              <li class="header__navigation-itme">
+                <a class="header__navigation-link" href="index.html">
+                  <span class="header__navigation-link-text" data-hover="О сервисе">о сервисе</span>
+                </a>
+              </li>
+              <li class="header__navigation-itme">
+                <a class="header__navigation-link header__navigation-link--active">
+                  <span class="header__navigation-link-text" data-hover="направления">направления</span>
+                </a>
+              </li>
+              <li class="header__navigation-itme">
+                <a class="header__navigation-link" href="catalog.html">
+                  <span class="header__navigation-link-text" data-hover="попутчики">попутчики</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <a class="button header__button-authorization" tabindex="0">авторизация</a>
+          <ul class="header__our-contacts our-contacts">
+            <li class="our-contacts__item our-contacts__item--header">
+              <a class="our-contacts__link" href="tel:88005558628">
+                <svg class="our-contacts__link-ico-phone" width="18" height="17">
+                  <use href="#icon-phone"></use>
+                </svg>
+                8 800 555-86-28</a>
+            </li>
+            <li class="our-contacts__item">
+              <a class="our-contacts__link" href="mailto:mail@htmlacademy.ru">
+                <svg class="our-contacts__link-ico-mail" width="23" height="25">
+                  <use href="#icon-mail"></use>
+                </svg>
+                mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="header__social social">
+            <li class="social__item">
+              <a class="social__link" href="#" title="Фэйсбук">
+                <svg class="social__ico" width="10" height="20">
+                  <use href="#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="В контакте">
+                <svg class="social__ico" width="23" height="11">
+                  <use href="#icon-vkontakte"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" title="Инстаграм">
+                <svg class="social__ico" width="18" height="17">
+                  <use href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div  class="header__out-trail header__out-trail--form">
+          <ul class="header__contacts">
+            <li class="header__contacts__item">
+              <a class="header__contacts-link" href="tel:88005558628" title="Позвоните нам">
+                <svg class="header__contacts-ico-phone" width="18" height="18">
+                  <use href="#icon-ring-phone"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__contacts__item">
+              <a class="header__contacts-link" href="mailto:mail@htmlacademy.ru" title="Напишите нам">
+                <svg class="header__contacts-ico-mail" width="18" height="15">
+                  <use href="#icon-post-mail"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <a class="button header__button-authorization-out-trail">авторизация</a>
+        </div>
+      </div>
+    </header>
+    <main class="form-page">
+      <h1 class="form-page__block"><span class="form-page__title main-title-form">Направления</span></h1>
+      <section class="user-information">
+        <h2 class="visually-hidden">Информация о пользователе</h2>
+        <div class="wrapper-form user-information__block">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/catalog/ico-level/form-desc-lv-80.svg">
+
+            <img class="user-information__level" src="img/catalog/ico-level/form-lv-80.svg" width="100" height="100" alt="Уровень пользователя 80">
+          </picture>
+          <div class="user-information__avatar-block">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.webp 1x, img/catalog/users/form-user-avatar-desktop@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/catalog/users/form-user-avatar-desktop.png 1x, img/catalog/users/form-user-avatar-desktop@2x.png 2x">
+
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.webp 1x, img/catalog/users/form-user-avatar-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/users/form-user-avatar-tablet.png 1x, img/catalog/users/form-user-avatar-tablet@2x.png 2x">
+
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/users/form-user-avatar-modile.webp 1x, img/catalog/users/form-user-avatar-modile@2x.webp 2x">
+              <img class="user-information__avatar" src="img/catalog/users/form-user-avatar-modile.png" srcset="img/catalog/users/form-user-avatar-modile@2x.png 2x" width="100" height="100" alt="Аватар пользователя">
+            </picture>
+          </div>
+          <button class="user-information__button" type="button"><span class="user-information__button-text">сменить&nbsp;</span>фото</button>
+          <fieldset class="user-information__fieldset user-information__hashtags">
+            <legend class="user-information__legend">Тэги</legend>
+            <label class="visually-hidden" for="user-hashtags-input">Введите свои хаштеги</label>
+            <textarea class="user-information__textarea" id="user-hashtags-input" rows="2" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="user-information__fieldset user-information__transport">
+            <legend class="user-information__legend">Транспорт</legend>
+            <ul class="user-information__transport-list">
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="Air_travel" name="Air-travel" checked>
+                <label class="user-information__checkbox-label" for="Air_travel" tabindex="0">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-plane"></use>
+                  </svg>
+                </label>
+                <span class="user-information__transport-signature">Авиаперелет</span>
+              </li>
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="Road_transport" name="Road-transport" checked>
+                <label class="user-information__checkbox-label" for="Road_transport" tabindex="0">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-bus"></use>
+                  </svg>
+                </label>
+                <span class="user-information__transport-signature">Автотранспорт</span>
+              </li>
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="Bike_riding" name="Bike-riding">
+                <label class="user-information__checkbox-label" for="Bike_riding" tabindex="0">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-bicycle"></use>
+                  </svg>
+                </label>
+                <span class="user-information__transport-signature">Велосипед</span>
+              </li>
+              <li class="user-information__transport-item">
+                <input class="user-information__checkbox" type="checkbox" id="On_foot" name="On-foot" checked>
+                <label class="user-information__checkbox-label" for="On_foot" tabindex="0">
+                  <svg class="user-information__transport-ico" width="16" height="16">
+                    <use href="#icon-run"></use>
+                  </svg>
+                </label>
+                <span class="user-information__transport-signature">Пешком</span>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+      </section>
+      <section class="my-plans">
+        <div class="wrapper-form my-plans__block">
+          <h2 class="my-plans__title form-sub-title">Мои планы:</h2>
+          <ul class="my-plans__list">
+            <li class="my-plans__item">
+              <h3 class="my-plans__item-title">Франция, Италия</h3>
+              <span class="my-plans__item-companions">3 попутчика</span>
+              <span class="my-plans__item-dates">26 мар — 29 мар</span>
+              <a class="my-plans__item-button-change" href="change-plan.html">изменить</a>
+            </li>
+            <li class="my-plans__item">
+              <h3 class="my-plans__item-title">Таиланд, Индонезия</h3>
+              <span class="my-plans__item-companions">1 попутчик</span>
+              <span class="my-plans__item-dates">1 июл — 15 июл</span>
+              <a class="my-plans__item-button-change" href="change-plan.html">изменить</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="plan-add">
+        <div class="wrapper-form plan-add__block">
+          <p class="visually-hidden"><a id="step-one"></a></p>
+          <h2 class="plan-add__title form-sub-title">Добавить план:</h2>
+          <div class="plan-add__steps-indicator">
+            <span class="plan-add__steps-dotts plan-add__steps-dotts--active"><span class="plan-add__steps-text">даты</span></span>
+            <span class="plan-add__steps-dotts"><span class="plan-add__steps-text">маршрут</span></span>
+            <span class="plan-add__steps-dotts"><span class="plan-add__steps-text">развлечения</span></span>
+          </div>
+          <form class="plan-add__form" method="POST" action="https://echo.htmlacademy.ru/">
+            <div class="plan-add__form-step-one step-one">
+              <h3 class="step-one__title step-title">Шаг 1. <span class="step-one__title-second-line">Даты пребывания</span></h3>
+              <p class="step-one__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+              <div class="step-one__section">
+                <fieldset class="step-one__fieldset step-one__fieldset-companions">
+                  <span class="step-one__fieldset-name">ищу попутчиков:</span>
+                  <span class="step-one__fieldset-measure">Чел.</span>
+                  <div class="step-one__fieldset-input-block">
+                    <label class="visually-hidden" for="companions_number" aria-label="Укажите колличество попутчиков"></label>
+                    <button class="step-one__button-minus" type="button" aria-label="Уменьшить значение">
+                      <svg class="step-one__button-minus-ico" width="14" height="1">
+                        <use href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <input class="step-one__input" type="number" id="companions_number" name="companions-number" value="2" min="1" max="10">
+                    <button class="step-one__button-plus" type="button" aria-label="Увеличить значение">
+                      <svg class="step-one__button-plus-ico" width="14" height="14">
+                        <use href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="step-one__chaild-off">
+                    <input class="step-one__chaild-off-checkbox" type="checkbox" id="chaild_on" name="chaild-on" checked>
+                    <label class="step-one__chaild-off-checkbox-label" for="chaild_on" tabindex="0">Можно с детьми</label>
+                  </div>
+                </fieldset>
+                <fieldset class="step-one__fieldset step-one__fieldset-duration">
+                  <span class="step-one__fieldset-name">длительность:</span>
+                  <span class="step-one__fieldset-measure">дн.</span>
+                  <div class="step-one__fieldset-input-block">
+                    <label class="visually-hidden" for="days_number" aria-label="Укажите колличество дней"></label>
+                    <button class="step-one__button-minus" type="button" aria-label="Уменьшить значение">
+                      <svg class="step-one__button-minus-ico" width="14" height="1">
+                        <use href="#icon-minus"></use>
+                      </svg>
+                    </button>
+                    <input class="step-one__input" type="number" id="days_number" name="days-number" value="3" min="1" max="20">
+                    <button class="step-one__button-plus" type="button" aria-label="Увеличить значение">
+                      <svg class="step-one__button-plus-ico" width="14" height="14">
+                        <use href="#icon-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </fieldset>
+                <fieldset class="step-one__fieldset step-one__fieldset-calendar">
+                  <div class="step-one__fieldset-month-block">
+                    <button class="step-one__button-back" type="button">
+                      <svg class="step-one__button-back-ico" width="15" height="21">
+                        <use href="#icon-button-back"></use>
+                      </svg>
+                    </button>
+                    <span class="step-one__fieldset-month">Март 2019</span>
+                    <button class="step-one__button-next" type="button">
+                      <svg class="step-one__button-next-ico" width="15" height="21">
+                        <use href="#icon-button-next"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <table class="step-one__calendar">
+                    <tr>
+                      <td class="step-one__calendar-item step-one__calendar-item-date">П<span class="step-one__calendar-item-text">н</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item-date">В<span class="step-one__calendar-item-text">т</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item-date">С<span class="step-one__calendar-item-text">р</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item-date">Ч<span class="step-one__calendar-item-text">т</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item-date">П<span class="step-one__calendar-item-text">т</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item-date step-one__calendar-item--weekend">С<span class="step-one__calendar-item-text">б</span></td>
+                      <td class="step-one__calendar-item step-one__calendar-item-date step-one__calendar-item--weekend">В<span class="step-one__calendar-item-text">с</span></td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="23_02" name="23.02" disabled>
+                        <label class="step-one__calendar-label" for="23_02">23</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="24_02" name="24.02" disabled>
+                        <label class="step-one__calendar-label" for="24_02">24</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="25_02" name="25.02" disabled>
+                        <label class="step-one__calendar-label" for="25_02">25</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="26_02" name="26.02" disabled>
+                        <label class="step-one__calendar-label" for="26_02">26</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="27_02" name="27.02" disabled>
+                        <label class="step-one__calendar-label" for="27_02">27</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="28_02" name="28.02" disabled>
+                        <label class="step-one__calendar-label" for="28_02">28</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="1_03" name="1.03" disabled>
+                        <label class="step-one__calendar-label" for="1_03">1&nbsp;<span class="step-one__calendar-label-data-text">мар</span></label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="2_03" name="2.03" disabled>
+                        <label class="step-one__calendar-label" for="2_03">2</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="3_03" name="3.03" disabled>
+                        <label class="step-one__calendar-label" for="3_03">3</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="4_03" name="4.03" disabled>
+                        <label class="step-one__calendar-label" for="4_03">4</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="5_03" name="5.03" disabled>
+                        <label class="step-one__calendar-label" for="5_03">5</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="6_03" name="6.03" disabled>
+                        <label class="step-one__calendar-label" for="6_03">6</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="7_03" name="7.03" disabled>
+                        <label class="step-one__calendar-label" for="7_03">7</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="8_03" name="8.03" disabled>
+                        <label class="step-one__calendar-label" for="8_03">8</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="9_03" name="9.03" disabled>
+                        <label class="step-one__calendar-label" for="9_03">9</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="10_03" name="10.03" disabled>
+                        <label class="step-one__calendar-label" for="10_03">10</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="11_03" name="11.03" disabled>
+                        <label class="step-one__calendar-label" for="11_03">11</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="12_03" name="12.03" disabled>
+                        <label class="step-one__calendar-label" for="12_03">12</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="13_03" name="13.03" disabled>
+                        <label class="step-one__calendar-label" for="13_03">13</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="14_03" name="14.03" disabled>
+                        <label class="step-one__calendar-label" for="14_03">14</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="15_03" name="15.03" disabled>
+                        <label class="step-one__calendar-label" for="15_03">15</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="16_03" name="16.03" disabled>
+                        <label class="step-one__calendar-label" for="16_03">16</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="17_03" name="17.03" disabled>
+                        <label class="step-one__calendar-label" for="17_03">17</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="18_03" name="18.03" disabled>
+                        <label class="step-one__calendar-label" for="18_03">18</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="19_03" name="19.03" disabled>
+                        <label class="step-one__calendar-label" for="19_03">19</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="20_03" name="20.03" disabled>
+                        <label class="step-one__calendar-label" for="20_03">20</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="21_03" name="21.03" disabled>
+                        <label class="step-one__calendar-label" for="21_03">21</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="22_03" name="22.03" disabled>
+                        <label class="step-one__calendar-label" for="22_03">22</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="23_03" name="23.03" disabled>
+                        <label class="step-one__calendar-label" for="23_03">23</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="24_03" name="24.03" disabled>
+                        <label class="step-one__calendar-label" for="24_03">24</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="25_03" name="25.03" disabled>
+                        <label class="step-one__calendar-label" for="25_03">25</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="26_03" name="26.03" checked>
+                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="26_03" tabindex="0">26<span class="step-one__calendar-label-text">Заезд</span></label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="27_03" name="27.03" checked>
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="27_03" tabindex="0">27</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="28_03" name="28.03" checked>
+                        <label class="step-one__calendar-label step-one__calendar-label--inportant step-one__calendar-label--valid" for="28_03" tabindex="0">28<span class="step-one__calendar-label-text">Выезд</span></label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="29_03" name="29.03">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="29_03" tabindex="0">29</label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="30_03" name="30.03">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="30_03" tabindex="0">30</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="31_03" name="31.03">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="31_03" tabindex="0">31</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="1_04" name="1.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="1_04" tabindex="0">1&nbsp;<span class="step-one__calendar-label-data-text">апр</span></label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="2_04" name="2.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="2_04" tabindex="0">2</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="3_04" name="3.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="3_04" tabindex="0">3</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="4_04" name="4.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="4_04" tabindex="0">4</label>
+                      </td>
+                      <td class="step-one__calendar-item">
+                        <input class="step-one__calendar-checkdox" type="checkbox" id="5_04" name="5.04">
+                        <label class="step-one__calendar-label step-one__calendar-label--valid" for="5_04" tabindex="0">5</label>
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+                <a class="button step-one__button" href="#step-second">Следующий шаг
+                  <svg class="arrow-ico step-one__arrow-ico" width="14" height="16">
+                    <use href="#button-arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="plan-add__form-step-second step-second">
+              <p class="visually-hidden"><a id="step-second"></a></p>
+              <h3 class="step-second__title step-title">Шаг 2. <span class="step-second__title-second-line">Маршрут</span></h3>
+              <p class="step-second__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.</p>
+              <div class="step-second__section">
+                <fieldset class="step-second__fieldset">
+                  <ul class="step-second__country-cheese-list">
+                    <li class="step-second__country-cheese-item">
+                      <button class="step-second__button-country-cheese" type="button">Босния&nbsp;и&nbsp;герцеговина
+                        <svg class="step-second__button-country-cheese-ico" width="16" height="12">
+                          <use href="#icon-button-down"></use>
+                        </svg>
+                      </button>
+                      <span class="step-second__flag step-second__flag-first-country"></span>
+                      <button class="step-second__button-close" type="button" aria-label="Удалить">
+                        <svg class="step-second__button-close-ico" width="24" height="20">
+                          <use href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="step-second__country-cheese-item">
+                      <button class="step-second__button-country-cheese" type="button">чехия
+                        <svg class="step-second__button-country-cheese-ico" width="16" height="12">
+                          <use href="#icon-button-down"></use>
+                        </svg>
+                      </button>
+                      <span class="step-second__flag step-second__flag-second-country"></span>
+                      <button class="step-second__button-close" type="button" aria-label="Удалить">
+                        <svg class="step-second__button-close-ico" width="24" height="20">
+                          <use href="#icon-close"></use>
+                        </svg>
+                      </button>
+                    </li>
+                    <li class="step-second__country-cheese-item">
+                      <button class="step-second__button-country-cheese" type="button">выберите страну
+                        <svg class="step-second__button-country-cheese-ico" width="16" height="12">
+                          <use href="#icon-button-down"></use>
+                        </svg>
+                      </button>
+                      <button class="step-second__button-close" type="button" aria-label="Удалить">
+                        <svg class="step-second__button-close-ico" width="24" height="20">
+                          <use href="#icon-close"></use>
+                        </svg>
+                      </button>
+                      <div class="step-second__countrys-block">
+                        <table class="step-second__table">
+                          <tr>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_A" name="letters" value="А" checked>
+                              <ul class="step-second__item-sub-list">
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Australia" name="country-А" value="Australia">
+                                  <label class="step-second__radio-label-country" for="Australia">Австралия</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Austria" name="country-А" value="Austria">
+                                  <label class="step-second__radio-label-country" for="Austria">Австрия</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Azerbaijan" name="country-А" value="Azerbaijan">
+                                  <label class="step-second__radio-label-country" for="Azerbaijan">Азербайджан</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Albania" name="country-А" value="Albania">
+                                  <label class="step-second__radio-label-country" for="Albania">Албания</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Algeria" name="country-А" value="Algeria">
+                                  <label class="step-second__radio-label-country" for="Algeria">Алжир</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Angola" name="country-А" value="Angola">
+                                  <label class="step-second__radio-label-country" for="Angola">Ангола</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Andorra" name="country-А" value="Andorra">
+                                  <label class="step-second__radio-label-country" for="Andorra">Андорра</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Antigua_and_Barbuda" name="country-А" value="Antigua_and_Barbuda">
+                                  <label class="step-second__radio-label-country" for="Antigua_and_Barbuda">Антигуа и Барбуда</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Argentina" name="country-А" value="Argentina">
+                                  <label class="step-second__radio-label-country" for="Argentina">Аргентина</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Armenia" name="country-А" value="Armenia">
+                                  <label class="step-second__radio-label-country" for="Armenia">Армения</label>
+                                </li>
+                                <li class="step-second__item-sub-list-item">
+                                  <input class="step-second__radio-country" type="radio" id="Afghanistan" name="country-А" value="Afghanistan">
+                                  <label class="step-second__radio-label-country" for="Afghanistan">Афганистан</label>
+                                </li>
+                              </ul>
+                              <label class="step-second__radio-label" for="letter_A">А</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Б" name="letters" value="Б">
+                              <label class="step-second__radio-label" for="letter_Б">Б</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_В" name="letters" value="В">
+                              <label class="step-second__radio-label" for="letter_В">В</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Г" name="letters" value="Г">
+                              <label class="step-second__radio-label" for="letter_Г">Г</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Д" name="letters" value="Д">
+                              <label class="step-second__radio-label" for="letter_Д">Д</label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Е" name="letters" value="Е">
+                              <label class="step-second__radio-label" for="letter_Е">Е</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_З" name="letters" value="З">
+                              <label class="step-second__radio-label" for="letter_З">З</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_И" name="letters" value="И">
+                              <label class="step-second__radio-label" for="letter_И">И</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_К" name="letters" value="К">
+                              <label class="step-second__radio-label" for="letter_К">К</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Л" name="letters" value="Л">
+                              <label class="step-second__radio-label" for="letter_Л">Л</label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_М" name="letters" value="М">
+                              <label class="step-second__radio-label" for="letter_М">М</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Н" name="letters" value="Н">
+                              <label class="step-second__radio-label" for="letter_Н">Н</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_О" name="letters" value="О">
+                              <label class="step-second__radio-label" for="letter_О">О</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_П" name="letters" value="П">
+                              <label class="step-second__radio-label" for="letter_П">П</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Р" name="letters" value="Р">
+                              <label class="step-second__radio-label" for="letter_Р">Р</label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_С" name="letters" value="С">
+                              <label class="step-second__radio-label" for="letter_С">С</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Т" name="letters" value="Т">
+                              <label class="step-second__radio-label" for="letter_Т">Т</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_У" name="letters" value="У">
+                              <label class="step-second__radio-label" for="letter_У">У</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Ф" name="letters" value="Ф">
+                              <label class="step-second__radio-label" for="letter_Ф">Ф</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Х" name="letters" value="Х">
+                              <label class="step-second__radio-label" for="letter_Х">Х</label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Ч" name="letters" value="Ч">
+                              <label class="step-second__radio-label" for="letter_Ч">Ч</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Ш" name="letters" value="Ш">
+                              <label class="step-second__radio-label" for="letter_Ш">Ш</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Э" name="letters" value="Э">
+                              <label class="step-second__radio-label" for="letter_Э">Э</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Ю" name="letters" value="Ю">
+                              <label class="step-second__radio-label" for="letter_Ю">Ю</label>
+                            </td>
+                            <td class="step-second__table-item">
+                              <input class="step-second__radio" type="radio" id="letter_Я" name="letters" value="Я">
+                              <label class="step-second__radio-label" for="letter_Я">Я</label>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </li>
+                    <li class="step-second__country-cheese-item">
+                      <button class="step-second__button-country-cheese step-second__button-country-cheese--add" type="button">Добавить страну
+                        <svg class="step-second__button-country-add-ico" width="14" height="14">
+                          <use href="#icon-plus"></use>
+                        </svg>
+                      </button>
+                    </li>
+                  </ul>
+                </fieldset>
+                <div class="step-second__button-block">
+                  <a class="button step-second__button" href="#step-three">Следующий шаг
+                    <svg class="arrow-ico step-second__arrow-ico" width="14" height="16">
+                      <use href="#button-arrow"></use>
+                    </svg>
+                  </a>
+                  <a class="plan-add__button-back step-second__button-back" href="#step-one">
+                    <svg class="arrow-ico step-second__arrow-back-ico" width="14" height="16">
+                      <use href="#button-arrow-back"></use>
+                    </svg>
+                    На шаг назад</a>
+                </div>
+              </div>
+            </div>
+            <div class="plan-add__form-step-three step-three">
+              <p class="visually-hidden"><a id="step-three"></a></p>
+              <h3 class="step-three__title step-title">Шаг 3. <span class="step-three__title-second-line">Развлечения</span></h3>
+              <p class="step-three__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="step-three__section">
+                <fieldset class="step-three__fieldset">
+                  <ul class="step-three__entertainment-list">
+                    <li class="step-three__entertainment-item">
+                      <span class="step-three__entertainment-title">Босния и Герцеговина<span class="step-three__entertainment-flag step-three__entertainment-flag-first-country"></span></span>
+                      <label class="visually-hidden" for="first_country_action" aria-label="План действий"></label>
+                      <textarea class="step-three__entertainment-textarea" id="first_country_action" name="first-country-action" placeholder="План действий" required></textarea>
+                      <span class="step-three__textarea-warning">Это поле должно быть заполнено</span>
+                    </li>
+                    <li class="step-three__entertainment-item">
+                      <span class="step-three__entertainment-title">Чехия<span class="step-three__entertainment-flag step-three__entertainment-flag-second-country"></span></span>
+                      <label class="visually-hidden" for="second_country_action" aria-label="План действий"></label>
+                      <textarea class="step-three__entertainment-textarea" id="second_country_action" name="second-country-action" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                      <span class="step-three__textarea-warning">Это поле должно быть заполнено</span>
+                    </li>
+                  </ul>
+                </fieldset>
+                <div class="step-three__button-block">
+                  <button class="button plan-add__button-submit" type="submit">Отправить
+                    <svg class="arrow-ico step-three__arrow-ico" width="14" height="16">
+                      <use href="#button-arrow"></use>
+                    </svg>
+                  </button>
+                  <a class="plan-add__button-back step-three__button-back" href="#step-second">
+                    <svg class="arrow-ico step-three__arrow-back-ico" width="14" height="16">
+                      <use href="#button-arrow-back"></use>
+                    </svg>
+                    На шаг назад</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper footer__block">
+        <a class="footer__logo" href="index.html">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.webp 1x, img/logo/logo-desktop-scrol@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-scrol.png 1x, img/logo/logo-desktop-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.webp 1x, img/logo/logo-tablet-scrol@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-scrol.png 1x, img/logo/logo-tablet-scrol@2x.png 2x">
+
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/logo/logo-mobile-scrol.webp 1x, img/logo/logo-mobile-scrol@2x.webp 2x">
+            <img class="footer__logo-ico" src="img/logo/logo-mobile-scrol.png" srcset="img/logo/logo-mobile-scrol@2x.png 2x" width="96" height="15" alt="Погнали">
+          </picture>
+        </a>
+        <ul class="footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="#" title="Фэйсбук">
+              <svg class="social__ico" width="10" height="20">
+                <use href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" title="В контакте">
+              <svg class="social__ico" width="23" height="11">
+                <use href="#icon-vkontakte"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" title="Инстаграм">
+              <svg class="social__ico" width="18" height="17">
+                <use href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+          <svg class="footer__developer-ico" width="27" height="34">
+            <use href="#icon-html"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

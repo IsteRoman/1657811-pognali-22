@@ -1,0 +1,43 @@
+.button {
+  display: inline-flex;
+  min-height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 22px 0 23px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: @basic-blue-dark;
+  background-color: @basic-yellow;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: @default-transition;
+  outline: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 31px 0 32px;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 36px 0 33px;
+  }
+}
+
+.button__arrow-ico,
+.arrow-ico {
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: @basic-yellow-dark;
+}
+
+.button:active {
+  color: @basic-blue-dark-0-3;
+}
